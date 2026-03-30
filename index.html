@@ -1197,13 +1197,19 @@ const CHART_COLORS = [
 function filtered() {
   let list = [...BUNDLES];
   if (state.q) {
-    const q = state.q.toLowerCase();
-    list = list.filter(b =>
-      b.name.toLowerCase().includes(q) ||
-      (b.namespace||'').toLowerCase().includes(q) ||
-      (b.description||'').toLowerCase().includes(q) ||
-      (b.tags||[]).some(t => t.includes(q))
-    );
+    if (state._semanticOrder?.length) {
+      // Semantic mode: rebuild list from ranked IDs, bypassing substring filter
+      const byId = Object.fromEntries(BUNDLES.map(b => [b.id, b]));
+      list = state._semanticOrder.map(id => byId[id]).filter(Boolean);
+    } else {
+      const q = state.q.toLowerCase();
+      list = list.filter(b =>
+        b.name.toLowerCase().includes(q) ||
+        (b.namespace||'').toLowerCase().includes(q) ||
+        (b.description||'').toLowerCase().includes(q) ||
+        (b.tags||[]).some(t => t.includes(q))
+      );
+    }
   }
   if (state.type !== 'all') list = list.filter(b => b.type === state.type);
   if (state.cat  !== 'all') list = list.filter(b => b.category === state.cat);
