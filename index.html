@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amplifier Registry — Bundles, Agents & Modules</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:            #14100D;
+  --bg-raised:     #1C1612;
+  --surface:       rgba(232,225,217,0.04);
+  --surface-hover: rgba(232,225,217,0.07);
+  --cream:         #E8E1D9;
+  --cream-dim:     rgba(232,225,217,0.55);
+  --cream-muted:   rgba(232,225,217,0.30);
+  --sienna:        #C4956A;
+  --sienna-dim:    rgba(196,149,106,0.12);
+  --sienna-border: rgba(196,149,106,0.35);
+  --border:        rgba(232,225,217,0.10);
+  --border-active: rgba(232,225,217,0.20);
+  --sage:          #8B9E8A;
+  --sage-dim:      rgba(139,158,138,0.12);
+  --font-serif:    'Cormorant Garamond', Georgia, serif;
+  --font-sans:     'Manrope', system-ui, sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--cream);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+/* Grain texture — the warmth layer */
+body::after {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  opacity: 0.048;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Warm atmospheric radial */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 10%, rgba(196,149,106,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 85% 85%, rgba(139,90,60,0.04) 0%, transparent 50%);
+}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px;
+  background: rgba(20,16,13,0.80);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-wordmark {
+  font-family: var(--font-serif);
+  font-size: 18px; font-weight: 400; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--cream); text-decoration: none;
+}
+
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: 9px; font-weight: 500; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--cream-muted);
+  text-decoration: none; transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--cream); }
+
+.nav-right { display: flex; align-items: center; gap: 16px; }
+
+.nav-search-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 14px; background: none;
+  border: 1px solid var(--border); border-radius: 2px;
+  color: var(--cream-muted); font-size: 10px; font-weight: 400;
+  font-family: var(--font-sans); cursor: pointer; letter-spacing: 0.06em;
+  transition: all 0.2s;
+}
+.nav-search-btn:hover { border-color: var(--border-active); color: var(--cream-dim); }
+.nav-search-btn kbd { font-family: var(--font-mono); font-size: 9px; opacity: 0.5; }
+
+.btn-primary {
+  padding: 7px 18px;
+  border: 1px solid var(--sienna-border); background: none;
+  border-radius: 2px; color: var(--sienna);
+  font-size: 9px; font-weight: 500; font-family: var(--font-sans);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: all 0.25s;
+}
+.btn-primary:hover {
+  background: var(--sienna-dim);
+  box-shadow: 0 0 20px rgba(196,149,106,0.12);
+}
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.hero {
+  position: relative; z-index: 1;
+  padding: 130px 40px 72px;
+  max-width: 720px; margin: 0 auto;
+  text-align: center;
+}
+
+.hero-kicker {
+  font-size: 9px; font-weight: 500; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sienna);
+  margin-bottom: 28px; display: block;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 300; line-height: 1.05; letter-spacing: -0.01em;
+  color: var(--cream); margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: italic; color: var(--sienna);
+}
+
+.hero-sub {
+  font-size: 13px; font-weight: 300;
+  color: var(--cream-dim); line-height: 1.75;
+  max-width: 480px; margin: 0 auto 40px;
+  letter-spacing: 0.01em;
+}
+
+/* Search */
+.hero-search { position: relative; max-width: 520px; margin: 0 auto 44px; }
+.hero-search input {
+  width: 100%; padding: 14px 44px 14px 44px;
+  background: rgba(232,225,217,0.04); border: 1px solid var(--border-active);
+  border-radius: 2px; color: var(--cream);
+  font-size: 14px; font-family: var(--font-sans); font-weight: 300;
+  outline: none; transition: all 0.3s; letter-spacing: 0.01em;
+}
+.hero-search input::placeholder { color: var(--cream-muted); }
+.hero-search input:focus {
+  border-color: var(--sienna-border);
+  box-shadow: 0 0 0 3px rgba(196,149,106,0.08);
+  background: rgba(232,225,217,0.05);
+}
+.search-icon {
+  position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  color: var(--cream-muted); pointer-events: none;
+}
+.search-clear {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: var(--cream-muted);
+  cursor: pointer; display: none; padding: 4px; border-radius: 2px;
+  transition: color 0.2s;
+}
+.search-clear:hover { color: var(--cream); }
+
+/* Stats */
+.stats-bar {
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px; flex-wrap: wrap;
+}
+.stat-item { text-align: center; }
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 32px; font-weight: 400;
+  color: var(--cream); line-height: 1;
+  display: block; letter-spacing: -0.01em;
+}
+.stat-label {
+  font-size: 8px; font-weight: 500;
+  color: var(--cream-muted); letter-spacing: 0.22em;
+  text-transform: uppercase; margin-top: 4px; display: block;
+}
+.stat-divider { width: 1px; height: 36px; background: var(--border); }
+
+.sweep-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 9px; font-weight: 400; color: var(--sage);
+  letter-spacing: 0.08em;
+}
+.sweep-dot {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--sage);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+/* ── DIVIDER ──────────────────────────────────────────────── */
+.section-rule {
+  width: 100%; height: 1px; background: var(--border);
+  max-width: 1280px; margin: 0 auto;
+}
+
+/* ── REGISTRY ─────────────────────────────────────────────── */
+.registry {
+  position: relative; z-index: 1;
+  max-width: 1280px; margin: 0 auto;
+  padding: 48px 40px 80px;
+  display: grid; grid-template-columns: 200px 1fr; gap: 40px;
+}
+
+/* Sidebar */
+.sidebar { position: sticky; top: 80px; height: fit-content; }
+
+.sidebar-label {
+  font-size: 8px; font-weight: 600; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--cream-muted);
+  margin-bottom: 12px; display: block;
+}
+
+.filter-btn {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 0; border: none; background: none;
+  color: var(--cream-muted); font-family: var(--font-sans); font-weight: 400;
+  font-size: 12px; cursor: pointer; transition: color 0.2s;
+  border-left: 2px solid transparent; padding-left: 10px; margin-left: -10px;
+  letter-spacing: 0.01em;
+}
+.filter-btn:hover { color: var(--cream-dim); }
+.filter-btn.active {
+  color: var(--sienna);
+  border-left-color: var(--sienna);
+}
+.filter-btn-count {
+  font-size: 10px; color: var(--cream-muted); font-family: var(--font-mono);
+  margin-left: auto; opacity: 0.6;
+}
+.filter-btn.active .filter-btn-count { color: var(--sienna); opacity: 0.8; }
+
+.sidebar-sep { height: 1px; background: var(--border); margin: 16px 0; }
+
+.sort-select {
+  width: 100%; padding: 6px 0; background: none; border: none;
+  border-bottom: 1px solid var(--border); color: var(--cream-dim);
+  font-size: 12px; font-family: var(--font-sans); font-weight: 300;
+  outline: none; cursor: pointer; appearance: none;
+  letter-spacing: 0.01em;
+}
+.sort-select:hover { border-bottom-color: var(--border-active); }
+
+/* Results bar */
+.results-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.results-count {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--cream-muted);
+}
+.results-count strong { color: var(--cream-dim); font-weight: 500; }
+
+/* Bundle grid */
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Bundle card */
+.bundle-card {
+  background: var(--surface);
+  padding: 22px 22px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.bundle-card:hover { background: var(--surface-hover); }
+.bundle-card.featured::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sienna), transparent);
+  opacity: 0.6;
+}
+
+.card-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 12px; gap: 12px;
+}
+.card-name-group { flex: 1; min-width: 0; }
+.card-namespace {
+  font-size: 9px; color: var(--cream-muted); font-family: var(--font-mono);
+  margin-bottom: 3px; letter-spacing: 0.05em;
+}
+.card-name {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 400; color: var(--cream);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+}
+
+.card-badges { display: flex; gap: 6px; flex-shrink: 0; align-items: flex-start; flex-wrap: wrap; justify-content: flex-end; }
+
+.type-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 1px;
+  font-size: 8px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  border: 1px solid;
+}
+.badge-bundle  { border-color: rgba(196,149,106,0.35); color: #C4956A; }
+.badge-agent   { border-color: rgba(196,149,106,0.25); color: #D4A87A; }
+.badge-module  { border-color: rgba(139,158,138,0.35); color: #8B9E8A; }
+.badge-tool    { border-color: rgba(139,158,130,0.35); color: #82A082; }
+.badge-recipe  { border-color: rgba(196,160,106,0.35); color: #C4A06A; }
+
+.featured-badge {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 2px 8px; border-radius: 1px;
+  font-size: 8px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  border: 1px solid rgba(196,149,106,0.4); color: var(--sienna);
+}
+.community-badge {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 2px 8px; border-radius: 1px;
+  font-size: 8px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  border: 1px solid rgba(139,158,138,0.4); color: var(--sage);
+}
+
+.card-desc {
+  font-size: 12px; font-weight: 300; color: var(--cream-dim);
+  line-height: 1.6; margin-bottom: 16px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; letter-spacing: 0.01em;
+}
+
+.card-metrics {
+  display: flex; align-items: center; gap: 18px; margin-bottom: 14px;
+}
+.metric {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 300; color: var(--cream-muted);
+}
+.metric-val { font-weight: 400; color: var(--cream-dim); }
+
+.stars { display: flex; align-items: center; gap: 2px; }
+.star { font-size: 10px; }
+.star.filled { color: var(--sienna); }
+.star.empty { color: var(--cream-muted); opacity: 0.3; }
+
+/* Sparkline */
+/* activity dot — replaces sparkline */
+.activity-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+  background: var(--sage); margin-left: auto; opacity: 0.7;
+}
+
+/* Install */
+.card-install {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 10px;
+  background: rgba(0,0,0,0.25); border: 1px solid var(--border);
+  border-radius: 2px; margin-bottom: 14px; gap: 8px;
+}
+.card-install code {
+  font-family: var(--font-mono); font-size: 10px; color: var(--sienna);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1;
+  opacity: 0.85;
+}
+.copy-btn {
+  background: none; border: none; cursor: pointer; color: var(--cream-muted);
+  padding: 2px; transition: color 0.2s; flex-shrink: 0;
+  display: flex; align-items: center;
+}
+.copy-btn:hover { color: var(--sienna); }
+
+/* Card footer */
+.card-footer { display: flex; align-items: center; justify-content: space-between; }
+.card-tags { display: flex; gap: 5px; flex-wrap: wrap; flex: 1; }
+.tag {
+  font-size: 9px; font-weight: 400; color: var(--cream-muted);
+  opacity: 0.7; letter-spacing: 0.06em;
+}
+.tag::before { content: '#'; }
+.card-author { font-size: 9px; color: var(--cream-muted); opacity: 0.5; white-space: nowrap; font-family: var(--font-mono); }
+
+/* Empty state */
+.empty-state {
+  grid-column: 1 / -1; padding: 80px 40px;
+  text-align: center; color: var(--cream-muted);
+}
+.empty-state p { font-size: 14px; font-weight: 300; }
+
+/* ── DETAIL PANEL ─────────────────────────────────────────── */
+.panel-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.panel-overlay.open { opacity: 1; pointer-events: all; }
+
+.detail-panel {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 201;
+  width: min(620px, 95vw);
+  background: var(--bg-raised);
+  border-left: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.detail-panel.open { transform: translateX(0); }
+
+.panel-header {
+  padding: 28px 32px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 20px;
+}
+.panel-close {
+  background: none; border: 1px solid var(--border);
+  border-radius: 2px; padding: 7px; cursor: pointer;
+  color: var(--cream-muted); transition: all 0.2s; flex-shrink: 0;
+  display: flex; align-items: center;
+}
+.panel-close:hover { border-color: var(--border-active); color: var(--cream); }
+
+.panel-title-group { flex: 1; }
+.panel-namespace { font-size: 10px; color: var(--cream-muted); font-family: var(--font-mono); margin-bottom: 4px; letter-spacing: 0.05em; }
+.panel-title { font-family: var(--font-serif); font-size: 26px; font-weight: 400; margin-bottom: 10px; letter-spacing: 0.02em; }
+.panel-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.panel-body { flex: 1; overflow-y: auto; padding: 28px 32px; }
+.panel-body::-webkit-scrollbar { width: 3px; }
+.panel-body::-webkit-scrollbar-thumb { background: var(--border-active); border-radius: 2px; }
+
+.panel-section { margin-bottom: 28px; }
+.panel-section-title {
+  font-size: 8px; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--cream-muted); margin-bottom: 12px;
+}
+.panel-desc { font-size: 13px; font-weight: 300; color: var(--cream-dim); line-height: 1.75; letter-spacing: 0.01em; }
+
+.panel-metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.panel-metric-card {
+  border: 1px solid var(--border); border-radius: 2px; padding: 14px 16px;
+}
+.panel-metric-val {
+  font-family: var(--font-serif); font-size: 26px; font-weight: 400;
+  color: var(--cream); line-height: 1;
+}
+.panel-metric-label { font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-muted); margin-top: 4px; }
+
+.panel-chart { height: 110px; }
+canvas.panel-chart-canvas { width: 100%; height: 100%; }
+
+.llm-verdict {
+  background: var(--sienna-dim); border: 1px solid var(--sienna-border);
+  border-radius: 2px; padding: 16px 18px;
+}
+.llm-verdict-label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 8px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--sienna); margin-bottom: 10px;
+}
+.llm-verdict-text { font-size: 12px; font-weight: 300; color: var(--cream-dim); line-height: 1.7; }
+
+.panel-install {
+  background: rgba(0,0,0,0.35); border: 1px solid var(--border);
+  border-radius: 2px; padding: 12px 16px;
+  font-family: var(--font-mono); font-size: 11px; color: var(--sienna);
+  word-break: break-all; line-height: 1.6; opacity: 0.85;
+}
+
+.panel-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.panel-tag {
+  padding: 3px 10px; border: 1px solid var(--border);
+  font-size: 10px; font-weight: 300; color: var(--cream-muted); border-radius: 1px;
+}
+
+.repo-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--sienna); text-decoration: none; font-weight: 300;
+}
+.repo-link:hover { text-decoration: underline; }
+
+.use-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px; width: 100%; margin-top: 8px;
+  border: 1px solid var(--border-active); background: none; border-radius: 2px;
+  color: var(--cream-dim); font-size: 11px; font-weight: 400;
+  font-family: var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.25s;
+}
+.use-btn:hover { border-color: var(--sienna-border); color: var(--sienna); background: var(--sienna-dim); }
+
+/* ── TRENDS ───────────────────────────────────────────────── */
+.trends-section {
+  position: relative; z-index: 1;
+  max-width: 1280px; margin: 0 auto; padding: 0 40px 80px;
+}
+
+.section-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: var(--font-serif); font-size: 28px; font-weight: 400;
+  color: var(--cream); letter-spacing: 0.02em;
+}
+.section-sub { font-size: 11px; font-weight: 300; color: var(--cream-muted); margin-top: 4px; }
+.section-action {
+  font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--sienna); text-decoration: none; cursor: pointer;
+  background: none; border: none; font-family: var(--font-sans);
+  display: flex; align-items: center; gap: 4px; transition: opacity 0.2s;
+}
+.section-action:hover { opacity: 0.7; }
+
+.trends-container {
+  border: 1px solid var(--border); border-radius: 2px; padding: 24px;
+  background: var(--surface);
+}
+.trends-legend { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 300; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.legend-name { color: var(--cream-dim); }
+.legend-count { color: var(--cream-muted); font-size: 10px; font-family: var(--font-mono); }
+.trends-chart-wrap { height: 180px; }
+#trendsChart { width: 100%; height: 100%; }
+.trends-footer { display: flex; align-items: center; gap: 12px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.trends-footer-label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream-muted); }
+.week-labels { display: flex; flex: 1; }
+.week-label { flex: 1; font-size: 9px; font-family: var(--font-mono); color: var(--cream-muted); text-align: center; opacity: 0.5; }
+
+/* ── HOW IT WORKS ─────────────────────────────────────────── */
+.community-section {
+  position: relative; z-index: 1;
+  max-width: 1280px; margin: 0 auto; padding: 0 40px 80px;
+}
+.community-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+.community-card { background: var(--surface); padding: 28px; }
+.community-card h3 {
+  font-family: var(--font-serif); font-size: 18px; font-weight: 400;
+  color: var(--cream); margin-bottom: 10px; letter-spacing: 0.02em;
+}
+.community-card p { font-size: 12px; font-weight: 300; color: var(--cream-dim); line-height: 1.7; }
+.community-card-num {
+  font-family: var(--font-serif); font-size: 38px; font-weight: 300;
+  color: var(--sienna); line-height: 1; margin-bottom: 12px; display: block; opacity: 0.8;
+}
+
+/* ── SUBMIT ───────────────────────────────────────────────── */
+.submit-section {
+  position: relative; z-index: 1;
+  max-width: 1280px; margin: 0 auto; padding: 0 40px 100px;
+}
+.submit-card {
+  border: 1px solid var(--border); border-radius: 2px; padding: 52px;
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+  background: var(--surface);
+}
+.submit-card h2 {
+  font-family: var(--font-serif); font-size: 28px; font-weight: 400;
+  color: var(--cream); margin-bottom: 10px; letter-spacing: 0.02em;
+}
+.submit-card p { font-size: 13px; font-weight: 300; color: var(--cream-dim); max-width: 420px; line-height: 1.75; }
+.submit-actions { display: flex; gap: 12px; flex-shrink: 0; }
+
+.btn-outline {
+  padding: 9px 20px; background: none;
+  border: 1px solid var(--border-active); border-radius: 2px;
+  color: var(--cream-muted); font-size: 9px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  font-family: var(--font-sans); cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;
+}
+.btn-outline:hover { border-color: var(--sienna-border); color: var(--sienna); }
+
+/* ── SUBMIT MODAL ─────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.25s; padding: 24px;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: var(--bg-raised); border: 1px solid var(--border-active);
+  border-radius: 2px; padding: 36px;
+  width: 100%; max-width: 500px;
+  transform: translateY(12px); transition: transform 0.25s;
+}
+.modal-overlay.open .modal { transform: translateY(0); }
+
+.modal-title {
+  font-family: var(--font-serif); font-size: 22px; font-weight: 400;
+  color: var(--cream); margin-bottom: 6px; letter-spacing: 0.02em;
+}
+.modal-sub { font-size: 12px; font-weight: 300; color: var(--cream-dim); margin-bottom: 28px; line-height: 1.6; }
+
+.form-group { margin-bottom: 20px; }
+.form-label {
+  display: block; font-size: 8px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--cream-muted); margin-bottom: 8px;
+}
+.form-input {
+  width: 100%; padding: 10px 0;
+  background: none; border: none; border-bottom: 1px solid var(--border);
+  color: var(--cream); font-size: 13px; font-weight: 300;
+  font-family: var(--font-sans); outline: none;
+  transition: border-color 0.2s; letter-spacing: 0.01em;
+}
+.form-input::placeholder { color: var(--cream-muted); opacity: 0.6; }
+.form-input:focus { border-bottom-color: var(--sienna-border); }
+.form-select {
+  appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23E8E1D9' stroke-width='2' opacity='0.3'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 4px center; padding-right: 20px;
+}
+.form-select option { background: var(--bg-raised); }
+.form-textarea { resize: vertical; min-height: 72px; line-height: 1.6; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 28px; }
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 28px 40px; max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-wordmark {
+  font-family: var(--font-serif); font-size: 14px; font-weight: 400;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); opacity: 0.7;
+}
+.footer-links { display: flex; gap: 20px; }
+.footer-links a {
+  font-size: 9px; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--cream-muted); text-decoration: none; opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.footer-links a:hover { opacity: 1; }
+.footer-copy { font-size: 10px; font-weight: 300; color: var(--cream-muted); opacity: 0.4; }
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .registry { grid-template-columns: 1fr; }
+  .sidebar { position: static; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .sidebar-sep { display: none; }
+  .sidebar-label { white-space: nowrap; }
+  .community-grid { grid-template-columns: 1fr; }
+  .submit-card { flex-direction: column; gap: 24px; }
+}
+@media (max-width: 640px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 110px 20px 56px; }
+  .registry, .trends-section, .community-section, .submit-section { padding-left: 20px; padding-right: 20px; }
+  .bundle-grid { grid-template-columns: 1fr; }
+  .panel-metrics-grid { grid-template-columns: 1fr 1fr; }
+  .stats-bar { gap: 24px; }
+  .stat-divider { display: none; }
+}
+
+/* ── COUNTER ANIMATION ────────────────────────────────────── */
+.stat-number { font-variant-numeric: tabular-nums; }
+
+/* ── COPY SUCCESS ─────────────────────────────────────────── */
+.copy-done { color: var(--sage) !important; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-wordmark">Amplifier</a>
+
+  <ul class="nav-links">
+    <li><a href="#registry">Browse</a></li>
+    <li><a href="#top-bundles">Top Bundles</a></li>
+    <li><a href="#how-it-works">About</a></li>
+    <li><a href="https://github.com/microsoft/amplifier" target="_blank" rel="noopener">Docs</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button class="nav-search-btn"
+      onclick="document.getElementById('heroSearch').focus(); document.querySelector('.hero').scrollIntoView({behavior:'smooth'})">
+      <i data-lucide="search" style="width:12px;height:12px;"></i>
+      Search &nbsp;<kbd>⌘K</kbd>
+    </button>
+    <button class="btn-primary" onclick="openModal()">
+      <i data-lucide="plus" style="width:12px;height:12px;"></i>
+      Add Yours
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-kicker">Community Registry · Open Source</span>
+  <h1>Discover <em>Amplifier</em><br>Bundles &amp; Agents</h1>
+  <p class="hero-sub">Browse, rate, and share bundles ranked by community usage and LLM-verified quality. Swept from 19 team members and beyond.</p>
+
+  <div class="hero-search">
+    <span class="search-icon"><i data-lucide="search" style="width:16px;height:16px;"></i></span>
+    <input id="heroSearch" type="text" placeholder="Search by name, capability, or what you want to do…"
+      oninput="handleSearch(this.value)">
+    <button class="search-clear" id="searchClear" onclick="clearSearch()">
+      <i data-lucide="x" style="width:13px;height:13px;"></i>
+    </button>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-number" id="statBundles">—</span>
+      <span class="stat-label">Bundles</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number" id="statAuthors">—</span>
+      <span class="stat-label">Contributors</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number" id="statStars">—</span>
+      <span class="stat-label">Total Stars</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="sweep-badge" title="All repos verified publicly accessible — checked nightly">
+      <div class="sweep-dot"></div>
+      Verified public
+    </div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- REGISTRY -->
+<section class="registry" id="registry">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <span class="sidebar-label">Type</span>
+      <button class="filter-btn active" data-type="all" onclick="setType('all',this)">
+        All<span class="filter-btn-count" id="cnt-all">—</span>
+      </button>
+      <button class="filter-btn" data-type="bundle" onclick="setType('bundle',this)">
+        Bundle<span class="filter-btn-count" id="cnt-bundle">—</span>
+      </button>
+      <button class="filter-btn" data-type="agent" onclick="setType('agent',this)">
+        Agent<span class="filter-btn-count" id="cnt-agent">—</span>
+      </button>
+      <button class="filter-btn" data-type="module" onclick="setType('module',this)">
+        Module<span class="filter-btn-count" id="cnt-module">—</span>
+      </button>
+      <button class="filter-btn" data-type="tool" onclick="setType('tool',this)">
+        Tool<span class="filter-btn-count" id="cnt-tool">—</span>
+      </button>
+      <button class="filter-btn" data-type="recipe" onclick="setType('recipe',this)">
+        Recipe<span class="filter-btn-count" id="cnt-recipe">—</span>
+      </button>
+    </div>
+
+    <div class="sidebar-sep"></div>
+
+    <div>
+      <span class="sidebar-label">Category</span>
+      <button class="filter-btn active" data-cat="all" onclick="setCat('all',this)">All</button>
+      <button class="filter-btn" data-cat="knowledge" onclick="setCat('knowledge',this)">Knowledge</button>
+      <button class="filter-btn" data-cat="dev" onclick="setCat('dev',this)">Development</button>
+      <button class="filter-btn" data-cat="ui" onclick="setCat('ui',this)">UI & Design</button>
+      <button class="filter-btn" data-cat="research" onclick="setCat('research',this)">Research</button>
+      <button class="filter-btn" data-cat="integration" onclick="setCat('integration',this)">Integrations</button>
+      <button class="filter-btn" data-cat="infra" onclick="setCat('infra',this)">Infrastructure</button>
+    </div>
+
+    <div class="sidebar-sep"></div>
+
+    <div>
+      <span class="sidebar-label">Sort by</span>
+      <select class="sort-select" onchange="setSort(this.value)">
+        <option value="trending">Trending</option>
+        <option value="rating">Highest rated</option>
+        <option value="stars">Most starred</option>
+        <option value="newest">Recently updated</option>
+        <option value="alpha">Alphabetical</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- Grid -->
+  <main>
+    <div class="results-bar">
+      <span class="results-count" id="resultsCount">Loading…</span>
+    </div>
+    <div class="bundle-grid" id="bundleGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </main>
+</section>
+
+<!-- TRENDS -->
+<section class="trends-section" id="top-bundles">
+  <div class="section-header">
+    <div>
+      <div class="section-title">Top Bundles</div>
+      <div class="section-sub">Ranked by GitHub stars &amp; LLM rating — updated nightly</div>
+    </div>
+    <button class="section-action" onclick="document.getElementById('registry').scrollIntoView({behavior:'smooth'})">
+      Browse all <i data-lucide="arrow-right" style="width:12px;height:12px;"></i>
+    </button>
+  </div>
+  <div class="trends-container">
+    <div id="topBundlesList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="community-section" id="how-it-works">
+  <div class="section-header">
+    <div>
+      <div class="section-title">How Ratings Work</div>
+      <div class="section-sub">Transparent, community-sourced quality signals</div>
+    </div>
+  </div>
+  <div class="community-grid">
+    <div class="community-card">
+      <span class="community-card-num">19</span>
+      <h3>Team Members Swept</h3>
+      <p>Public GitHub repos are swept nightly for new bundles, changes, and usage signals. Only repos with public visibility are listed. Results update automatically.</p>
+    </div>
+    <div class="community-card">
+      <span class="community-card-num">AI</span>
+      <h3>LLM-as-Judge Ratings</h3>
+      <p>An automated pipeline evaluates each bundle on documentation quality, capability breadth, prompt design, and observable output quality. Runs on every update and bi-weekly for unchanged bundles.</p>
+    </div>
+    <div class="community-card">
+      <span class="community-card-num">∞</span>
+      <h3>Community Signals</h3>
+      <p>Users self-report which bundles they use. Mentions in GitHub Discussions, Teams, and Slack are picked up by the sweep. Every report increments the weekly user count.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUBMIT -->
+<section class="submit-section">
+  <div class="submit-card">
+    <div>
+      <h2>Built something with Amplifier?</h2>
+      <p>Share your bundle with the community. We'll run an LLM quality check, seed usage tracking, and add it to the registry. Open-source and team-private bundles both welcome.</p>
+    </div>
+    <div class="submit-actions">
+      <a href="https://github.com/microsoft/amplifier/discussions" target="_blank" rel="noopener" class="btn-outline">
+        <i data-lucide="github" style="width:12px;height:12px;"></i>
+        GitHub Discussions
+      </a>
+      <button class="btn-primary" onclick="openModal()">
+        <i data-lucide="upload" style="width:12px;height:12px;"></i>
+        Submit Bundle
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-wordmark">Amplifier Registry</span>
+  <div class="footer-links">
+    <a href="https://github.com/microsoft/amplifier" target="_blank">GitHub</a>
+    <a href="#how-it-works">How ratings work</a>
+    <a href="https://github.com/microsoft/amplifier/discussions" target="_blank">Discussions</a>
+    <a href="#" onclick="openModal(); return false;">Submit</a>
+  </div>
+  <span class="footer-copy">Built for the Amplifier community</span>
+</footer>
+
+<!-- DETAIL PANEL -->
+<div class="panel-overlay" id="panelOverlay" onclick="closePanel()"></div>
+<div class="detail-panel" id="detailPanel">
+  <div class="panel-header">
+    <div class="panel-title-group">
+      <div class="panel-namespace" id="panelNS"></div>
+      <div class="panel-title" id="panelTitle"></div>
+      <div class="panel-badges" id="panelBadges"></div>
+    </div>
+    <button class="panel-close" onclick="closePanel()">
+      <i data-lucide="x" style="width:15px;height:15px;"></i>
+    </button>
+  </div>
+  <div class="panel-body">
+    <div class="panel-section">
+      <div class="panel-section-title">About</div>
+      <p class="panel-desc" id="panelDesc"></p>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">At a glance</div>
+      <div class="panel-metrics-grid">
+        <div class="panel-metric-card"><div class="panel-metric-val" id="panelStars">—</div><div class="panel-metric-label">GitHub stars</div></div>
+        <div class="panel-metric-card"><div class="panel-metric-val" id="panelRating">—</div><div class="panel-metric-label">LLM rating</div></div>
+        <div class="panel-metric-card"><div class="panel-metric-val" id="panelUpdated">—</div><div class="panel-metric-label">Last updated</div></div>
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">LLM Verdict</div>
+      <div class="llm-verdict">
+        <div class="llm-verdict-label"><i data-lucide="sparkles" style="width:12px;height:12px;"></i> AI Quality Assessment</div>
+        <p class="llm-verdict-text" id="panelVerdict"></p>
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Install</div>
+      <div class="panel-install" id="panelInstall"></div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Tags</div>
+      <div class="panel-tags" id="panelTags"></div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Repository</div>
+      <a class="repo-link" id="panelRepo" href="#" target="_blank" rel="noopener">
+        <i data-lucide="github" style="width:13px;height:13px;"></i>
+        View on GitHub
+        <i data-lucide="external-link" style="width:11px;height:11px;"></i>
+      </a>
+    </div>
+    <button class="use-btn" onclick="markUsing()">
+      <i data-lucide="check" style="width:14px;height:14px;"></i>
+      <span id="useBtnText">I use this bundle</span>
+    </button>
+  </div>
+</div>
+
+<!-- SUBMIT MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-title">Submit a Bundle</div>
+    <div class="modal-sub">Share your bundle with the Amplifier community. We'll verify it and add it to the registry.</div>
+    <div class="form-group">
+      <label class="form-label">Bundle identifier *</label>
+      <input type="text" class="form-input" placeholder="e.g. my-org:my-bundle or git+https://…">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Type *</label>
+      <select class="form-input form-select">
+        <option value="">Select type…</option>
+        <option>Bundle</option><option>Agent</option>
+        <option>Module</option><option>Tool</option><option>Recipe</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">GitHub repository URL *</label>
+      <input type="url" class="form-input" placeholder="https://github.com/…">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Short description</label>
+      <textarea class="form-input form-textarea" placeholder="What does it do? Who is it for?"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Your GitHub handle</label>
+      <input type="text" class="form-input" placeholder="@username">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" onclick="submitBundle()">
+        <i data-lucide="send" style="width:11px;height:11px;"></i>
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── STATE ──────────────────────────────────────────────────────
+let BUNDLES = [];
+const state = { type: 'all', cat: 'all', sort: 'trending', q: '', bundle: null };
+
+const CHART_COLORS = [
+  '#C4956A', '#D4A87A', '#8B9E8A', '#A89070', '#B8856A',
+  '#9A9070', '#C4AA8A',
+];
+
+// ── FILTER / SORT ──────────────────────────────────────────────
+function filtered() {
+  let list = [...BUNDLES];
+  if (state.q) {
+    const q = state.q.toLowerCase();
+    list = list.filter(b =>
+      b.name.toLowerCase().includes(q) ||
+      (b.namespace||'').toLowerCase().includes(q) ||
+      (b.description||'').toLowerCase().includes(q) ||
+      (b.tags||[]).some(t => t.includes(q))
+    );
+  }
+  if (state.type !== 'all') list = list.filter(b => b.type === state.type);
+  if (state.cat  !== 'all') list = list.filter(b => b.category === state.cat);
+  switch (state.sort) {
+    case 'rating':  list.sort((a,b) => b.rating - a.rating); break;
+    case 'stars':   list.sort((a,b) => (b.stars||0) - (a.stars||0)); break;
+    case 'newest':  list.sort((a,b) => (b.lastUpdated||'').localeCompare(a.lastUpdated||'')); break;
+    case 'alpha':   list.sort((a,b) => a.name.localeCompare(b.name)); break;
+    default:
+      list.sort((a,b) => {
+        if (a.featured && !b.featured) return -1;
+        if (!a.featured && b.featured) return 1;
+        return (b.stars||0) - (a.stars||0);
+      });
+  }
+  return list;
+}
+
+// ── SPARKLINE ──────────────────────────────────────────────────
+function daysAgo(dateStr) {
+  if (!dateStr) return '—';
+  const days = Math.floor((Date.now() - new Date(dateStr)) / 86400000);
+  if (days === 0) return 'today';
+  if (days === 1) return '1d ago';
+  if (days < 30) return `${days}d ago`;
+  if (days < 60) return '1mo ago';
+  return `${Math.floor(days/30)}mo ago`;
+}
+
+function stars(r) {
+  const full = Math.floor(r);
+  return Array.from({length:5},(_,i) =>
+    `<span class="star ${i<full?'filled':'empty'}">★</span>`).join('');
+}
+
+function fmt(n) {
+  if (!n) return '0';
+  return n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'')+'k' : String(n);
+}
+
+// ── RENDER CARDS ───────────────────────────────────────────────
+function renderCards() {
+  const list = filtered();
+  const grid = document.getElementById('bundleGrid');
+  const count = document.getElementById('resultsCount');
+  count.innerHTML = `Showing <strong>${list.length}</strong> bundle${list.length!==1?'s':''}`;
+
+  if (!list.length) {
+    grid.innerHTML = `<div class="empty-state"><p>No bundles match your search.</p></div>`;
+    lucide.createIcons(); return;
+  }
+
+  grid.innerHTML = list.map(b => `
+    <div class="bundle-card${b.featured?' featured':''}" onclick="openPanel('${b.id}')">
+      <div class="card-header">
+        <div class="card-name-group">
+          <div class="card-namespace">${b.namespace}:</div>
+          <div class="card-name">${b.name}</div>
+        </div>
+        <div class="card-badges">
+          ${b.featured ? '<span class="featured-badge">Featured</span>' :
+            b.community ? '<span class="community-badge">Community</span>' : ''}
+          <span class="type-badge badge-${b.type}">${b.type}</span>
+        </div>
+      </div>
+      <p class="card-desc">${b.description||''}</p>
+      <div class="card-metrics">
+        <div class="metric" title="LLM rating">
+          <div class="stars">${stars(b.rating||0)}</div>
+          <span class="metric-val" style="margin-left:4px;">${(b.rating||0).toFixed(1)}</span>
+        </div>
+        <div class="metric" title="GitHub stars">
+          <i data-lucide="star" style="width:12px;height:12px;"></i>
+          <span class="metric-val">${b.stars||0}</span>
+        </div>
+        <span class="metric" style="margin-left:auto;font-size:10px;opacity:0.55;">${daysAgo(b.lastUpdated)}</span>
+      </div>
+      <div class="card-install">
+        <code>${b.install||''}</code>
+        <button class="copy-btn" onclick="event.stopPropagation();copyInstall('${b.id}',this)" title="Copy">
+          <i data-lucide="copy" style="width:12px;height:12px;"></i>
+        </button>
+      </div>
+      <div class="card-footer">
+        <div class="card-tags">${(b.tags||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <span class="card-author">${b.author||''}</span>
+      </div>
+    </div>`).join('');
+
+  lucide.createIcons();
+}
+
+// ── COPY ───────────────────────────────────────────────────────
+function copyInstall(id, btn) {
+  const b = BUNDLES.find(x => x.id === id);
+  if (!b) return;
+  navigator.clipboard.writeText(b.install||'').then(() => {
+    btn.classList.add('copy-done');
+    setTimeout(() => btn.classList.remove('copy-done'), 1200);
+  });
+}
+
+// ── FILTER HANDLERS ────────────────────────────────────────────
+function setType(t, btn) {
+  state.type = t;
+  document.querySelectorAll('[data-type]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards();
+}
+function setCat(c, btn) {
+  state.cat = c;
+  document.querySelectorAll('[data-cat]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards();
+}
+function setSort(v) { state.sort = v; renderCards(); }
+
+function handleSearch(v) {
+  state.q = v.trim();
+  document.getElementById('searchClear').style.display = v ? 'flex' : 'none';
+  renderCards();
+}
+function clearSearch() {
+  const el = document.getElementById('heroSearch');
+  el.value = ''; state.q = '';
+  document.getElementById('searchClear').style.display = 'none';
+  renderCards();
+}
+
+// ── COUNTS ─────────────────────────────────────────────────────
+function updateCounts() {
+  document.getElementById('cnt-all').textContent = BUNDLES.length;
+  ['bundle','agent','module','tool','recipe'].forEach(t => {
+    const el = document.getElementById(`cnt-${t}`);
+    if (el) el.textContent = BUNDLES.filter(b => b.type === t).length;
+  });
+}
+
+// ── PANEL ──────────────────────────────────────────────────────
+function openPanel(id) {
+  const b = BUNDLES.find(x => x.id === id);
+  if (!b) return;
+  state.bundle = b;
+
+  document.getElementById('panelNS').textContent = `${b.namespace}:`;
+  document.getElementById('panelTitle').textContent = b.name;
+  document.getElementById('panelBadges').innerHTML = `
+    <span class="type-badge badge-${b.type}">${b.type}</span>
+    ${b.featured ? '<span class="featured-badge">Featured</span>' :
+      b.community ? '<span class="community-badge">Community</span>' : ''}`;
+  document.getElementById('panelDesc').textContent = b.description||'';
+  document.getElementById('panelStars').textContent = fmt(b.stars||0);
+  document.getElementById('panelRating').textContent = `${(b.rating||0).toFixed(1)} / 5`;
+  document.getElementById('panelUpdated').textContent = (b.lastUpdated||'').replace(/^2026-/,'');
+  document.getElementById('panelVerdict').textContent = b.llmVerdict||'';
+  document.getElementById('panelInstall').textContent = b.install||'';
+  document.getElementById('panelRepo').href = b.repo||'#';
+  document.getElementById('panelTags').innerHTML = (b.tags||[]).map(t => `<span class="panel-tag">${t}</span>`).join('');
+  document.getElementById('useBtnText').textContent = 'I use this bundle';
+
+  // (no trend chart)
+
+  document.getElementById('panelOverlay').classList.add('open');
+  document.getElementById('detailPanel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  lucide.createIcons();
+}
+
+function closePanel() {
+  document.getElementById('panelOverlay').classList.remove('open');
+  document.getElementById('detailPanel').classList.remove('open');
+  document.body.style.overflow = '';
+  state.bundle = null;
+}
+
+function markUsing() {
+  const b = state.bundle; if (!b) return;
+  document.getElementById('panelStars').textContent = fmt(b.stars||0);
+  document.getElementById('useBtnText').textContent = 'Marked! Thanks.';
+  setTimeout(() => { document.getElementById('useBtnText').textContent = 'I use this bundle'; }, 2500);
+}
+
+// ── TOP BUNDLES SECTION ────────────────────────────────────────────────────────
+function renderTopBundles() {
+  const el = document.getElementById('topBundlesList');
+  if (!el) return;
+  const top6 = [...BUNDLES]
+    .sort((a,b) => (b.stars||0) - (a.stars||0) || b.rating - a.rating)
+    .slice(0, 6);
+  if (!top6.length) return;
+  el.innerHTML = top6.map(b => `
+    <div class="bundle-card" onclick="openPanel('${b.id}')" style="border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
+      <div class="card-namespace">${b.namespace}:</div>
+      <div class="card-name" style="font-size:15px;margin-bottom:8px;">${b.name}</div>
+      <div class="card-metrics" style="margin-bottom:0;">
+        <div class="metric">
+          <i data-lucide="star" style="width:12px;height:12px;"></i>
+          <span class="metric-val">${b.stars||0} stars</span>
+        </div>
+        <div class="metric">
+          <div class="stars">${stars(b.rating||0)}</div>
+          <span class="metric-val" style="margin-left:4px;">${(b.rating||0).toFixed(1)}</span>
+        </div>
+        <span class="metric" style="margin-left:auto;font-size:10px;opacity:0.55;">${daysAgo(b.lastUpdated)}</span>
+      </div>
+    </div>`).join('');
+  lucide.createIcons();
+}
+
+// ── MODAL ──────────────────────────────────────────────────────
+function openModal() {
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function submitBundle() {
+  closeModal();
+  window.open('https://github.com/microsoft/amplifier/issues/new?template=bundle-submission.yml', '_blank');
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ── COUNTER ANIMATION ──────────────────────────────────────────
+function animateNum(el, target) {
+  const steps = 36, dur = 1100;
+  let n = 0;
+  const iv = setInterval(() => {
+    n++;
+    const v = Math.round((n/steps) * target);
+    el.textContent = v >= 1000 ? (v/1000).toFixed(1).replace(/\.0$/,'')+'k' : v;
+    if (n >= steps) { el.textContent = target>=1000?(target/1000).toFixed(1).replace(/\.0$/,'')+'k':target; clearInterval(iv); }
+  }, dur/steps);
+}
+
+// ── KEYBOARD ───────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if ((e.metaKey||e.ctrlKey) && e.key==='k') {
+    e.preventDefault();
+    document.getElementById('heroSearch').focus();
+    document.querySelector('.hero').scrollIntoView({behavior:'smooth'});
+  }
+  if (e.key==='Escape') {
+    if (document.getElementById('detailPanel').classList.contains('open')) closePanel();
+    else if (document.getElementById('modalOverlay').classList.contains('open')) closeModal();
+    else if (state.q) clearSearch();
+  }
+});
+
+// ── INIT ───────────────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch('./bundles.json');
+    if (!res.ok) throw new Error(res.status);
+    BUNDLES = await res.json();
+  } catch (err) {
+    console.warn('bundles.json not found, using empty registry.');
+    BUNDLES = [];
+  }
+
+  updateCounts();
+  renderCards();
+  setTimeout(renderTopBundles, 100);
+
+  setTimeout(() => {
+    animateNum(document.getElementById('statBundles'), BUNDLES.length);
+    animateNum(document.getElementById('statAuthors'), new Set(BUNDLES.map(b=>b.author)).size);
+    animateNum(document.getElementById('statStars'), BUNDLES.reduce((s,b)=>s+(b.stars||0),0));
+  }, 350);
+}
+
+
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

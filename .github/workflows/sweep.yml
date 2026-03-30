@@ -1,0 +1,45 @@
+name: Nightly Registry Sweep
+
+on:
+  schedule:
+    # Run at 02:00 UTC every day
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — log changes but do not commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sweep GitHub repos and enrich bundles.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node .github/scripts/sweep.mjs \
+            --input bundles.json \
+            --output bundles.json \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit updated bundles.json
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name  "Amplifier Registry Bot"
+          git config user.email "registry-bot@amplifier.dev"
+          git diff --quiet bundles.json && echo "No changes." || (
+            git add bundles.json &&
+            git commit -m "chore(sweep): update registry data [$(date -u +%Y-%m-%d)]" &&
+            git push
+          )

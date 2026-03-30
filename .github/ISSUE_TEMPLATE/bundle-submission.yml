@@ -1,0 +1,92 @@
+name: Submit a Bundle
+description: Add your Amplifier bundle, agent, module, tool, or recipe to the registry
+title: "[Bundle] namespace:name"
+labels: ["bundle-submission"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your work with the Amplifier community! Fill out the fields
+        below and we'll review, run an LLM quality check, and add it to the registry.
+
+  - type: input
+    id: identifier
+    attributes:
+      label: Bundle identifier
+      description: How users install or reference this bundle
+      placeholder: "e.g. my-org:my-bundle  OR  git+https://github.com/me/my-bundle@main"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Bundle
+        - Agent
+        - Module
+        - Tool
+        - Recipe
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Knowledge & Docs
+        - Development
+        - UI & Design
+        - Research & Writing
+        - Integrations
+        - Infrastructure
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub repository URL
+      placeholder: "https://github.com/…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One or two sentences — what does it do and who is it for?
+      placeholder: "My bundle does X, which helps Y kind of user do Z."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated tags that describe this bundle's capabilities
+      placeholder: "memory, vector, persistence, cross-session"
+
+  - type: input
+    id: author
+    attributes:
+      label: Your GitHub handle
+      placeholder: "@username"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission checklist
+      options:
+        - label: The repo is public
+          required: true
+        - label: It has a README that describes what it does
+          required: true
+        - label: It works with the current Amplifier release
+          required: true
+        - label: I am the author or have permission to submit it
+          required: true
