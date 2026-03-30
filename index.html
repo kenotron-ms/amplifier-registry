@@ -675,6 +675,107 @@ footer {
   .stat-divider { display: none; }
 }
 
+
+/* ── SCORE BREAKDOWN ─────────────────────────────────────────── */
+.score-breakdown { margin: 0; }
+.score-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+}
+.score-lbl {
+  font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--cream-muted); width: 110px; flex-shrink: 0;
+}
+.score-track {
+  flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden;
+}
+.score-fill {
+  height: 100%; border-radius: 2px; background: var(--sienna);
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.score-fill.dim-low   { background: rgba(232,225,217,0.25); }
+.score-fill.dim-mid   { background: var(--sienna); opacity: 0.65; }
+.score-fill.dim-high  { background: var(--sienna); }
+.score-num {
+  font-size: 10px; font-family: var(--font-mono); color: var(--cream-dim);
+  width: 24px; text-align: right; flex-shrink: 0;
+}
+.score-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
+  font-size: 9px; letter-spacing: 0.08em;
+}
+.score-total { color: var(--cream-dim); font-family: var(--font-mono); }
+.score-total strong { color: var(--sienna); font-family: var(--font-serif); font-size: 16px; font-weight: 400; }
+.score-meta { color: var(--cream-muted); }
+.score-meta a {
+  color: var(--sienna); text-decoration: none; opacity: 0.8;
+  letter-spacing: 0.06em;
+}
+.score-meta a:hover { opacity: 1; }
+
+/* ── RUBRIC MODAL ─────────────────────────────────────────────── */
+.rubric-overlay {
+  position: fixed; inset: 0; z-index: 400;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.25s;
+  padding: 32px;
+}
+.rubric-overlay.open { opacity: 1; pointer-events: all; }
+.rubric-modal {
+  background: var(--bg-raised); border: 1px solid var(--border-active);
+  border-radius: 2px; width: 100%; max-width: 680px; max-height: 85vh;
+  display: flex; flex-direction: column;
+  transform: translateY(12px); transition: transform 0.25s;
+}
+.rubric-overlay.open .rubric-modal { transform: translateY(0); }
+.rubric-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 28px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.rubric-modal-title {
+  font-family: var(--font-serif); font-size: 20px; font-weight: 400; letter-spacing: 0.02em;
+}
+.rubric-modal-body { overflow-y: auto; padding: 24px 28px; flex: 1; }
+.rubric-modal-body::-webkit-scrollbar { width: 3px; }
+.rubric-modal-body::-webkit-scrollbar-thumb { background: var(--border-active); border-radius: 2px; }
+
+.rubric-dim { margin-bottom: 28px; }
+.rubric-dim-title {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--sienna); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+}
+.rubric-dim-source {
+  font-size: 8px; letter-spacing: 0.1em; color: var(--cream-muted);
+  border: 1px solid var(--border); padding: 1px 7px; border-radius: 1px;
+}
+.rubric-table { width: 100%; border-collapse: collapse; }
+.rubric-table tr + tr td { border-top: 1px solid var(--border); }
+.rubric-table td {
+  padding: 8px 0; font-size: 11px; font-weight: 300;
+  color: var(--cream-dim); line-height: 1.5; vertical-align: top;
+}
+.rubric-table td:first-child {
+  font-family: var(--font-mono); color: var(--sienna); width: 22px;
+  padding-right: 14px; font-size: 10px; padding-top: 9px;
+}
+.rubric-mapping {
+  margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border);
+}
+.rubric-mapping-title {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--cream-muted); margin-bottom: 12px;
+}
+.rubric-mapping-row {
+  display: flex; gap: 0; font-size: 10px; font-family: var(--font-mono); margin-bottom: 5px;
+}
+.rubric-mapping-pts { color: var(--cream-dim); width: 70px; }
+.rubric-mapping-stars { color: var(--sienna); }
+.rubric-version {
+  font-size: 9px; color: var(--cream-muted); letter-spacing: 0.08em;
+  margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border);
+}
+
 /* ── COUNTER ANIMATION ────────────────────────────────────── */
 .stat-number { font-variant-numeric: tabular-nums; }
 
@@ -691,6 +792,7 @@ footer {
   <ul class="nav-links">
     <li><a href="#registry">Browse</a></li>
     <li><a href="#top-bundles">Top Bundles</a></li>
+    <li><a href="#" onclick="openRubric(); return false;">Rubric</a></li>
     <li><a href="#how-it-works">About</a></li>
     <li><a href="https://github.com/microsoft/amplifier" target="_blank" rel="noopener">Docs</a></li>
   </ul>
@@ -882,6 +984,8 @@ footer {
     <a href="https://github.com/microsoft/amplifier" target="_blank">GitHub</a>
     <a href="#how-it-works">How ratings work</a>
     <a href="https://github.com/microsoft/amplifier/discussions" target="_blank">Discussions</a>
+    <a href="#" onclick="openRubric(); return false;">Rubric</a>
+    <a href="#" onclick="openRubric(); return false;">Rubric</a>
     <a href="#" onclick="openModal(); return false;">Submit</a>
   </div>
   <span class="footer-copy">Built for the Amplifier community</span>
@@ -906,11 +1010,9 @@ footer {
       <p class="panel-desc" id="panelDesc"></p>
     </div>
     <div class="panel-section">
-      <div class="panel-section-title">At a glance</div>
-      <div class="panel-metrics-grid">
-        <div class="panel-metric-card"><div class="panel-metric-val" id="panelStars">—</div><div class="panel-metric-label">GitHub stars</div></div>
-        <div class="panel-metric-card"><div class="panel-metric-val" id="panelRating">—</div><div class="panel-metric-label">LLM rating</div></div>
-        <div class="panel-metric-card"><div class="panel-metric-val" id="panelUpdated">—</div><div class="panel-metric-label">Last updated</div></div>
+      <div class="panel-section-title">Quality Breakdown <span style="font-size:8px;color:var(--cream-muted);font-family:var(--font-mono);letter-spacing:0.05em;margin-left:6px;" id="panelScoreVersion"></span></div>
+      <div class="score-breakdown" id="scoreBreakdown">
+        <!-- rendered by JS -->
       </div>
     </div>
     <div class="panel-section">
@@ -940,6 +1042,94 @@ footer {
       <i data-lucide="check" style="width:14px;height:14px;"></i>
       <span id="useBtnText">I use this bundle</span>
     </button>
+  </div>
+</div>
+
+<!-- RUBRIC MODAL -->
+<div class="rubric-overlay" id="rubricOverlay">
+  <div class="rubric-modal">
+    <div class="rubric-modal-header">
+      <div class="rubric-modal-title">Quality Rubric — v1.0</div>
+      <button class="panel-close" onclick="closeRubric()">
+        <i data-lucide="x" style="width:15px;height:15px;"></i>
+      </button>
+    </div>
+    <div class="rubric-modal-body">
+      <p style="font-size:12px;font-weight:300;color:var(--cream-dim);line-height:1.7;margin-bottom:24px;">
+        Every bundle is scored on five dimensions — two from the GitHub API (objective), three from an LLM reading the public README (consistent). Same rubric, every time. Scores are recomputed nightly.
+      </p>
+
+      <div class="rubric-dim">
+        <div class="rubric-dim-title">1 — Documentation <span class="rubric-dim-source">LLM-judged</span></div>
+        <table class="rubric-table">
+          <tr><td>4</td><td>Clear purpose, audience, install, usage example, AND tradeoffs or when-not-to-use.</td></tr>
+          <tr><td>3</td><td>Clear purpose, install, at least one usage example. No major gaps.</td></tr>
+          <tr><td>2</td><td>Purpose clear, install present, but no examples or audience is unclear.</td></tr>
+          <tr><td>1</td><td>README exists but sparse, vague, or mostly template boilerplate.</td></tr>
+          <tr><td>0</td><td>No README, empty, or gives no useful information.</td></tr>
+        </table>
+      </div>
+
+      <div class="rubric-dim">
+        <div class="rubric-dim-title">2 — Bundle / Agent Design <span class="rubric-dim-source">LLM-judged</span></div>
+        <table class="rubric-table">
+          <tr><td>4</td><td>Proper Amplifier structure, rich context files, clear agent description, follows delegation philosophy, obvious care in prompt design.</td></tr>
+          <tr><td>3</td><td>Proper structure, meaningful context files, install and type declaration make sense.</td></tr>
+          <tr><td>2</td><td>Recognizable Amplifier bundle, install present, context files thin.</td></tr>
+          <tr><td>1</td><td>Minimal structure, install declared, little or no context or guidance.</td></tr>
+          <tr><td>0</td><td>Cannot be identified as a proper Amplifier bundle.</td></tr>
+        </table>
+      </div>
+
+      <div class="rubric-dim">
+        <div class="rubric-dim-title">3 — Activity &amp; Maintenance <span class="rubric-dim-source">GitHub API</span></div>
+        <table class="rubric-table">
+          <tr><td>4</td><td>Last commit ≤ 30 days AND at least one of: issues closed, release tag, merged PR in past 90 days.</td></tr>
+          <tr><td>3</td><td>Last commit ≤ 60 days, or ≤ 90 days with some issue or PR activity.</td></tr>
+          <tr><td>2</td><td>Last commit ≤ 180 days.</td></tr>
+          <tr><td>1</td><td>Last commit between 6 and 12 months ago.</td></tr>
+          <tr><td>0</td><td>No commits in over 12 months, or repository appears abandoned.</td></tr>
+        </table>
+      </div>
+
+      <div class="rubric-dim">
+        <div class="rubric-dim-title">4 — Code / Prompt Quality <span class="rubric-dim-source">LLM-judged</span></div>
+        <table class="rubric-table">
+          <tr><td>4</td><td>Clear expertise: well-structured prompts with reasoning guidance, handles edge cases, no quick-fix patterns.</td></tr>
+          <tr><td>3</td><td>Solid, minor weaknesses. Prompts coherent and purposeful.</td></tr>
+          <tr><td>2</td><td>Functional but shallow. Prompts generic or could apply to many tools unchanged.</td></tr>
+          <tr><td>1</td><td>Minimal — little design thought visible in prompts or code.</td></tr>
+          <tr><td>0</td><td>No meaningful implementation. Placeholder or entirely boilerplate.</td></tr>
+        </table>
+      </div>
+
+      <div class="rubric-dim">
+        <div class="rubric-dim-title">5 — Trust Signals <span class="rubric-dim-source">GitHub API</span></div>
+        <table class="rubric-table">
+          <tr><td>4</td><td>LICENSE + CI/CD workflow files + tests or CHANGELOG.</td></tr>
+          <tr><td>3</td><td>LICENSE + CI/CD. No tests or CHANGELOG.</td></tr>
+          <tr><td>2</td><td>LICENSE only. README has clear structure.</td></tr>
+          <tr><td>1</td><td>LICENSE only. README unstructured.</td></tr>
+          <tr><td>0</td><td>No LICENSE file.</td></tr>
+        </table>
+      </div>
+
+      <div class="rubric-mapping">
+        <div class="rubric-mapping-title">Score → Stars</div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">18 – 20 pts</span><span class="rubric-mapping-stars">★★★★★  5.0</span></div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">15 – 17 pts</span><span class="rubric-mapping-stars">★★★★½  4.5</span></div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">12 – 14 pts</span><span class="rubric-mapping-stars">★★★★    4.0</span></div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">9 – 11 pts</span><span class="rubric-mapping-stars">★★★½    3.5</span></div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">6 – 8 pts</span><span class="rubric-mapping-stars">★★★      3.0</span></div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">3 – 5 pts</span><span class="rubric-mapping-stars">★★        2.0</span></div>
+        <div class="rubric-mapping-row"><span class="rubric-mapping-pts">0 – 2 pts</span><span class="rubric-mapping-stars">★          1.0</span></div>
+      </div>
+
+      <p class="rubric-version">
+        Rubric v1.0 · <a href="https://github.com/kenotron-ms/amplifier-registry/blob/main/RUBRIC.md" target="_blank" rel="noopener" style="color:var(--sienna);text-decoration:none;">View full rubric on GitHub</a>
+        · To dispute a score, open an issue with label <code style="font-family:var(--font-mono);font-size:9px;">score-dispute</code>
+      </p>
+    </div>
   </div>
 </div>
 
@@ -1015,7 +1205,7 @@ function filtered() {
       list.sort((a,b) => {
         if (a.featured && !b.featured) return -1;
         if (!a.featured && b.featured) return 1;
-        return (b.stars||0) - (a.stars||0);
+        return (b.quality?.total||0) - (a.quality?.total||0) || (b.quality?.rating||b.rating||0) - (a.quality?.rating||a.rating||0);
       });
   }
   return list;
@@ -1071,8 +1261,8 @@ function renderCards() {
       <p class="card-desc">${b.description||''}</p>
       <div class="card-metrics">
         <div class="metric" title="LLM rating">
-          <div class="stars">${stars(b.rating||0)}</div>
-          <span class="metric-val" style="margin-left:4px;">${(b.rating||0).toFixed(1)}</span>
+          <div class="stars">${stars((b.quality?.rating||b.rating)||0)}</div>
+          <span class="metric-val" style="margin-left:4px;">${((b.quality?.rating||b.rating)||0).toFixed(1)}</span>
         </div>
         <div class="metric" title="GitHub stars">
           <i data-lucide="star" style="width:12px;height:12px;"></i>
@@ -1155,6 +1345,41 @@ function openPanel(id) {
       b.community ? '<span class="community-badge">Community</span>' : ''}`;
   document.getElementById('panelDesc').textContent = b.description||'';
   document.getElementById('panelStars').textContent = fmt(b.stars||0);
+
+  // Render score breakdown
+  const q = b.quality;
+  const sbEl = document.getElementById('scoreBreakdown');
+  const vEl  = document.getElementById('panelScoreVersion');
+  if (q && sbEl) {
+    const dims = [
+      { key: 'docs',     label: 'Documentation' },
+      { key: 'design',   label: 'Bundle Design'  },
+      { key: 'activity', label: 'Activity'        },
+      { key: 'code',     label: 'Code / Prompts'  },
+      { key: 'trust',    label: 'Trust Signals'   },
+    ];
+    const fillClass = (v) => v <= 1 ? 'dim-low' : v <= 2 ? 'dim-mid' : 'dim-high';
+    sbEl.innerHTML = dims.map(d => {
+      const v = q[d.key] || 0;
+      const pct = (v / 4) * 100;
+      return `<div class="score-row">
+        <span class="score-lbl">${d.label}</span>
+        <div class="score-track"><div class="score-fill ${fillClass(v)}" style="width:${pct}%"></div></div>
+        <span class="score-num">${v}/4</span>
+      </div>`;
+    }).join('') + `
+    <div class="score-footer">
+      <span class="score-total">Total <strong>${q.total || 0}</strong>/20 &ensp; ★ ${q.rating || '—'}</span>
+      <span class="score-meta">
+        ${q.scoredAt || ''} &ensp;
+        ${q.llmScored ? 'LLM ✓' : 'objective only'} &ensp;
+        <a href="#" onclick="openRubric(); return false;">Rubric v${q.scoreVersion || '1.0'}</a>
+      </span>
+    </div>`;
+    if (vEl) vEl.textContent = `v${q.scoreVersion||'1.0'}`;
+  } else if (sbEl) {
+    sbEl.innerHTML = '<p style="font-size:11px;color:var(--cream-muted);">Not yet scored.</p>';
+  }
   document.getElementById('panelRating').textContent = `${(b.rating||0).toFixed(1)} / 5`;
   document.getElementById('panelUpdated').textContent = (b.lastUpdated||'').replace(/^2026-/,'');
   document.getElementById('panelVerdict').textContent = b.llmVerdict||'';
@@ -1181,6 +1406,41 @@ function closePanel() {
 function markUsing() {
   const b = state.bundle; if (!b) return;
   document.getElementById('panelStars').textContent = fmt(b.stars||0);
+
+  // Render score breakdown
+  const q = b.quality;
+  const sbEl = document.getElementById('scoreBreakdown');
+  const vEl  = document.getElementById('panelScoreVersion');
+  if (q && sbEl) {
+    const dims = [
+      { key: 'docs',     label: 'Documentation' },
+      { key: 'design',   label: 'Bundle Design'  },
+      { key: 'activity', label: 'Activity'        },
+      { key: 'code',     label: 'Code / Prompts'  },
+      { key: 'trust',    label: 'Trust Signals'   },
+    ];
+    const fillClass = (v) => v <= 1 ? 'dim-low' : v <= 2 ? 'dim-mid' : 'dim-high';
+    sbEl.innerHTML = dims.map(d => {
+      const v = q[d.key] || 0;
+      const pct = (v / 4) * 100;
+      return `<div class="score-row">
+        <span class="score-lbl">${d.label}</span>
+        <div class="score-track"><div class="score-fill ${fillClass(v)}" style="width:${pct}%"></div></div>
+        <span class="score-num">${v}/4</span>
+      </div>`;
+    }).join('') + `
+    <div class="score-footer">
+      <span class="score-total">Total <strong>${q.total || 0}</strong>/20 &ensp; ★ ${q.rating || '—'}</span>
+      <span class="score-meta">
+        ${q.scoredAt || ''} &ensp;
+        ${q.llmScored ? 'LLM ✓' : 'objective only'} &ensp;
+        <a href="#" onclick="openRubric(); return false;">Rubric v${q.scoreVersion || '1.0'}</a>
+      </span>
+    </div>`;
+    if (vEl) vEl.textContent = `v${q.scoreVersion||'1.0'}`;
+  } else if (sbEl) {
+    sbEl.innerHTML = '<p style="font-size:11px;color:var(--cream-muted);">Not yet scored.</p>';
+  }
   document.getElementById('useBtnText').textContent = 'Marked! Thanks.';
   setTimeout(() => { document.getElementById('useBtnText').textContent = 'I use this bundle'; }, 2500);
 }
@@ -1203,8 +1463,8 @@ function renderTopBundles() {
           <span class="metric-val">${b.stars||0} stars</span>
         </div>
         <div class="metric">
-          <div class="stars">${stars(b.rating||0)}</div>
-          <span class="metric-val" style="margin-left:4px;">${(b.rating||0).toFixed(1)}</span>
+          <div class="stars">${stars((b.quality?.rating||b.rating)||0)}</div>
+          <span class="metric-val" style="margin-left:4px;">${((b.quality?.rating||b.rating)||0).toFixed(1)}</span>
         </div>
         <span class="metric" style="margin-left:auto;font-size:10px;opacity:0.55;">${daysAgo(b.lastUpdated)}</span>
       </div>
@@ -1250,7 +1510,8 @@ document.addEventListener('keydown', e => {
   }
   if (e.key==='Escape') {
     if (document.getElementById('detailPanel').classList.contains('open')) closePanel();
-    else if (document.getElementById('modalOverlay').classList.contains('open')) closeModal();
+    else if (document.getElementById('rubricOverlay').classList.contains('open')) closeRubric();
+  else if (document.getElementById('modalOverlay').classList.contains('open')) closeModal();
     else if (state.q) clearSearch();
   }
 });
@@ -1280,6 +1541,22 @@ async function init() {
 
 
 document.addEventListener('DOMContentLoaded', init);
+// ── RUBRIC ──────────────────────────────────────────────────────
+function openRubric() {
+  document.getElementById('rubricOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  lucide.createIcons();
+}
+function closeRubric() {
+  document.getElementById('rubricOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('rubricOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeRubric();
+  });
+});
+
 </script>
 <script>lucide.createIcons();</script>
 </body>

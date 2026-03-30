@@ -9,7 +9,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier",
     "install": "amplifier bundle add amplifier:amplifier-expert",
-    "rating": 4.9,
+    "rating": 4.5,
     "tags": [
       "expert",
       "ecosystem",
@@ -17,10 +17,28 @@
       "guidance"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-03-28",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
-    "stars": 0,
-    "forks": 0
+    "stars": 3023,
+    "forks": 251,
+    "quality": {
+      "docs": 3,
+      "design": 3,
+      "activity": 4,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "Clear purpose and audience, comprehensive installation and usage examples provided, but lacks discussion of tradeoffs, limitations, or when not to use the bundle.",
+      "designReason": "Proper Amplifier bundle structure with clear agent description, install instruction, and extensive README documenting purpose and usage; minor gap is thin context files specific to this agent's expert domain.",
+      "codeReason": "Solid prompts with clear agent definition and comprehensive context documentation; minor weakness is lack of explicit chain-of-thought reasoning patterns or edge-case handling guidance in the prompts themselves.",
+      "total": 15,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 3023,
+      "forks": 251,
+      "lastUpdated": "2026-03-28"
+    }
   },
   {
     "id": "foundation-expert",
@@ -32,7 +50,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:foundation-expert",
-    "rating": 4.8,
+    "rating": 5,
     "tags": [
       "bundles",
       "agents",
@@ -40,10 +58,28 @@
       "authoring"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-22",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Exceptional precision on bundle YAML structure and composition patterns. Significantly reduces authoring errors. Highly recommended as a required checkpoint before any bundle work.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 4,
+      "docsReason": "Excellent documentation with clear purpose (foundational library for Amplifier), defined audience (bundle authors and library users), comprehensive install instructions, multiple usage examples (Quick Start, utilities, full workflow), extensive reference tables, linked guides covering tradeoffs/patterns, and explicit discussion of philosophy and when to use (mechanism vs policy).",
+      "designReason": "Exemplary Amplifier bundle with proper structure (bundle.md as core), comprehensive documentation (BUNDLE_GUIDE.md, AGENT_AUTHORING.md, PATTERNS.md), rich reference content (providers, agents, behaviors, context), clear context-sink pattern guidance, and authoritative expert agent designation with explicit consultation requirement.",
+      "codeReason": "Solid documentation with clear API structure and examples, but prompts/guidance for the agent itself are implicit rather than explicit—no visible instruction set, edge case handling, or reasoning patterns for the 'foundation-expert' agent role.",
+      "total": 19,
+      "rating": 5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "superpowers",
@@ -55,7 +91,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-bundle-superpowers",
     "install": "amplifier bundle add superpowers",
-    "rating": 4.8,
+    "rating": 4.5,
     "tags": [
       "tdd",
       "planning",
@@ -63,10 +99,28 @@
       "quality"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-15",
+    "lastUpdated": "2026-03-14",
     "llmVerdict": "Excellent discipline enforcement. The TDD-first approach and verification gates prevent a large class of agent mistakes. The brainstorm-to-execute flow is well-designed and transfers well across project types.",
-    "stars": 0,
-    "forks": 0
+    "stars": 3,
+    "forks": 3,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "README clearly explains purpose (bringing Superpowers methodology to Amplifier), target audience (Amplifier users), provides two installation paths with commands, includes comprehensive usage examples (modes, recipes, settings.yaml), and explicitly discusses tradeoffs between the behavior install (composable, layered) versus full bundle approach (standalone experience).",
+      "designReason": "Exemplary Amplifier bundle with proper structure (behaviors, agents, modes, context, recipes), comprehensive context files (philosophy and instructions), five well-defined specialist agents, six workflow modes, composable design pattern supporting both standalone and layered deployment, clear delegation philosophy with role-based agents, and meticulous prompt engineering throughout.",
+      "codeReason": "Well-structured bundle with clear workflow documentation, specialized agents for each role, and thoughtful composability patterns, but prompts themselves are not visible in the README and depth of reasoning guidance for individual agent behaviors is not demonstrated.",
+      "total": 17,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 3,
+      "forks": 3,
+      "lastUpdated": "2026-03-14"
+    }
   },
   {
     "id": "zen-architect",
@@ -78,7 +132,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:zen-architect",
-    "rating": 4.7,
+    "rating": 4.5,
     "tags": [
       "architecture",
       "design",
@@ -86,10 +140,28 @@
       "review"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Strong architectural judgment with clear philosophy application. The three-mode design (analyze/architect/review) maps well to real development workflows. Ruthless simplicity principle is consistently enforced.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 3,
+      "design": 1,
+      "activity": 4,
+      "code": 3,
+      "trust": 4,
+      "docsReason": "Clear purpose and audience (bundle authors/Python users), comprehensive install instructions, multiple usage examples across quick start and examples directory, but lacks explicit discussion of tradeoffs or when not to use the bundle.",
+      "designReason": "This is the foundation library itself, not a zen-architect agent bundle—it lacks agent-specific context files, system prompts, tool definitions, or the ANALYZE/ARCHITECT/REVIEW mode specifications claimed in the description.",
+      "codeReason": "Solid foundation library with well-documented APIs, clear composition patterns, and comprehensive examples, but the zen-architect agent prompts themselves are not shown—only the library README is provided, leaving code quality assessment incomplete.",
+      "total": 15,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "modular-builder",
@@ -101,7 +173,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:modular-builder",
-    "rating": 4.6,
+    "rating": 4.5,
     "tags": [
       "implementation",
       "tdd",
@@ -109,10 +181,28 @@
       "specs"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Excellent implementation discipline. The hard requirement for complete specs before starting prevents scope creep. Pairs exceptionally well with zen-architect as a design-then-build workflow.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 4,
+      "design": 2,
+      "activity": 4,
+      "code": 3,
+      "trust": 4,
+      "docsReason": "Excellent documentation with clear purpose (bundle composition/utilities), explicit install command, comprehensive usage examples (quick start, utilities, full workflow), detailed API tables, multiple reference documents, AND discusses tradeoffs/philosophy (mechanism vs policy, when to use composition vs direct utilities).",
+      "designReason": "Recognizable Amplifier bundle with proper install command and extensive documentation, but this is a library/framework bundle rather than an agent bundle—the agent description claims TDD implementation execution, yet the actual content is foundational tooling with no agent context files, tool definitions, or prompt guidance for the stated modular-builder agent role.",
+      "codeReason": "Well-structured documentation with clear API organization, practical examples, and reference patterns; prompts are coherent but lack explicit edge-case handling guidance and deeper reasoning scaffolding for complex bundle composition scenarios.",
+      "total": 17,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "bug-hunter",
@@ -124,17 +214,35 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:bug-hunter",
-    "rating": 4.7,
+    "rating": 4,
     "tags": [
       "debugging",
       "testing",
       "root-cause"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Exceptional methodological rigor. Consistently identifies root causes rather than patching symptoms. The hypothesis-driven approach prevents the common AI mistake of trying multiple fixes simultaneously.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 1,
+      "design": 1,
+      "activity": 4,
+      "code": 2,
+      "trust": 4,
+      "docsReason": "README is for the foundation library itself, not the bug-hunter agent bundle—it provides no information about the agent's purpose, when/how to use it, debugging methodology, or examples of its output.",
+      "designReason": "This is the foundation library README, not a bug-hunter agent bundle; it lacks agent-specific structure, context files, tools, instructions, and debugging methodology documentation.",
+      "codeReason": "The bundle description is generic ('systematic debugging expert') with minimal prompt engineering—no structured methodology, edge case handling, or reasoning guidance visible in the actual implementation or examples provided.",
+      "total": 12,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "git-ops",
@@ -146,7 +254,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:git-ops",
-    "rating": 4.5,
+    "rating": 3.5,
     "tags": [
       "git",
       "github",
@@ -155,10 +263,28 @@
       "safety"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-18",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Reliable and safe. The safety protocol guardrails prevent destructive git operations. Commit message quality is notably better than ad-hoc generation. Good GitHub CLI integration for PR workflows.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 1,
+      "design": 1,
+      "activity": 4,
+      "code": 1,
+      "trust": 4,
+      "docsReason": "The README is for the foundation library itself, not the git-ops agent bundle; it lacks purpose/audience clarity for the git-ops agent, contains no installation or usage examples specific to git operations, and provides no tradeoffs or guidance on when to use this agent.",
+      "designReason": "This is a foundational library bundle (not a git-ops agent), lacks agent-specific context files, tool descriptions, and prompt design for safe git operations despite the description claiming it delegates git safely.",
+      "codeReason": "The bundle description claims 'Safe git and GitHub operations' but the provided README is entirely about foundation library infrastructure (bundle loading, composition, utilities) with no git-ops prompts, instructions, or quality commit message guidance visible.",
+      "total": 11,
+      "rating": 3.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "explorer",
@@ -170,7 +296,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:explorer",
-    "rating": 4.4,
+    "rating": 4,
     "tags": [
       "exploration",
       "codebase",
@@ -178,10 +304,28 @@
       "context"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-17",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Solid context-sink pattern. Effectively absorbs token costs of large codebase exploration. The requirement to provide full objective and scope in the instruction is appropriate given the clean-slate design.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 3,
+      "design": 1,
+      "activity": 4,
+      "code": 2,
+      "trust": 4,
+      "docsReason": "Clear purpose and audience (bundle authors and Python developers), comprehensive install instructions, and multiple usage examples throughout, but lacks explicit discussion of tradeoffs or when NOT to use the foundation bundle.",
+      "designReason": "This is a library bundle documentation, not a proper Amplifier agent bundle—it lacks agent-specific structure (tools definition, system prompt, context files for the explorer agent), clear install instructions for the stated 'foundation:explorer' agent, and no discernible agent/tool design.",
+      "codeReason": "The README documents a library system well but provides no agent prompts, reasoning guidance, or multi-file exploration logic—just installation instructions and API references; the 'explorer' agent type lacks any actual prompt design, edge-case handling, or context-preservation patterns.",
+      "total": 14,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "browser-tester",
@@ -193,7 +337,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-bundle-browser-tester",
     "install": "amplifier bundle add browser-tester",
-    "rating": 4.5,
+    "rating": 4,
     "tags": [
       "browser",
       "automation",
@@ -202,10 +346,28 @@
       "screenshots"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-16",
+    "lastUpdated": "2026-03-01",
     "llmVerdict": "Effective browser automation layer. The three-agent split (operator/researcher/visual) maps well to different automation use cases. Accessibility-tree approach via agent-browser is more robust than DOM selectors.",
-    "stars": 0,
-    "forks": 0
+    "stars": 1,
+    "forks": 0,
+    "quality": {
+      "docs": 3,
+      "design": 3,
+      "activity": 3,
+      "code": 2,
+      "trust": 2,
+      "docsReason": "Clear purpose and three distinct agents, complete install instructions with prerequisites, multiple usage examples (active bundle, include in bundle, behavior only), and recipe examples, but lacks discussion of tradeoffs or limitations.",
+      "designReason": "Proper Amplifier bundle structure with three well-defined agents, clear install instructions, good README documentation, and context-sink pattern implementation; however, actual context files and detailed agent/tool descriptions are truncated or not shown in the provided excerpt.",
+      "codeReason": "The bundle provides functional prompts and recipes for browser automation tasks, but lacks sophisticated prompt engineering—the agent descriptions are generic task statements rather than structured prompts with reasoning guidance, edge case handling, or clear quality standards.",
+      "total": 13,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 1,
+      "forks": 0,
+      "lastUpdated": "2026-03-01"
+    }
   },
   {
     "id": "python-dev",
@@ -217,7 +379,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-bundle-python-dev",
     "install": "amplifier bundle add python-dev",
-    "rating": 4.6,
+    "rating": 4.5,
     "tags": [
       "python",
       "linting",
@@ -226,10 +388,28 @@
       "ruff"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-21",
+    "lastUpdated": "2026-03-10",
     "llmVerdict": "Excellent Python tooling integration. The ruff+pyright combination catches a wide class of issues. The LSP code-intel sub-agent provides genuine semantic understanding beyond text search. Well-documented configuration.",
-    "stars": 0,
-    "forks": 0
+    "stars": 3,
+    "forks": 3,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "README excels with clear purpose (Python dev expert bundle), explicit audience (Amplifier users), comprehensive install instructions, multiple usage examples (YAML config, agent usage, hook behavior), detailed architecture explanation, and explicit discussion of design philosophy and when/why to use each component.",
+      "designReason": "Exemplary Amplifier bundle with proper structure (tool, hook, agent modules), rich context files (best practices guide), clear component descriptions, delegation philosophy (shared core checker), thoughtful prompt design, and comprehensive documentation demonstrating obvious care.",
+      "codeReason": "The bundle demonstrates solid architectural design with clear integration patterns (tool/hook/agent separation, LSP integration, shared core logic) and well-documented configuration options, but lacks visible prompt engineering examples and edge-case handling documentation for the agent's reasoning patterns.",
+      "total": 17,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 3,
+      "forks": 3,
+      "lastUpdated": "2026-03-10"
+    }
   },
   {
     "id": "lsp-code-navigator",
@@ -241,7 +421,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-bundle-lsp",
     "install": "amplifier bundle add lsp:code-navigator",
-    "rating": 4.5,
+    "rating": 4,
     "tags": [
       "lsp",
       "navigation",
@@ -250,10 +430,28 @@
       "semantic"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-14",
+    "lastUpdated": "2026-03-02",
     "llmVerdict": "Strong semantic code intelligence. The LSP approach provides genuine type-aware navigation that grep cannot match. The distinction between semantic and text results is clearly maintained in outputs.",
-    "stars": 0,
-    "forks": 0
+    "stars": 1,
+    "forks": 1,
+    "quality": {
+      "docs": 3,
+      "design": 3,
+      "activity": 4,
+      "code": 2,
+      "trust": 2,
+      "docsReason": "Clear purpose and audience, comprehensive install/usage instructions with examples and operation tables, but lacks discussion of tradeoffs, limitations, or when not to use the bundle.",
+      "designReason": "Proper Amplifier bundle structure with clear agent/tool organization, comprehensive LSP operation documentation, and thoughtful philosophy alignment; minor gap is lack of concrete context file examples or detailed prompt design specifics for the code-navigator agent itself.",
+      "codeReason": "The bundle documentation explains LSP operations and installation clearly, but lacks concrete prompting examples, agent reasoning patterns, and guidance for handling ambiguous code navigation scenarios or fallback strategies when LSP operations fail.",
+      "total": 14,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 1,
+      "forks": 1,
+      "lastUpdated": "2026-03-02"
+    }
   },
   {
     "id": "recipes",
@@ -265,7 +463,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-bundle-recipes",
     "install": "amplifier bundle add recipes",
-    "rating": 4.7,
+    "rating": 4.5,
     "tags": [
       "orchestration",
       "workflow",
@@ -273,10 +471,28 @@
       "yaml"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-23",
+    "lastUpdated": "2026-03-22",
     "llmVerdict": "Well-designed orchestration layer. The approval gate pattern is particularly valuable for human-in-loop workflows. Resumability after interruption is a genuine differentiator. Schema is clean and learnable.",
-    "stars": 0,
-    "forks": 0
+    "stars": 5,
+    "forks": 8,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "README clearly explains purpose (multi-step AI orchestration), audience (workflow creators), provides installation instructions, multiple usage examples (execute/create/session management), discusses advanced features and tradeoffs (approval gates, foreach loops, resumability), includes comprehensive documentation links, and explains when/how to use each component.",
+      "designReason": "Exemplary Amplifier bundle with proper structure (tool-recipes + multiple agents), rich context (11 examples, 4 documentation files, templates), clear installation and delegation patterns, sophisticated features (approval gates, foreach loops, resumability), and obvious care in declarative YAML-first design philosophy.",
+      "codeReason": "Solid prompts and design with clear agent delegation patterns (recipe-author, result-validator), comprehensive YAML schema guidance, and practical examples, but lacks explicit edge-case handling and reasoning scaffolding in the prompt specifications themselves.",
+      "total": 17,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 5,
+      "forks": 8,
+      "lastUpdated": "2026-03-22"
+    }
   },
   {
     "id": "session-analyst",
@@ -288,7 +504,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:session-analyst",
-    "rating": 4.6,
+    "rating": 4,
     "tags": [
       "debugging",
       "sessions",
@@ -296,10 +512,28 @@
       "transcripts"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Invaluable for session recovery. The REPAIR-over-REWIND default is the right choice — preserving history is almost always preferable. Safe 100k+ token line handling is a genuine necessity for events.jsonl files.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 1,
+      "design": 1,
+      "activity": 4,
+      "code": 2,
+      "trust": 4,
+      "docsReason": "README is a generic foundation library overview with no mention of the session-analyst agent's actual purpose (transcript surgery, orphaned tool calls, ordering violations), no usage examples specific to this bundle, and no guidance on when/how to use it for session debugging.",
+      "designReason": "This is the foundation library README, not a session-analyst agent bundle; it lacks agent-specific context files, prompt design, tool definitions, or the delegation/context-sink structure required for a proper Amplifier agent bundle.",
+      "codeReason": "README is informative documentation but contains no actual prompts, code examples for the session-analyst agent itself, or structured prompt engineering—it documents the foundation library generally rather than providing specialized prompts for analyzing/debugging Amplifier sessions.",
+      "total": 12,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "security-guardian",
@@ -311,7 +545,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-foundation",
     "install": "amplifier bundle add foundation:security-guardian",
-    "rating": 4.7,
+    "rating": 3.5,
     "tags": [
       "security",
       "owasp",
@@ -319,10 +553,28 @@
       "vulnerabilities"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-18",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Thorough and systematic security analysis. OWASP Top 10 coverage is comprehensive. The required-before-production gate enforces good practices. Dependency scanning integration catches a class of vulnerabilities often missed.",
-    "stars": 0,
-    "forks": 0
+    "stars": 13,
+    "forks": 14,
+    "quality": {
+      "docs": 1,
+      "design": 1,
+      "activity": 4,
+      "code": 1,
+      "trust": 4,
+      "docsReason": "README is for the foundation library itself, not the security-guardian agent bundle; it contains no purpose statement, usage examples, installation instructions, or tradeoffs specific to the security-guardian agent described in the bundle metadata.",
+      "designReason": "The provided content is the foundation library README, not the security-guardian bundle itself; no bundle.yaml, agent definition, context files, or security-specific prompts are present.",
+      "codeReason": "The README is foundational library documentation with no visible security review prompts, OWASP guidance, secret detection patterns, validation rules, or cryptographic review instructions—the bundle description promises security expertise but the content shows none of it.",
+      "total": 11,
+      "rating": 3.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 13,
+      "forks": 14,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "agent-daemon",
@@ -334,7 +586,7 @@
     "author": "kenotron-ms",
     "repo": "https://github.com/kenotron-ms/agent-daemon",
     "install": "amplifier bundle add git+https://github.com/kenotron-ms/agent-daemon@main",
-    "rating": 4.2,
+    "rating": 4,
     "tags": [
       "scheduler",
       "cron",
@@ -343,10 +595,28 @@
       "daemon"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-22",
+    "lastUpdated": "2026-03-29",
     "llmVerdict": "Practical local automation solution. The three executor types (shell/claude-code/amplifier) cover the main use cases. macOS tray app is a nice touch. File-watch triggers enable event-driven workflows.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 2,
+      "activity": 4,
+      "code": 2,
+      "trust": 0,
+      "docsReason": "README clearly documents purpose, audience (users wanting scheduled jobs), installation methods (one-liner, manual, source), quick start example, CLI reference, configuration details, watch trigger example, and implicitly discusses tradeoffs (notify vs poll modes for file watching).",
+      "designReason": "Recognizable Amplifier bundle with proper install command and functional structure, but context files are minimal—README describes the scheduler itself rather than bundle integration patterns, agent capabilities, or delegation philosophy specific to Amplifier workflows.",
+      "codeReason": "Prompts are functional but generic—the AI assistant feature is mentioned but no actual prompt templates, examples, or reasoning guidance are provided; the bundle is primarily a daemon/scheduler with standard CLI documentation rather than a collection of well-designed, reusable prompts.",
+      "total": 12,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-29"
+    }
   },
   {
     "id": "core-expert",
@@ -358,7 +628,7 @@
     "author": "microsoft",
     "repo": "https://github.com/microsoft/amplifier-core",
     "install": "amplifier bundle add core:core-expert",
-    "rating": 4.7,
+    "rating": 5,
     "tags": [
       "kernel",
       "internals",
@@ -367,10 +637,28 @@
       "modules"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-03-26",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
-    "stars": 0,
-    "forks": 0
+    "stars": 19,
+    "forks": 20,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 4,
+      "docsReason": "Clear purpose (ultra-thin kernel for modular AI agents), explicit audience (consumers and developers), comprehensive installation instructions (pip install and from-source), multiple usage examples (session creation, module development), and thorough discussion of design tradeoffs (mechanisms vs policies, stability guarantees, when to use kernel vs modules).",
+      "designReason": "Exemplary bundle design: proper Amplifier structure, comprehensive context documentation covering kernel architecture/contracts/protocols, clear agent purpose (kernel expert), extensive README with code examples, and thoughtful mechanism-vs-policy philosophy that guides users to appropriate kernel vs module decisions.",
+      "codeReason": "Well-structured documentation with clear architectural diagrams, stable contracts, and concrete API examples, but lacks explicit reasoning guidance for complex kernel vs. module decisions and edge case handling.",
+      "total": 19,
+      "rating": 5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 19,
+      "forks": 20,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "agent-memory",
@@ -382,7 +670,7 @@
     "author": "ramparte",
     "repo": "https://github.com/ramparte/amplifier-bundle-agent-memory",
     "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-agent-memory@main",
-    "rating": 4.4,
+    "rating": 4,
     "tags": [
       "memory",
       "vector",
@@ -394,7 +682,25 @@
     "lastUpdated": "2026-02-04",
     "llmVerdict": "Well-executed semantic memory layer. Vector similarity search is more effective than naive context injection. The cross-session persistence design is solid. High value for long-running projects where context drift is a real problem.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 3,
+      "design": 4,
+      "activity": 3,
+      "code": 2,
+      "trust": 2,
+      "docsReason": "Clear purpose, install instructions, and multiple usage examples present; however, lacks discussion of tradeoffs (e.g., OpenAI API dependency, embedding cost implications beyond raw numbers, when local-only memory might be preferable) and when not to use this bundle.",
+      "designReason": "Exemplary bundle with proper Amplifier structure, two well-defined tools (memory_store/memory_search), comprehensive configuration options, clear architecture diagram, detailed tool signatures with input/output specs, security considerations, performance metrics, and excellent documentation following context-sink delegation philosophy.",
+      "codeReason": "Documentation is clear and well-organized, but provides no example prompts, agent interaction patterns, or guidance on how to structure queries for optimal memory retrieval—treating it as a reference manual rather than a tool for prompt engineering.",
+      "total": 14,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-02-04"
+    }
   },
   {
     "id": "self-driving",
@@ -406,7 +712,7 @@
     "author": "ramparte",
     "repo": "https://github.com/ramparte/amplifier-bundle-self-driving",
     "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-self-driving@main",
-    "rating": 4.3,
+    "rating": 2,
     "tags": [
       "autonomous",
       "orchestration",
@@ -418,7 +724,25 @@
     "lastUpdated": "2026-02-11",
     "llmVerdict": "Innovative self-management approach. Adversarial review built into the loop catches a class of errors that single-agent runs miss. Crash recovery is practical and well-implemented. Pairs well with dev-machine for very long autonomous runs.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 0,
+      "design": 1,
+      "activity": 3,
+      "code": 0,
+      "trust": 0,
+      "docsReason": "README is essentially empty with only a title, providing no purpose explanation, installation instructions, usage examples, audience information, or tradeoffs.",
+      "designReason": "Bundle declares proper Amplifier structure and install command, but README is empty/truncated with no context files, agent descriptions, tool specifications, or prompt guidance visible.",
+      "codeReason": "README is truncated to empty content with no visible prompts, code examples, or implementation details to evaluate.",
+      "total": 4,
+      "rating": 2,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-02-11"
+    }
   },
   {
     "id": "workgraph",
@@ -430,7 +754,7 @@
     "author": "ramparte",
     "repo": "https://github.com/ramparte/amplifier-bundle-workgraph",
     "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-workgraph@main",
-    "rating": 4.2,
+    "rating": 4,
     "tags": [
       "scheduling",
       "dependencies",
@@ -439,10 +763,28 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-02-18",
+    "lastUpdated": "2026-02-17",
     "llmVerdict": "Solid dependency graph approach to task orchestration. Parallel-safe scheduling is the right abstraction for complex multi-agent workflows. The declarative dependency model is clear and prevents ordering bugs.",
-    "stars": 0,
-    "forks": 0
+    "stars": 1,
+    "forks": 2,
+    "quality": {
+      "docs": 3,
+      "design": 4,
+      "activity": 3,
+      "code": 3,
+      "trust": 0,
+      "docsReason": "Clear purpose and audience, comprehensive install instructions for both integration directions, multiple usage examples, and architectural overview; lacks explicit discussion of tradeoffs or when NOT to use workgraph.",
+      "designReason": "Exemplary Amplifier bundle with bidirectional integration architecture, comprehensive context files (workgraph-guide, executor protocol), specialized agent definitions, clear install/config patterns, well-documented executor protocol, and thoughtful delegation philosophy.",
+      "codeReason": "Solid integration bundle with clear architectural documentation, sensible defaults, and practical configuration examples, but prompts lack explicit reasoning guidance and edge-case handling (e.g., circular dependencies, timeout recovery, executor failure modes).",
+      "total": 13,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 1,
+      "forks": 2,
+      "lastUpdated": "2026-02-17"
+    }
   },
   {
     "id": "metacognition",
@@ -454,7 +796,7 @@
     "author": "ramparte",
     "repo": "https://github.com/ramparte/amplifier-bundle-metacognition",
     "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-metacognition@main",
-    "rating": 4.1,
+    "rating": 4.5,
     "tags": [
       "metacognition",
       "arc-agi",
@@ -463,10 +805,28 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-02-28",
+    "lastUpdated": "2026-01-06",
     "llmVerdict": "Genuinely experimental but well-grounded. The ARC-AGI inspiration translates into concrete self-monitoring behaviors. Strategy selection layer adds measurable improvement on complex tasks. Worth watching as the approach matures.",
-    "stars": 0,
-    "forks": 0
+    "stars": 1,
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 2,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "Excellent documentation with clear purpose, detailed installation instructions, comprehensive usage examples for different complexity scenarios, agent specifications, context files, and thoughtful discussion of when to use each approach based on task complexity.",
+      "designReason": "Exemplary Amplifier bundle with proper structure, four well-defined agents with clear responsibilities, three comprehensive context files (poetiq-patterns.md, complexity-signals.md, scoring-rubrics.md), rich delegation philosophy showing metacognitive orchestration, detailed agent specifications with input/output schemas, and demonstration of context-sink pattern through complexity assessment routing to specialized agents.",
+      "codeReason": "Solid prompts with clear agent responsibilities and example flows demonstrating metacognitive patterns, but lacks explicit reasoning guidance in the actual prompt structures and edge-case handling documentation.",
+      "total": 15,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 1,
+      "forks": 0,
+      "lastUpdated": "2026-01-06"
+    }
   },
   {
     "id": "tool-diagrams",
@@ -478,7 +838,7 @@
     "author": "ramparte",
     "repo": "https://github.com/ramparte/amplifier-module-tool-diagrams",
     "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-module-tool-diagrams@main",
-    "rating": 4.3,
+    "rating": 3.5,
     "tags": [
       "diagrams",
       "mermaid",
@@ -491,7 +851,25 @@
     "lastUpdated": "2026-01-21",
     "llmVerdict": "Practical diagram generation with good format coverage. Mermaid + D2 + Kroki covers the main use cases. Useful for documentation workflows and architecture visualization. The Kroki backend handles format diversity cleanly.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 3,
+      "design": 3,
+      "activity": 2,
+      "code": 3,
+      "trust": 0,
+      "docsReason": "Clear purpose and audience, installation instructions provided, multiple usage examples covering generate/validate/render operations, but lacks discussion of tradeoffs, limitations, or when not to use the tool.",
+      "designReason": "Proper Amplifier bundle structure with clear install command, meaningful README documenting features and API, good context through examples and templates, though lacking explicit agent/tool configuration files and context-sink philosophy documentation.",
+      "codeReason": "Well-structured module with clear purpose, good template support, and comprehensive documentation; however, the prompts lack explicit reasoning guidance for diagram design decisions and edge case handling (e.g., handling very large diagrams, validation error recovery strategies).",
+      "total": 11,
+      "rating": 3.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-01-21"
+    }
   },
   {
     "id": "agent-governance",
@@ -503,7 +881,7 @@
     "author": "marklicata",
     "repo": "https://github.com/marklicata/agent-governance-toolkit",
     "install": "amplifier bundle add git+https://github.com/marklicata/agent-governance-toolkit@main",
-    "rating": 4.5,
+    "rating": 5,
     "tags": [
       "governance",
       "security",
@@ -513,10 +891,28 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-27",
     "llmVerdict": "Comprehensive governance coverage. OWASP Agentic Top 10 alignment is timely and thorough. Zero-trust identity model is the right approach for agent-to-agent interactions. High value for enterprise or production deployments.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 3,
+      "code": 3,
+      "trust": 4,
+      "docsReason": "README clearly articulates purpose (runtime governance for AI agents covering OWASP Agentic Top 10), identifies audience (developers building agents), provides installation instructions for three languages (Python/pip, TypeScript/npm, .NET/NuGet), includes multiple usage examples (Python, TypeScript, .NET policy enforcement), discusses tradeoffs (community preview vs. official releases), and extensively documents when/how to use (tutorials, framework integrations, compliance mappings).",
+      "designReason": "Exemplary Amplifier bundle with comprehensive structure: proper install command, rich multi-language SDKs (Python/TypeScript/.NET), extensive context files (tutorials, OWASP compliance, architecture docs), clear capability descriptions, deterministic policy enforcement philosophy, 6,100+ tests, and meticulous prompt design across all frameworks.",
+      "codeReason": "Prompts are coherent and purposeful with solid structure (policy engine, identity, sandboxing examples), but lack explicit reasoning guidance, edge-case handling, and sophisticated prompt engineering patterns beyond straightforward code samples.",
+      "total": 18,
+      "rating": 5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-27"
+    }
   },
   {
     "id": "bundlewizard",
@@ -528,7 +924,7 @@
     "author": "michaeljabbour",
     "repo": "https://github.com/michaeljabbour/amplifier-bundle-bundlewizard",
     "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-bundlewizard@main",
-    "rating": 4.4,
+    "rating": 4.5,
     "tags": [
       "scaffolding",
       "authoring",
@@ -540,7 +936,25 @@
     "lastUpdated": "2026-03-27",
     "llmVerdict": "Excellent bundle authoring tool. The interview-then-generate approach produces better starting points than blank templates. Schema validation integration catches errors early. Complements foundation-expert well as a practical authoring companion.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 0,
+      "docsReason": "README clearly explains purpose (guided scaffold for bundle generation), target audience (Amplifier users), provides detailed install instructions, multiple comprehensive usage examples (create new, improve existing, upgrade, yolo mode), documents modes and tradeoffs (interactive vs autonomous tracks, when to use each), and discusses quality gates and limitations.",
+      "designReason": "Exemplary Amplifier bundle with sophisticated multi-agent architecture, comprehensive recipe system for guided workflows, clear delegation patterns through specialized agents (explorer, auditor, generator, critic, evaluator, packager), rich context through multiple markdown documentation layers, adversarial convergence validation loops, and obvious expert care in prompt design and quality gates.",
+      "codeReason": "Well-structured prompts with clear phase guidance, adversarial validation loops, and comprehensive recipes; minor weakness is limited explicit edge-case handling documentation and some prompt patterns could be more prescriptive about failure modes.",
+      "total": 15,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-27"
+    }
   },
   {
     "id": "loop-safety",
@@ -552,7 +966,7 @@
     "author": "michaeljabbour",
     "repo": "https://github.com/michaeljabbour/amplifier-bundle-loop-safety",
     "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-loop-safety@main",
-    "rating": 4.3,
+    "rating": 4,
     "tags": [
       "safety",
       "loop-detection",
@@ -561,10 +975,28 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-02-05",
+    "lastUpdated": "2026-02-06",
     "llmVerdict": "Addresses a real failure mode. Pattern detection for repetitive tool calls is more sophisticated than simple iteration limits. The human-intervention surface is well-designed. Essential for any long-running autonomous workflow.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 3,
+      "code": 3,
+      "trust": 0,
+      "docsReason": "Exemplary documentation with clear purpose (loop prevention), target audience (Amplifier users), comprehensive install instructions, multiple usage examples across different configuration profiles, detailed component reference, and explicit discussion of tradeoffs via philosophy section explaining when different configurations should be used.",
+      "designReason": "Exemplary bundle design with dual safety mechanisms (orchestrator + hook), clear modular architecture, comprehensive configuration profiles (conservative/development/monitoring), detailed component documentation, real-world problem motivation, event system integration, and thoughtful philosophy on mechanism vs. policy.",
+      "codeReason": "Solid bundle with well-structured documentation, clear configuration examples across three profiles, and thoughtful dual-mechanism design (orchestrator limits + pattern detection), but lacks detailed implementation examples, edge case documentation, and explicit handling guidance for complex scenarios like context compaction interactions.",
+      "total": 14,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-02-06"
+    }
   },
   {
     "id": "bundle-sage",
@@ -576,7 +1008,7 @@
     "author": "michaeljabbour",
     "repo": "https://github.com/michaeljabbour/amplifier-bundle-sage",
     "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-sage@main",
-    "rating": 4.1,
+    "rating": 4,
     "tags": [
       "strategy",
       "gemini",
@@ -588,7 +1020,25 @@
     "lastUpdated": "2026-01-21",
     "llmVerdict": "Interesting architectural pattern — separating strategic counsel from tactical execution. Gemini integration for high-level guidance is well-motivated. Most effective on projects spanning multiple sessions where drift is a genuine risk.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 3,
+      "activity": 2,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "README clearly establishes purpose (strategic advisor for autonomous work), audience (Amplifier users), installation instructions, extensive usage examples across 12 patterns, and explicitly discusses tradeoffs, constraints, and when to consult Sage.",
+      "designReason": "Proper Amplifier bundle structure with clear install command, meaningful context files (Core Formula, autonomous patterns, tool usage), well-defined sage tool and sage-consultant agent with delegation philosophy, but lacks explicit context file examples and could benefit from richer prompt engineering documentation.",
+      "codeReason": "Solid prompts with clear outcome-focused patterns and the Core Formula framework, but lacks explicit reasoning guidance in actual tool implementations and has minimal edge-case handling documentation.",
+      "total": 14,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-01-21"
+    }
   },
   {
     "id": "cicd-bundle",
@@ -600,7 +1050,7 @@
     "author": "michaeljabbour",
     "repo": "https://github.com/michaeljabbour/amplifier-bundle-cicd",
     "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-cicd@main",
-    "rating": 4.4,
+    "rating": 4,
     "tags": [
       "ci",
       "cd",
@@ -613,7 +1063,25 @@
     "lastUpdated": "2026-03-26",
     "llmVerdict": "Strong CI/CD coverage. The audit capability is particularly valuable — identifying gaps in existing pipelines is harder than generating new ones. Multi-system support is practical for mixed environments.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 3,
+      "design": 3,
+      "activity": 3,
+      "code": 3,
+      "trust": 0,
+      "docsReason": "Clear purpose, installation instructions, and multiple usage examples are present; however, lacks discussion of tradeoffs, limitations, or when not to use the bundle.",
+      "designReason": "Proper Amplifier bundle structure with clear install, meaningful context organization (schemas, platforms, stages), well-documented philosophy and entry points, but context files themselves are not shown—only directory structure and README—making it impossible to verify depth of actual prompt design and agent guidance.",
+      "codeReason": "Well-structured bundle with clear separation of concerns (APR abstraction, platform-specific rendering), documented entry points, and thoughtful architecture, but prompts lack explicit reasoning guidance, edge-case handling, and validation examples that would elevate to expert-level design.",
+      "total": 12,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-26"
+    }
   },
   {
     "id": "parallax-discovery",
@@ -637,7 +1105,25 @@
     "lastUpdated": "2026-03-13",
     "llmVerdict": "Outstanding methodology for deep codebase understanding. The multi-angle approach catches blind spots that single-agent exploration consistently misses. Synthesis quality is high. Particularly valuable for onboarding to unfamiliar large codebases.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 3,
+      "code": 4,
+      "trust": 0,
+      "docsReason": "Exceptional documentation with clear purpose, installation instructions, detailed usage examples across multiple modes and recipes, comprehensive methodology explanation, agent/role descriptions, AND explicit guidance on when NOT to use (quick answers, narrow questions, low-cost errors).",
+      "designReason": "Exemplary bundle structure with five specialized agents, clear delegation philosophy via triplicate teams and wave progression, comprehensive context files (methodology, artifact strategy, wave protocol), well-defined modes and recipes, and meticulous prompt design emphasizing execution-based evidence and discrepancy investigation.",
+      "codeReason": "Expertly structured methodology with five distinct agent personas, clear wave-based progression, explicit evidence standards (file:line requirements), sophisticated recipes with approval gates, and comprehensive handling of edge cases like discrepancy investigation and adversarial testing.",
+      "total": 15,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-13"
+    }
   },
   {
     "id": "unified-llm",
@@ -649,7 +1135,7 @@
     "author": "bkrabach",
     "repo": "https://github.com/bkrabach/amplifier-bundle-unified-llm",
     "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-bundle-unified-llm@main",
-    "rating": 4.4,
+    "rating": 4,
     "tags": [
       "rust",
       "grpc",
@@ -662,7 +1148,25 @@
     "lastUpdated": "2026-03-23",
     "llmVerdict": "Impressive engineering. The Rust + gRPC sidecar pattern cleanly separates provider logic from Python overhead. Multi-provider support in a single binary is operationally clean. Latency improvements are measurable. Reference implementation quality.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 3,
+      "design": 3,
+      "activity": 3,
+      "code": 2,
+      "trust": 2,
+      "docsReason": "Clear purpose and audience (Amplifier users), install instructions provided, architecture and usage examples included with variant configurations, but lacks discussion of tradeoffs, performance benchmarks, or when to use alternatives.",
+      "designReason": "Proper Amplifier bundle structure with clear provider variants, well-documented gRPC sidecar architecture, and meaningful context organization; minor gaps in specific agent/tool descriptions and example context file content.",
+      "codeReason": "The bundle provides functional provider variants and clear architectural documentation, but lacks substantive prompt engineering guidance, concrete usage examples with reasoning patterns, edge case handling documentation, or implementation details that demonstrate design depth beyond configuration.",
+      "total": 13,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-23"
+    }
   },
   {
     "id": "hive-slack",
@@ -674,7 +1178,7 @@
     "author": "bkrabach",
     "repo": "https://github.com/bkrabach/amplifier-hive-slack",
     "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-hive-slack@main",
-    "rating": 4.2,
+    "rating": 4,
     "tags": [
       "slack",
       "collaboration",
@@ -687,7 +1191,25 @@
     "lastUpdated": "2026-02-26",
     "llmVerdict": "Novel human-agent collaboration pattern via Slack. Channel-based routing to specialized agents is intuitive for teams. Coordination across long-running work is well-handled. Slack as a coordination surface reduces the need for custom UIs.",
     "stars": 0,
-    "forks": 0
+    "forks": 1,
+    "quality": {
+      "docs": 4,
+      "design": 3,
+      "activity": 3,
+      "code": 3,
+      "trust": 0,
+      "docsReason": "README clearly explains purpose (AI assistant in Slack), provides detailed 5-minute setup with prerequisites, multiple usage examples (file sharing, threading, service management), discusses tradeoffs (90-day history, free tier limits), and explains when to use different configurations (single vs. multiple instances, channel topics).",
+      "designReason": "Proper Amplifier bundle structure with clear install instructions, meaningful configuration files (YAML-based with environment variables), and comprehensive documentation of agent routing and delegation through Slack channels; minor gaps in explicit context file examples and tool descriptions within the bundle itself.",
+      "codeReason": "Solid implementation with well-structured setup instructions, clear architectural boundaries, and thoughtful design patterns (e.g., SessionManager interface for future extensibility), but lacks explicit reasoning guidance in prompts and edge-case handling documentation for mid-execution message injection edge cases.",
+      "total": 13,
+      "rating": 4,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 1,
+      "lastUpdated": "2026-02-26"
+    }
   },
   {
     "id": "dotnet-ops",
@@ -699,7 +1221,7 @@
     "author": "colombod",
     "repo": "https://github.com/colombod/amplifier-bundle-dotnet-ops",
     "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-dotnet-ops@main",
-    "rating": 4.4,
+    "rating": 4.5,
     "tags": [
       "dotnet",
       "csharp",
@@ -712,7 +1234,25 @@
     "lastUpdated": "2026-03-07",
     "llmVerdict": "Comprehensive .NET coverage. Build, test, package, and scaffold operations all present. Cross-platform behavior is correct. NuGet integration is clean. Fills a real gap — .NET is underserved in the Amplifier ecosystem relative to Python.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 3,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "Clear purpose and audience (.NET developers), comprehensive installation instructions (three methods), extensive usage examples across all capabilities, cross-platform tradeoffs documented, and safety considerations explained.",
+      "designReason": "Exemplary Amplifier bundle with proper structure (agents/, behaviors/, context/), clear cross-platform delegation philosophy, rich README with comprehensive context tables, explicit safety protocols, and demonstrates careful prompt design for platform-aware .NET operations.",
+      "codeReason": "Solid prompts with clear cross-platform awareness and safety constraints, but lacks explicit reasoning guidance in agent design and doesn't demonstrate edge-case handling patterns beyond basic safety checks.",
+      "total": 16,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-07"
+    }
   },
   {
     "id": "bundle-perplexity",
@@ -724,7 +1264,7 @@
     "author": "colombod",
     "repo": "https://github.com/colombod/amplifier-bundle-perplexity",
     "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-perplexity@main",
-    "rating": 4.3,
+    "rating": 4.5,
     "tags": [
       "research",
       "perplexity",
@@ -737,6 +1277,24 @@
     "lastUpdated": "2026-03-04",
     "llmVerdict": "Strong research augmentation. Perplexity Agentic API provides better web research than raw browsing for many use cases. Source attribution is reliable. Good complement to the specialists bundle for research-heavy workflows.",
     "stars": 0,
-    "forks": 0
+    "forks": 0,
+    "quality": {
+      "docs": 4,
+      "design": 4,
+      "activity": 4,
+      "code": 3,
+      "trust": 2,
+      "docsReason": "README provides clear purpose, comprehensive installation options, multiple usage examples (direct tool use, agent delegation, chaining), cost awareness guidance with when/when-not-to-use tradeoffs, detailed component documentation, and practical recipes.",
+      "designReason": "Exemplary Amplifier bundle with proper structure, rich context files demonstrating domain-specific capabilities (categorized references, deep dive suggestions), clear agent/tool descriptions, intelligent delegation patterns, and meticulous prompt design throughout.",
+      "codeReason": "Well-structured prompts with clear domain-specific query enhancement and categorized reference handling, though the implementation focuses more on bundling existing APIs rather than novel prompt engineering patterns or edge case handling.",
+      "total": 17,
+      "rating": 4.5,
+      "scoreVersion": "1.0",
+      "scoredAt": "2026-03-30",
+      "llmScored": true,
+      "stars": 0,
+      "forks": 0,
+      "lastUpdated": "2026-03-04"
+    }
   }
 ]
