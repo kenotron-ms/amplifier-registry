@@ -779,6 +779,16 @@ footer {
 /* ── COUNTER ANIMATION ────────────────────────────────────── */
 .stat-number { font-variant-numeric: tabular-nums; }
 
+/* ── SEMANTIC SEARCH BADGE ───────────────────────────────────── */
+.semantic-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 1px;
+  font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid var(--sienna-border); color: var(--sienna);
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
 /* ── COPY SUCCESS ─────────────────────────────────────────── */
 .copy-done { color: var(--sage) !important; }
 </style>
@@ -824,6 +834,7 @@ footer {
       <i data-lucide="x" style="width:13px;height:13px;"></i>
     </button>
   </div>
+  <div id="searchHint" style="font-size:10px;letter-spacing:0.08em;color:var(--cream-muted);text-align:center;min-height:16px;margin-top:8px;transition:opacity 0.3s;"></div>
 
   <div class="stats-bar">
     <div class="stat-item">
@@ -1238,7 +1249,9 @@ function renderCards() {
   const list = filtered();
   const grid = document.getElementById('bundleGrid');
   const count = document.getElementById('resultsCount');
-  count.innerHTML = `Showing <strong>${list.length}</strong> bundle${list.length!==1?'s':''}`;
+  const semBadge = state.q && state._semanticOrder?.length
+    ? ' &ensp;<span class="semantic-badge">⚡ Semantic</span>' : '';
+  count.innerHTML = `Showing <strong>${list.length}</strong> bundle${list.length!==1?'s':''}${semBadge}`;
 
   if (!list.length) {
     grid.innerHTML = `<div class="empty-state"><p>No bundles match your search.</p></div>`;
@@ -1313,11 +1326,26 @@ function setSort(v) { state.sort = v; renderCards(); }
 function handleSearch(v) {
   state.q = v.trim();
   document.getElementById('searchClear').style.display = v ? 'flex' : 'none';
-  renderCards();
+
+  // Kick off model load on first keystroke (non-blocking)
+  if (v && !semanticReady && !semanticLoading) loadSemanticSearch();
+
+  if (v && semanticReady) {
+    // Re-rank results semantically, then render
+    maybeSemantic(v).then(orderedIds => {
+      if (!orderedIds) { renderCards(); return; }
+      state._semanticOrder = orderedIds;
+      renderCards();
+    });
+  } else {
+    state._semanticOrder = null;
+    renderCards();
+  }
 }
 function clearSearch() {
   const el = document.getElementById('heroSearch');
   el.value = ''; state.q = '';
+  state._semanticOrder = null;
   document.getElementById('searchClear').style.display = 'none';
   renderCards();
 }
@@ -1344,8 +1372,6 @@ function openPanel(id) {
     ${b.featured ? '<span class="featured-badge">Featured</span>' :
       b.community ? '<span class="community-badge">Community</span>' : ''}`;
   document.getElementById('panelDesc').textContent = b.description||'';
-  document.getElementById('panelStars').textContent = fmt(b.stars||0);
-
   // Render score breakdown
   const q = b.quality;
   const sbEl = document.getElementById('scoreBreakdown');
@@ -1380,8 +1406,6 @@ function openPanel(id) {
   } else if (sbEl) {
     sbEl.innerHTML = '<p style="font-size:11px;color:var(--cream-muted);">Not yet scored.</p>';
   }
-  document.getElementById('panelRating').textContent = `${(b.rating||0).toFixed(1)} / 5`;
-  document.getElementById('panelUpdated').textContent = (b.lastUpdated||'').replace(/^2026-/,'');
   document.getElementById('panelVerdict').textContent = b.llmVerdict||'';
   document.getElementById('panelInstall').textContent = b.install||'';
   document.getElementById('panelRepo').href = b.repo||'#';
@@ -1405,8 +1429,6 @@ function closePanel() {
 
 function markUsing() {
   const b = state.bundle; if (!b) return;
-  document.getElementById('panelStars').textContent = fmt(b.stars||0);
-
   // Render score breakdown
   const q = b.quality;
   const sbEl = document.getElementById('scoreBreakdown');
@@ -1541,6 +1563,86 @@ async function init() {
 
 
 document.addEventListener('DOMContentLoaded', init);
+
+// ── SEMANTIC SEARCH (Transformers.js) ─────────────────────────────
+let embedder = null;
+let bundleVecs = null;   // { id → Float32Array }
+let semanticReady = false;
+let semanticLoading = false;
+
+function hint(msg, fade = false) {
+  const el = document.getElementById('searchHint');
+  if (!el) return;
+  el.textContent = msg;
+  el.style.opacity = '1';
+  if (fade) setTimeout(() => { el.style.opacity = '0'; el.textContent = ''; }, 2000);
+}
+
+async function loadSemanticSearch() {
+  if (semanticReady || semanticLoading) return;
+  semanticLoading = true;
+  hint('Loading semantic search…');
+
+  try {
+    // Dynamic import — only fetches ~23 MB on first use, cached thereafter
+    const { pipeline, env } = await import(
+      'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.1'
+    );
+    env.allowLocalModels = false;
+
+    embedder = await pipeline(
+      'feature-extraction',
+      'Xenova/all-MiniLM-L6-v2',
+      { dtype: 'q8' }   // 8-bit quantised — ~6 MB
+    );
+
+    hint('Indexing bundles…');
+
+    // Pre-compute embedding for each bundle's text
+    bundleVecs = {};
+    for (const b of BUNDLES) {
+      const text = [b.name, b.namespace, b.description || '', (b.tags || []).join(' ')].join(' ');
+      const out  = await embedder(text, { pooling: 'mean', normalize: true });
+      bundleVecs[b.id] = out.data; // Float32Array, 384 dims
+    }
+
+    semanticReady = true;
+    semanticLoading = false;
+    hint('⚡ Semantic search ready', true);
+
+    // Re-run current query now that semantic is ready
+    if (state.q) handleSearch(state.q);
+
+  } catch (err) {
+    console.warn('Semantic search unavailable:', err.message);
+    semanticLoading = false;
+    hint('', true);
+  }
+}
+
+function cosine(a, b) {
+  let dot = 0, na = 0, nb = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    na  += a[i] * a[i];
+    nb  += b[i] * b[i];
+  }
+  return dot / (Math.sqrt(na) * Math.sqrt(nb) || 1);
+}
+
+// Called by the existing handleSearch — intercepts if semantic is ready
+async function maybeSemantic(q) {
+  if (!q || !semanticReady || !embedder) return null;
+  const out  = await embedder(q, { pooling: 'mean', normalize: true });
+  const qVec = out.data;
+
+  return Object.entries(bundleVecs)
+    .map(([id, vec]) => ({ id, score: cosine(qVec, vec) }))
+    .sort((a, b) => b.score - a.score)
+    .filter(x => x.score > 0.2)
+    .map(x => x.id);
+}
+
 // ── RUBRIC ──────────────────────────────────────────────────────
 function openRubric() {
   document.getElementById('rubricOverlay').classList.add('open');
