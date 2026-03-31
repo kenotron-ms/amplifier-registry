@@ -17,10 +17,10 @@
       "guidance"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-28",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
     "stars": 3023,
-    "forks": 251,
+    "forks": 252,
     "quality": {
       "docs": 3,
       "design": 3,
@@ -58,7 +58,7 @@
       "authoring"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Exceptional precision on bundle YAML structure and composition patterns. Significantly reduces authoring errors. Highly recommended as a required checkpoint before any bundle work.",
     "stars": 13,
     "forks": 14,
@@ -99,10 +99,10 @@
       "quality"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-14",
+    "lastUpdated": "2026-03-31",
     "llmVerdict": "Excellent discipline enforcement. The TDD-first approach and verification gates prevent a large class of agent mistakes. The brainstorm-to-execute flow is well-designed and transfers well across project types.",
     "stars": 3,
-    "forks": 3,
+    "forks": 4,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -140,7 +140,7 @@
       "review"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Strong architectural judgment with clear philosophy application. The three-mode design (analyze/architect/review) maps well to real development workflows. Ruthless simplicity principle is consistently enforced.",
     "stars": 13,
     "forks": 14,
@@ -181,7 +181,7 @@
       "specs"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Excellent implementation discipline. The hard requirement for complete specs before starting prevents scope creep. Pairs exceptionally well with zen-architect as a design-then-build workflow.",
     "stars": 13,
     "forks": 14,
@@ -221,7 +221,7 @@
       "root-cause"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Exceptional methodological rigor. Consistently identifies root causes rather than patching symptoms. The hypothesis-driven approach prevents the common AI mistake of trying multiple fixes simultaneously.",
     "stars": 13,
     "forks": 14,
@@ -263,7 +263,7 @@
       "safety"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Reliable and safe. The safety protocol guardrails prevent destructive git operations. Commit message quality is notably better than ad-hoc generation. Good GitHub CLI integration for PR workflows.",
     "stars": 13,
     "forks": 14,
@@ -304,7 +304,7 @@
       "context"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Solid context-sink pattern. Effectively absorbs token costs of large codebase exploration. The requirement to provide full objective and scope in the instruction is appropriate given the clean-slate design.",
     "stars": 13,
     "forks": 14,
@@ -346,10 +346,10 @@
       "screenshots"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-01",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Effective browser automation layer. The three-agent split (operator/researcher/visual) maps well to different automation use cases. Accessibility-tree approach via agent-browser is more robust than DOM selectors.",
     "stars": 1,
-    "forks": 0,
+    "forks": 2,
     "quality": {
       "docs": 3,
       "design": 3,
@@ -391,7 +391,7 @@
     "lastUpdated": "2026-03-10",
     "llmVerdict": "Excellent Python tooling integration. The ruff+pyright combination catches a wide class of issues. The LSP code-intel sub-agent provides genuine semantic understanding beyond text search. Well-documented configuration.",
     "stars": 3,
-    "forks": 3,
+    "forks": 4,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -471,10 +471,10 @@
       "yaml"
     ],
     "featured": true,
-    "lastUpdated": "2026-03-22",
+    "lastUpdated": "2026-03-31",
     "llmVerdict": "Well-designed orchestration layer. The approval gate pattern is particularly valuable for human-in-loop workflows. Resumability after interruption is a genuine differentiator. Schema is clean and learnable.",
     "stars": 5,
-    "forks": 8,
+    "forks": 9,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -512,7 +512,7 @@
       "transcripts"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Invaluable for session recovery. The REPAIR-over-REWIND default is the right choice — preserving history is almost always preferable. Safe 100k+ token line handling is a genuine necessity for events.jsonl files.",
     "stars": 13,
     "forks": 14,
@@ -553,7 +553,7 @@
       "vulnerabilities"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Thorough and systematic security analysis. OWASP Top 10 coverage is comprehensive. The required-before-production gate enforces good practices. Dependency scanning integration catches a class of vulnerabilities often missed.",
     "stars": 13,
     "forks": 14,
@@ -595,7 +595,7 @@
       "daemon"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-29",
+    "lastUpdated": "2026-03-31",
     "llmVerdict": "Practical local automation solution. The three executor types (shell/claude-code/amplifier) cover the main use cases. macOS tray app is a nice touch. File-watch triggers enable event-driven workflows.",
     "stars": 0,
     "forks": 0,
@@ -637,7 +637,7 @@
       "modules"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-26",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
     "stars": 19,
     "forks": 20,
