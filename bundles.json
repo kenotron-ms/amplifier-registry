@@ -38,7 +38,27 @@
       "stars": 3023,
       "forks": 251,
       "lastUpdated": "2026-03-28"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "amplifier-dev-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Development hygiene and best practices for Amplifier CLI users"
+      },
+      {
+        "file": "behaviors/amplifier-expert.yaml",
+        "name": "amplifier-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier@main#subdirectory=behaviors/amplifier-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Authoritative consultant for the complete Amplifier ecosystem",
+        "agents": [
+          "amplifier:amplifier-expert"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "foundation-expert",
@@ -79,7 +99,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "superpowers",
@@ -120,7 +269,31 @@
       "stars": 3,
       "forks": 3,
       "lastUpdated": "2026-03-14"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/superpowers-methodology.yaml",
+        "name": "superpowers-methodology-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-superpowers@main#subdirectory=behaviors/superpowers-methodology.yaml --app",
+        "version": "1.0.0",
+        "description": "TDD and subagent-driven development methodology with specialized agents, interactive modes, and a skills library.",
+        "tools": [
+          "tool-mode",
+          "tool-skills"
+        ],
+        "hooks": [
+          "hooks-mode"
+        ],
+        "agents": [
+          "superpowers:implementer",
+          "superpowers:spec-reviewer",
+          "superpowers:code-quality-reviewer",
+          "superpowers:brainstormer",
+          "superpowers:plan-writer"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "zen-architect",
@@ -161,7 +334,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "modular-builder",
@@ -202,7 +504,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bug-hunter",
@@ -242,7 +673,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "git-ops",
@@ -284,7 +844,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "explorer",
@@ -325,7 +1014,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "browser-tester",
@@ -367,7 +1185,22 @@
       "stars": 1,
       "forks": 0,
       "lastUpdated": "2026-03-01"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/browser-tester.yaml",
+        "name": "browser-testing-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-browser-tester@main#subdirectory=behaviors/browser-tester.yaml --app",
+        "version": "1.0.0",
+        "description": "Browser automation behavior - adds browser agents for web interaction, research, and visual documentation. Can be composed into any bundle.",
+        "agents": [
+          "browser-tester:browser-operator",
+          "browser-tester:browser-researcher",
+          "browser-tester:visual-documenter"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "python-dev",
@@ -409,7 +1242,45 @@
       "stars": 3,
       "forks": 3,
       "lastUpdated": "2026-03-10"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/python-dev.yaml",
+        "name": "python-dev-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-dev.yaml --app",
+        "version": "0.1.0",
+        "description": "Comprehensive Python development - LSP intelligence + quality tools"
+      },
+      {
+        "file": "behaviors/python-lsp.yaml",
+        "name": "behavior-python-lsp",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-lsp.yaml --app",
+        "version": "0.1.0",
+        "tools": [
+          "tool-lsp"
+        ],
+        "agents": [
+          "python-dev:code-intel"
+        ]
+      },
+      {
+        "file": "behaviors/python-quality.yaml",
+        "name": "python-quality-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-quality.yaml --app",
+        "version": "0.1.0",
+        "description": "Python code quality tools - ruff, pyright, stub detection, and expert agent",
+        "tools": [
+          "tool-python-check"
+        ],
+        "hooks": [
+          "hooks-python-check"
+        ],
+        "agents": [
+          "python-dev:python-dev"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "lsp-code-navigator",
@@ -451,7 +1322,21 @@
       "stars": 1,
       "forks": 1,
       "lastUpdated": "2026-03-02"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/lsp-core.yaml",
+        "name": "behavior-lsp-core",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-lsp@main#subdirectory=behaviors/lsp-core.yaml --app",
+        "tools": [
+          "tool-lsp"
+        ],
+        "agents": [
+          "lsp:code-navigator"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "recipes",
@@ -492,7 +1377,24 @@
       "stars": 5,
       "forks": 8,
       "lastUpdated": "2026-03-22"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/recipes.yaml",
+        "name": "recipes-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-recipes@main#subdirectory=behaviors/recipes.yaml --app",
+        "version": "1.0.0",
+        "description": "Multi-step AI agent orchestration via declarative YAML recipes",
+        "tools": [
+          "tool-recipes"
+        ],
+        "agents": [
+          "recipes:recipe-author",
+          "recipes:result-validator"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "session-analyst",
@@ -533,7 +1435,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "security-guardian",
@@ -574,7 +1605,136 @@
       "stars": 13,
       "forks": 14,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/agents.yaml",
+        "name": "behavior-agents",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/agents.yaml --app",
+        "version": "2.0.0",
+        "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
+        "tools": [
+          "tool-delegate"
+        ]
+      },
+      {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
+        "file": "behaviors/foundation-expert.yaml",
+        "name": "foundation-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/foundation-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for bundle composition, patterns, and building AI applications",
+        "agents": [
+          "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
+        ]
+      },
+      {
+        "file": "behaviors/progress-monitor.yaml",
+        "name": "behavior-progress-monitor",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/progress-monitor.yaml --app",
+        "version": "1.0.0",
+        "description": "Detects analysis paralysis patterns and injects corrective prompts",
+        "hooks": [
+          "hooks-progress-monitor"
+        ]
+      },
+      {
+        "file": "behaviors/redaction.yaml",
+        "name": "behavior-redaction",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/redaction.yaml --app",
+        "version": "1.0.0",
+        "description": "Redact secrets and PII from logs",
+        "hooks": [
+          "hooks-redaction"
+        ]
+      },
+      {
+        "file": "behaviors/sessions.yaml",
+        "name": "behavior-sessions",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/sessions.yaml --app",
+        "version": "1.0.0",
+        "description": "Session management - naming, logging, analysis, and debugging",
+        "hooks": [
+          "hooks-session-naming"
+        ],
+        "agents": [
+          "foundation:session-analyst"
+        ]
+      },
+      {
+        "file": "behaviors/shadow-amplifier.yaml",
+        "name": "behavior-shadow-amplifier",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
+        "version": "1.0.0",
+        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
+        "agents": [
+          "foundation:amplifier-smoke-test"
+        ]
+      },
+      {
+        "file": "behaviors/status-context.yaml",
+        "name": "behavior-status-context",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
+        "version": "1.0.0",
+        "description": "Inject environment and git status into agent context",
+        "hooks": [
+          "hooks-status-context"
+        ]
+      },
+      {
+        "file": "behaviors/streaming-ui.yaml",
+        "name": "behavior-streaming-ui",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
+        "version": "1.0.0",
+        "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
+        "hooks": [
+          "hooks-streaming-ui"
+        ]
+      },
+      {
+        "file": "behaviors/tasks.yaml",
+        "name": "behavior-tasks",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
+        "version": "1.0.0",
+        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
+        "tools": [
+          "tool-task"
+        ]
+      },
+      {
+        "file": "behaviors/todo-reminder.yaml",
+        "name": "behavior-todo-reminder",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
+        "version": "1.1.0",
+        "description": "Todo tracking with automatic context reminders and visual progress display",
+        "tools": [
+          "tool-todo"
+        ],
+        "hooks": [
+          "hooks-todo-reminder"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "agent-daemon",
@@ -616,7 +1776,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-29"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "core-expert",
@@ -658,7 +1819,20 @@
       "stars": 19,
       "forks": 20,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/core-expert.yaml",
+        "name": "core-expert-behavior",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-core@main#subdirectory=behaviors/core-expert.yaml --app",
+        "version": "1.0.0",
+        "description": "Expert consultant for Amplifier kernel internals",
+        "agents": [
+          "core:core-expert"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "agent-memory",
@@ -700,7 +1874,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-02-04"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "self-driving",
@@ -742,7 +1917,30 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-02-11"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/self-driving.yaml",
+        "name": "self-driving-behavior",
+        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-self-driving@main#subdirectory=behaviors/self-driving.yaml --app",
+        "version": "0.1.0",
+        "description": "Self-driving orchestration capability - task decomposition, adversarial review, state tracking, and self-managing execution loop.",
+        "tools": [
+          "tool-session-state"
+        ],
+        "hooks": [
+          "hooks-heartbeat",
+          "hooks-token-tracker"
+        ],
+        "agents": [
+          "self-driving:worker",
+          "self-driving:reviewer",
+          "self-driving:task-decomposer",
+          "self-driving:state-analyst"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "workgraph",
@@ -784,7 +1982,20 @@
       "stars": 1,
       "forks": 2,
       "lastUpdated": "2026-02-17"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/workgraph.yaml",
+        "name": "workgraph-behavior",
+        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-workgraph@main#subdirectory=behaviors/workgraph.yaml --app",
+        "version": "0.1.0",
+        "description": "Adds workgraph task graph awareness and tooling to Amplifier agents",
+        "agents": [
+          "workgraph:workgraph-planner"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "metacognition",
@@ -826,7 +2037,8 @@
       "stars": 1,
       "forks": 0,
       "lastUpdated": "2026-01-06"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "tool-diagrams",
@@ -869,7 +2081,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-01-21"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "agent-governance",
@@ -912,7 +2125,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-27"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundlewizard",
@@ -954,7 +2168,36 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-27"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/bundlewizard.yaml",
+        "name": "bundlewizard-behavior",
+        "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-bundlewizard@main#subdirectory=behaviors/bundlewizard.yaml --app",
+        "version": "0.1.0",
+        "description": "Core behavior for bundlewizard. Mounts the modes system, registers all agents, loads skills, and includes root-level context.",
+        "tools": [
+          "tool-mode",
+          "tool-skills"
+        ],
+        "hooks": [
+          "hooks-mode"
+        ],
+        "agents": [
+          "bundlewizard:agents/bundle-explorer",
+          "bundlewizard:agents/bundle-auditor",
+          "bundlewizard:agents/ecosystem-scout",
+          "bundlewizard:agents/bundle-spec-writer",
+          "bundlewizard:agents/bundle-plan-writer",
+          "bundlewizard:agents/bundle-generator",
+          "bundlewizard:agents/bundle-critic",
+          "bundlewizard:agents/bundle-refiner",
+          "bundlewizard:agents/bundle-evaluator",
+          "bundlewizard:agents/bundle-packager"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "loop-safety",
@@ -996,7 +2239,23 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-02-06"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/loop-safety.yaml",
+        "name": "loop-safety-behavior",
+        "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-loop-safety@main#subdirectory=behaviors/loop-safety.yaml --app",
+        "version": "1.0.0",
+        "description": "Loop safety behavior providing iteration limits and pattern detection. Includes: - orchestrator-loop-safe: Hard iteration limits with warnings - hooks-loop-detector: Repetitive pattern detection - loop-diagnostician: Diagnostic agent for stuck sessions",
+        "hooks": [
+          "hooks-loop-detector"
+        ],
+        "agents": [
+          "loop-safety:loop-diagnostician"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundle-sage",
@@ -1038,7 +2297,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-01-21"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "cicd-bundle",
@@ -1081,7 +2341,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-26"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "parallax-discovery",
@@ -1123,7 +2384,31 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-13"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/parallax-discovery.yaml",
+        "name": "parallax-discovery-behavior",
+        "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-bundle-parallax-discovery@main#subdirectory=behaviors/parallax-discovery.yaml --app",
+        "version": "0.1.0",
+        "description": "Multi-agent deep investigation methodology with specialized agents, interactive modes, and a methodology skills library.",
+        "tools": [
+          "tool-mode",
+          "tool-skills"
+        ],
+        "hooks": [
+          "hooks-mode"
+        ],
+        "agents": [
+          "parallax-discovery:code-tracer",
+          "parallax-discovery:behavior-observer",
+          "parallax-discovery:integration-mapper",
+          "parallax-discovery:lead-investigator",
+          "parallax-discovery:antagonist"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "unified-llm",
@@ -1166,7 +2451,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-23"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "hive-slack",
@@ -1209,7 +2495,8 @@
       "stars": 0,
       "forks": 1,
       "lastUpdated": "2026-02-26"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "dotnet-ops",
@@ -1252,7 +2539,21 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-07"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/dotnet-ops.yaml",
+        "name": "dotnet-ops-behavior",
+        "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-dotnet-ops@main#subdirectory=behaviors/dotnet-ops.yaml --app",
+        "version": "1.0.0",
+        "description": "Adds dotnet-ops agent with cross-platform shell support. Compose onto any bundle for .NET CLI capabilities on Windows, Linux, or macOS.",
+        "tools": [
+          "tool-bash",
+          "tool-filesystem"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundle-perplexity",
@@ -1295,7 +2596,23 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-04"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/perplexity-research.yaml",
+        "name": "perplexity-research-behavior",
+        "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-perplexity@main#subdirectory=behaviors/perplexity-research.yaml --app",
+        "version": "1.0.0",
+        "description": "Perplexity deep research capability - agent, tool, and guidance",
+        "tools": [
+          "tool-perplexity-search"
+        ],
+        "agents": [
+          "perplexity:research-expert"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "nano-banana",
@@ -1337,7 +2654,23 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-27"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/nano-banana.yaml",
+        "name": "nano-banana-behavior",
+        "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-module-tool-nano-banana@main#subdirectory=behaviors/nano-banana.yaml --app",
+        "version": "0.1.0",
+        "description": "Adds Gemini VLM capabilities — image analysis, comparison, and generation",
+        "tools": [
+          "tool-nano-banana"
+        ],
+        "agents": [
+          "nano-banana:agents/nano-banana-expert"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "amplifier-voice",
@@ -1380,7 +2713,8 @@
       "stars": 0,
       "forks": 2,
       "lastUpdated": "2026-03-10"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "attention-firewall",
@@ -1423,7 +2757,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-01"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundle-notify",
@@ -1466,7 +2801,33 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-20"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/desktop-notifications.yaml",
+        "name": "behavior-desktop-notifications",
+        "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-notify@main#subdirectory=behaviors/desktop-notifications.yaml --app",
+        "version": "1.0.0",
+        "description": "Desktop and terminal notifications when assistant turns complete. Supports macOS, Linux, Windows/WSL, and SSH sessions.",
+        "hooks": [
+          "hooks-notify"
+        ],
+        "agents": [
+          "notify:notify-expert"
+        ]
+      },
+      {
+        "file": "behaviors/push-notifications.yaml",
+        "name": "behavior-push-notifications",
+        "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-notify@main#subdirectory=behaviors/push-notifications.yaml --app",
+        "version": "0.1.0",
+        "description": "Push notifications via ntfy.sh when assistant turns complete. Perfect for mobile SSH clients (Termius, JuiceSSH) where terminal escape sequences don't trigger system notifications.",
+        "hooks": [
+          "hooks-notify-push"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "foreman",
@@ -1508,7 +2869,8 @@
       "stars": 1,
       "forks": 0,
       "lastUpdated": "2026-02-17"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "session-guardian",
@@ -1551,7 +2913,23 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-15"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/session-guardian.yaml",
+        "name": "session-guardian-behavior",
+        "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-bundle-session-guardian@main#subdirectory=behaviors/session-guardian.yaml --app",
+        "version": "1.0.0",
+        "description": "Automatic session scope management with token tracking and state handoff",
+        "tools": [
+          "tool-session-state"
+        ],
+        "hooks": [
+          "session-guardian"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "discovery-bundle",
@@ -1594,7 +2972,20 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-01-10"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/discovery.yaml",
+        "name": "discovery-behavior",
+        "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-bundle-discovery@main#subdirectory=behaviors/discovery.yaml --app",
+        "version": "1.0.0",
+        "description": "Progressive discovery capabilities with conversational interviewing",
+        "agents": [
+          "discovery:discovery-interviewer"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "engram",
@@ -1637,7 +3028,23 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-07"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/engram.yaml",
+        "name": "engram-behavior",
+        "install": "amplifier bundle add git+https://github.com/kenotron-ms/engram@main#subdirectory=behaviors/engram.yaml --app",
+        "version": "0.2.0",
+        "description": "Persistent vector memory — hooks + tools for Amplifier agents",
+        "tools": [
+          "engram-tool"
+        ],
+        "hooks": [
+          "engram-hook"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "stt-whispercpp",
@@ -1681,7 +3088,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-01-08"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "provider-github-copilot",
@@ -1724,7 +3132,8 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-03-10"
-    }
+    },
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "lsp-typescript",
@@ -1767,6 +3176,21 @@
       "stars": 0,
       "forks": 0,
       "lastUpdated": "2026-01-05"
-    }
+    },
+    "behaviors": [
+      {
+        "file": "behaviors/typescript-lsp.yaml",
+        "name": "behavior-typescript-lsp",
+        "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-bundle-lsp-typescript@main#subdirectory=behaviors/typescript-lsp.yaml --app",
+        "version": "0.1.0",
+        "tools": [
+          "tool-lsp"
+        ],
+        "agents": [
+          "lsp-typescript:typescript-code-intel"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-04-02"
   }
 ]
