@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "description": "CI scripts for Amplifier Registry — not part of the published site",
+  "dependencies": {
+    "@huggingface/transformers": "3.5.1"
+  }
+}
