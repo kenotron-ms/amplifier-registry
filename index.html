@@ -641,6 +641,44 @@ footer {
   .panel-metrics-grid { grid-template-columns: 1fr 1fr; }
   .stats-bar { gap: 0; }
 }
+
+/* -- BEHAVIORS ---------------------------------------------------------------- */
+.behaviors-list { display: flex; flex-direction: column; gap: 10px; }
+.behavior-card {
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 14px; background: var(--bg); transition: border-color 0.15s;
+}
+.behavior-card:hover { border-color: var(--border-dark); }
+.behavior-name {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  color: var(--cyan); letter-spacing: 0.02em; margin-bottom: 5px;
+}
+.behavior-desc {
+  font-size: 11px; color: var(--text-muted); line-height: 1.55; margin-bottom: 8px;
+}
+.behavior-caps { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.behavior-pill {
+  padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 500;
+  background: var(--panel); border: 1px solid var(--border);
+  color: var(--text-faint); white-space: nowrap;
+}
+.behavior-install {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 7px 10px;
+  cursor: pointer; transition: border-color 0.15s;
+}
+.behavior-install:hover { border-color: var(--cyan); }
+.behavior-install code {
+  font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1;
+}
+.behavior-copy-hint {
+  font-size: 9px; color: var(--text-faint); white-space: nowrap; flex-shrink: 0;
+}
+.behavior-install.copied { border-color: var(--cyan); }
+.behavior-install.copied .behavior-copy-hint { color: var(--cyan); }
+
 </style>
 </head>
 <body>
@@ -892,7 +930,12 @@ footer {
       <div class="panel-section-title">Install</div>
       <div class="panel-install" id="panelInstall"></div>
     </div>
-    <div class="panel-section">
+    <div class="panel-section" id="panelBehaviorsSection" style="display:none">
+      <div class="panel-section-title">Behaviors <span id="panelBehaviorCount" style="font-size:10px;color:var(--text-faint);font-family:var(--font-mono);margin-left:4px;font-weight:400;"></span></div>
+      <p style="font-size:11px;color:var(--text-muted);line-height:1.5;margin-bottom:10px;">Pick individual behaviors to install. Each is a focused capability you can add independently as an app bundle.</p>
+      <div class="behaviors-list" id="panelBehaviors"></div>
+    </div>
+        <div class="panel-section">
       <div class="panel-section-title">Tags</div>
       <div class="panel-tags" id="panelTags"></div>
     </div>
@@ -1270,6 +1313,38 @@ function openPanel(id) {
   }
   document.getElementById('panelVerdict').textContent = b.llmVerdict||'';
   document.getElementById('panelInstall').textContent = b.install||'';
+
+  // -- Behaviors ---------------------------------------------------------------
+  const behSection = document.getElementById('panelBehaviorsSection');
+  const behEl = document.getElementById('panelBehaviors');
+  if (behSection && behEl) {
+    if (b.behaviors && b.behaviors.length) {
+      behSection.style.display = '';
+      document.getElementById('panelBehaviorCount').textContent = '(' + b.behaviors.length + ')';
+      behEl.innerHTML = b.behaviors.map(function(beh) {
+        var pills = [
+          beh.tools  && beh.tools.length  ? beh.tools.length  + ' tool'  + (beh.tools.length  > 1 ? 's' : '') : null,
+          beh.hooks  && beh.hooks.length  ? beh.hooks.length  + ' hook'  + (beh.hooks.length  > 1 ? 's' : '') : null,
+          beh.agents && beh.agents.length ? beh.agents.length + ' agent' + (beh.agents.length > 1 ? 's' : '') : null,
+        ].filter(Boolean);
+        var shortDesc = beh.description
+          ? (beh.description.length > 130 ? beh.description.slice(0, 130) + '\u2026' : beh.description)
+          : '';
+        var safeCmd = (beh.install || '').replace(/"/g, '&quot;');
+        return '<div class="behavior-card">'
+          + '<div class="behavior-name">' + beh.name + '</div>'
+          + (shortDesc ? '<div class="behavior-desc">' + shortDesc + '</div>' : '')
+          + (pills.length ? '<div class="behavior-caps">' + pills.map(function(p){ return '<span class="behavior-pill">' + p + '</span>'; }).join('') + '</div>' : '')
+          + '<div class="behavior-install" onclick="copyBehaviorInstall(this)" data-cmd="' + safeCmd + '">'
+          + '<code>' + (beh.install || '') + '</code>'
+          + '<span class="behavior-copy-hint">click to copy</span>'
+          + '</div>'
+          + '</div>';
+      }).join('');
+    } else {
+      behSection.style.display = 'none';
+    }
+  }
   document.getElementById('panelRepo').href = b.repo||'#';
   document.getElementById('panelTags').innerHTML = (b.tags||[]).map(t => `<span class="panel-tag">${t}</span>`).join('');
   document.getElementById('useBtnText').textContent = 'I use this bundle';
@@ -1548,6 +1623,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === this) closeRubric();
   });
 });
+
+// -- COPY BEHAVIOR INSTALL ---------------------------------------------------
+function copyBehaviorInstall(el) {
+  var cmd = el.getAttribute('data-cmd');
+  if (!cmd) return;
+  var hint = el.querySelector('.behavior-copy-hint');
+  function flash() {
+    el.classList.add('copied');
+    if (hint) hint.textContent = 'copied!';
+    setTimeout(function() {
+      el.classList.remove('copied');
+      if (hint) hint.textContent = 'click to copy';
+    }, 2000);
+  }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(cmd).then(flash).catch(flash);
+  } else {
+    flash(); // graceful degradation
+  }
+}
+
 
 </script>
 <script>lucide.createIcons();</script>
