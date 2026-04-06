@@ -1356,10 +1356,10 @@
       "yaml"
     ],
     "featured": true,
-    "lastUpdated": "2026-04-04",
+    "lastUpdated": "2026-04-06",
     "llmVerdict": "Well-designed orchestration layer. The approval gate pattern is particularly valuable for human-in-loop workflows. Resumability after interruption is a genuine differentiator. Schema is clean and learnable.",
     "stars": 5,
-    "forks": 9,
+    "forks": 10,
     "quality": {
       "docs": 4,
       "design": 4,
