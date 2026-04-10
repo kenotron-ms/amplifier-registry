@@ -17,9 +17,9 @@
       "guidance"
     ],
     "featured": true,
-    "lastUpdated": "2026-04-05",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
-    "stars": 3041,
+    "stars": 3031,
     "forks": 251,
     "quality": {
       "docs": 3,
@@ -58,7 +58,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "foundation-expert",
@@ -78,9 +78,9 @@
       "authoring"
     ],
     "featured": true,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Exceptional precision on bundle YAML structure and composition patterns. Significantly reduces authoring errors. Highly recommended as a required checkpoint before any bundle work.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 4,
@@ -228,7 +228,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "superpowers",
@@ -248,10 +248,10 @@
       "quality"
     ],
     "featured": true,
-    "lastUpdated": "2026-04-07",
+    "lastUpdated": "2026-03-31",
     "llmVerdict": "Excellent discipline enforcement. The TDD-first approach and verification gates prevent a large class of agent mistakes. The brainstorm-to-execute flow is well-designed and transfers well across project types.",
     "stars": 3,
-    "forks": 5,
+    "forks": 4,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -288,13 +288,12 @@
           "superpowers:implementer",
           "superpowers:spec-reviewer",
           "superpowers:code-quality-reviewer",
-          "superpowers:code-reviewer",
           "superpowers:brainstormer",
           "superpowers:plan-writer"
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "zen-architect",
@@ -314,9 +313,9 @@
       "review"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Strong architectural judgment with clear philosophy application. The three-mode design (analyze/architect/review) maps well to real development workflows. Ruthless simplicity principle is consistently enforced.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 3,
@@ -464,7 +463,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "modular-builder",
@@ -484,9 +483,9 @@
       "specs"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Excellent implementation discipline. The hard requirement for complete specs before starting prevents scope creep. Pairs exceptionally well with zen-architect as a design-then-build workflow.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 3,
@@ -634,7 +633,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bug-hunter",
@@ -653,9 +652,9 @@
       "root-cause"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Exceptional methodological rigor. Consistently identifies root causes rather than patching symptoms. The hypothesis-driven approach prevents the common AI mistake of trying multiple fixes simultaneously.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 1,
@@ -803,7 +802,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "git-ops",
@@ -824,9 +823,9 @@
       "safety"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Reliable and safe. The safety protocol guardrails prevent destructive git operations. Commit message quality is notably better than ad-hoc generation. Good GitHub CLI integration for PR workflows.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 1,
@@ -974,7 +973,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "explorer",
@@ -994,9 +993,9 @@
       "context"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Solid context-sink pattern. Effectively absorbs token costs of large codebase exploration. The requirement to provide full objective and scope in the instruction is appropriate given the clean-slate design.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 3,
@@ -1144,7 +1143,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "browser-tester",
@@ -1201,7 +1200,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "python-dev",
@@ -1281,7 +1280,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "lsp-code-navigator",
@@ -1337,7 +1336,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "recipes",
@@ -1357,10 +1356,10 @@
       "yaml"
     ],
     "featured": true,
-    "lastUpdated": "2026-04-08",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Well-designed orchestration layer. The approval gate pattern is particularly valuable for human-in-loop workflows. Resumability after interruption is a genuine differentiator. Schema is clean and learnable.",
     "stars": 5,
-    "forks": 10,
+    "forks": 9,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -1395,7 +1394,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "session-analyst",
@@ -1415,9 +1414,9 @@
       "transcripts"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Invaluable for session recovery. The REPAIR-over-REWIND default is the right choice — preserving history is almost always preferable. Safe 100k+ token line handling is a genuine necessity for events.jsonl files.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 1,
@@ -1565,7 +1564,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "security-guardian",
@@ -1585,9 +1584,9 @@
       "vulnerabilities"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-10",
+    "lastUpdated": "2026-04-01",
     "llmVerdict": "Thorough and systematic security analysis. OWASP Top 10 coverage is comprehensive. The required-before-production gate enforces good practices. Dependency scanning integration catches a class of vulnerabilities often missed.",
-    "stars": 14,
+    "stars": 13,
     "forks": 14,
     "quality": {
       "docs": 1,
@@ -1735,7 +1734,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "agent-daemon",
@@ -1756,7 +1755,7 @@
       "daemon"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-09",
+    "lastUpdated": "2026-04-02",
     "llmVerdict": "Practical local automation solution. The three executor types (shell/claude-code/amplifier) cover the main use cases. macOS tray app is a nice touch. File-watch triggers enable event-driven workflows.",
     "stars": 0,
     "forks": 0,
@@ -1778,7 +1777,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-29"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "core-expert",
@@ -1799,9 +1798,9 @@
       "modules"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-09",
+    "lastUpdated": "2026-03-30",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
-    "stars": 18,
+    "stars": 19,
     "forks": 20,
     "quality": {
       "docs": 4,
@@ -1833,7 +1832,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "agent-memory",
@@ -1876,7 +1875,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-04"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "self-driving",
@@ -1941,7 +1940,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "workgraph",
@@ -1996,7 +1995,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "metacognition",
@@ -2039,7 +2038,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-06"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "tool-diagrams",
@@ -2083,7 +2082,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "agent-governance",
@@ -2127,7 +2126,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-27"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundlewizard",
@@ -2198,7 +2197,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "loop-safety",
@@ -2256,7 +2255,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundle-sage",
@@ -2299,7 +2298,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "cicd-bundle",
@@ -2343,7 +2342,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-26"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "parallax-discovery",
@@ -2409,7 +2408,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "unified-llm",
@@ -2453,7 +2452,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-23"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "hive-slack",
@@ -2497,7 +2496,7 @@
       "forks": 1,
       "lastUpdated": "2026-02-26"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "dotnet-ops",
@@ -2554,7 +2553,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundle-perplexity",
@@ -2613,7 +2612,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "nano-banana",
@@ -2671,7 +2670,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "amplifier-voice",
@@ -2715,7 +2714,7 @@
       "forks": 2,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "attention-firewall",
@@ -2759,7 +2758,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-01"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "bundle-notify",
@@ -2828,7 +2827,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "foreman",
@@ -2871,7 +2870,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-17"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "session-guardian",
@@ -2930,7 +2929,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "discovery-bundle",
@@ -2986,7 +2985,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "engram",
@@ -3045,7 +3044,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "stt-whispercpp",
@@ -3090,7 +3089,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-08"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "provider-github-copilot",
@@ -3134,7 +3133,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
   },
   {
     "id": "lsp-typescript",
@@ -3192,6 +3191,2239 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-10"
+    "behaviorsScannedAt": "2026-04-02"
+  },
+  {
+    "id": "infographic-builder",
+    "name": "infographic-builder",
+    "namespace": "infographic-builder",
+    "description": "Expert infographic designer that turns any topic or dataset into a polished, publication-ready visual. Handles layout selection, panel decomposition, style consistency, and quality review automatically.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "singh2",
+    "repo": "https://github.com/singh2/infographic-builder",
+    "install": "amplifier bundle add git+https://github.com/singh2/infographic-builder@main",
+    "rating": null,
+    "tags": [
+      "infographic",
+      "image-gen",
+      "visualization",
+      "design",
+      "gemini"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "presentation-builder",
+    "name": "amplifier-bundle-presentation-builder",
+    "namespace": "presentation-builder",
+    "description": "Presentation designer that transforms any input into self-contained HTML slide decks with narrative arc, CSS/SVG visual design, keyboard/touch navigation, and speaker notes.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "singh2",
+    "repo": "https://github.com/singh2/amplifier-bundle-presentation-builder",
+    "install": "amplifier bundle add git+https://github.com/singh2/amplifier-bundle-presentation-builder@main",
+    "rating": null,
+    "tags": [
+      "presentations",
+      "slides",
+      "html",
+      "narrative",
+      "decks"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "diagram-beautifier",
+    "name": "amplifier-bundle-diagram-beautifier",
+    "namespace": "diagram-beautifier",
+    "description": "AI-powered diagram beautification transforming raw Graphviz DOT and Mermaid diagrams into polished, visually appealing outputs.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "singh2",
+    "repo": "https://github.com/singh2/amplifier-bundle-diagram-beautifier",
+    "install": "amplifier bundle add git+https://github.com/singh2/amplifier-bundle-diagram-beautifier@main",
+    "rating": null,
+    "tags": [
+      "diagrams",
+      "dot-graph",
+      "mermaid",
+      "graphviz",
+      "visualization"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "infographic-builder-cc",
+    "name": "infographic-builder-cc",
+    "namespace": "infographic-builder-cc",
+    "description": "Claude Code plugin for generating publication-ready multi-panel infographics with Gemini. CC-native variant of infographic-builder.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "singh2",
+    "repo": "https://github.com/singh2/infographic-builder-cc",
+    "install": "amplifier bundle add git+https://github.com/singh2/infographic-builder-cc@main",
+    "rating": null,
+    "tags": [
+      "infographic",
+      "claude-code",
+      "image-gen",
+      "gemini"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "atelier",
+    "name": "atelier",
+    "namespace": "atelier",
+    "description": "Creative studio bundle by singh2.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "singh2",
+    "repo": "https://github.com/singh2/atelier",
+    "install": "amplifier bundle add git+https://github.com/singh2/atelier@main",
+    "rating": null,
+    "tags": [
+      "creative",
+      "studio"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "orchamp",
+    "name": "orchamp",
+    "namespace": "orchamp",
+    "description": "Orchestration champion — owned by singh2.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "singh2",
+    "repo": "https://github.com/singh2/orchamp",
+    "install": "amplifier bundle add git+https://github.com/singh2/orchamp@main",
+    "rating": null,
+    "tags": [
+      "orchestration"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "ui-studio",
+    "name": "amplifier-bundle-ui-studio",
+    "namespace": "ui-studio",
+    "description": "Design-to-code pipeline with moodboard, storyboard, frame, blueprint, and forge modes. Iterative visual convergence from inspiration to production-ready implementation.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-bundle-ui-studio",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-bundle-ui-studio@main",
+    "rating": null,
+    "tags": [
+      "ui",
+      "design-to-code",
+      "mockup",
+      "visual",
+      "storyboard"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-gpt-image",
+    "name": "amplifier-module-tool-gpt-image",
+    "namespace": "kenotron-ms",
+    "description": "OpenAI GPT image generation tool module for Amplifier. Provides image generation and editing via GPT-Image-1 including background removal.",
+    "type": "tool",
+    "category": "ui",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-module-tool-gpt-image",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-module-tool-gpt-image@main",
+    "rating": null,
+    "tags": [
+      "image-gen",
+      "openai",
+      "gpt-image",
+      "visual"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "connector-m365",
+    "name": "amplifier-bundle-connector-m365",
+    "namespace": "connector-m365",
+    "description": "Microsoft 365 connector bundle — email, Teams chat, meetings, and calendar via CLI tools. No browser required once tokens are cached.",
+    "type": "bundle",
+    "category": "integration",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-bundle-connector-m365",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-bundle-connector-m365@main",
+    "rating": null,
+    "tags": [
+      "m365",
+      "email",
+      "teams",
+      "calendar",
+      "microsoft"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-loom",
+    "name": "amplifier-app-loom",
+    "namespace": "loom",
+    "description": "Local job scheduler running at localhost:7700. Schedule shell commands, Claude AI prompts, and Amplifier recipes on cron, interval, file-watch, or one-shot triggers.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-app-loom",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-app-loom@main",
+    "rating": null,
+    "tags": [
+      "scheduler",
+      "cron",
+      "automation",
+      "jobs",
+      "daemon"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-registry",
+    "name": "amplifier-registry",
+    "namespace": "kenotron-ms",
+    "description": "Community registry for Amplifier bundles, agents, modules, and tools.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-registry",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-registry@main",
+    "rating": null,
+    "tags": [
+      "registry",
+      "community",
+      "discovery"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "module-auto-title",
+    "name": "amplifier-module-auto-title",
+    "namespace": "kenotron-ms",
+    "description": "Automatic session title generation module for Amplifier.",
+    "type": "module",
+    "category": "infra",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-module-auto-title",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-module-auto-title@main",
+    "rating": null,
+    "tags": [
+      "sessions",
+      "titles",
+      "hooks"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "bundle-omnisvg",
+    "name": "amplifier-bundle-omnisvg",
+    "namespace": "kenotron-ms",
+    "description": "SVG generation and manipulation bundle for Amplifier.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-bundle-omnisvg",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-bundle-omnisvg@main",
+    "rating": null,
+    "tags": [
+      "svg",
+      "vector",
+      "graphics",
+      "ui"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "sdk-node",
+    "name": "amplifier-sdk-node",
+    "namespace": "kenotron-ms",
+    "description": "Node.js SDK for Amplifier.",
+    "type": "module",
+    "category": "infra",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-sdk-node",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-sdk-node@main",
+    "rating": null,
+    "tags": [
+      "sdk",
+      "node",
+      "javascript"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "module-connectors",
+    "name": "amplifier-module-connectors",
+    "namespace": "kenotron-ms",
+    "description": "Chat platform connectors module for Amplifier.",
+    "type": "module",
+    "category": "integration",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-module-connectors",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-module-connectors@main",
+    "rating": null,
+    "tags": [
+      "connectors",
+      "chat",
+      "integration"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "team-pulse-kenotron",
+    "name": "amplifier-team-pulse",
+    "namespace": "kenotron-ms",
+    "description": "Weekly team pulse and showcase bundle.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/amplifier-team-pulse",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-team-pulse@main",
+    "rating": null,
+    "tags": [
+      "team",
+      "pulse",
+      "weekly",
+      "showcase"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "engram-lite",
+    "name": "engram-lite",
+    "namespace": "kenotron-ms",
+    "description": "Lightweight vector memory for Amplifier agents — streamlined version of engram.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/engram-lite",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/engram-lite@main",
+    "rating": null,
+    "tags": [
+      "memory",
+      "vector",
+      "lightweight"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "spicy-specs",
+    "name": "spicy-specs",
+    "namespace": "kenotron-ms",
+    "description": "Pattern library for spicy-specs.com — curated specification patterns for AI-driven development.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/spicy-specs",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/spicy-specs@main",
+    "rating": null,
+    "tags": [
+      "specs",
+      "patterns",
+      "library"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "ampbox",
+    "name": "ampbox",
+    "namespace": "kenotron-ms",
+    "description": "AI Agent Sandbox Platform running on Kubernetes — isolated execution environments for Amplifier agents.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "kenotron-ms",
+    "repo": "https://github.com/kenotron-ms/ampbox",
+    "install": "amplifier bundle add git+https://github.com/kenotron-ms/ampbox@main",
+    "rating": null,
+    "tags": [
+      "kubernetes",
+      "sandbox",
+      "isolation",
+      "infra"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "bundle-projector",
+    "name": "amplifier-bundle-projector",
+    "namespace": "ramparte",
+    "description": "Project management and strategy layer for Amplifier agents.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-projector",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-projector@main",
+    "rating": null,
+    "tags": [
+      "project-management",
+      "strategy",
+      "planning"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "project-orchestrator",
+    "name": "amplifier-bundle-project-orchestrator",
+    "namespace": "ramparte",
+    "description": "Large-scale project management orchestration for Amplifier.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-project-orchestrator",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-project-orchestrator@main",
+    "rating": null,
+    "tags": [
+      "orchestration",
+      "project",
+      "large-scale"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "deliberate-development",
+    "name": "amplifier-bundle-deliberate-development",
+    "namespace": "ramparte",
+    "description": "Decomposition-first planning and deliberate development methodology for Amplifier.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-deliberate-development",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main",
+    "rating": null,
+    "tags": [
+      "methodology",
+      "planning",
+      "decomposition"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "longbuilder",
+    "name": "amplifier-bundle-longbuilder",
+    "namespace": "ramparte",
+    "description": "Phase-based orchestration for long-running autonomous builds — the LongBuilder methodology.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-longbuilder",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-longbuilder@main",
+    "rating": null,
+    "tags": [
+      "long-running",
+      "orchestration",
+      "phases",
+      "autonomous"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "soar",
+    "name": "amplifier-bundle-soar",
+    "namespace": "ramparte",
+    "description": "SOAR meta-learning bundle — Security Orchestration, Automation and Response patterns for Amplifier.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-soar",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-soar@main",
+    "rating": null,
+    "tags": [
+      "soar",
+      "meta-learning",
+      "automation"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "daily-flow",
+    "name": "amplifier-bundle-daily-flow",
+    "namespace": "ramparte",
+    "description": "Daily workflow commands and automation bundle for Amplifier.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-daily-flow",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-daily-flow@main",
+    "rating": null,
+    "tags": [
+      "daily",
+      "workflow",
+      "automation"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "beads-superpowers",
+    "name": "amplifier-bundle-beads-superpowers",
+    "namespace": "ramparte",
+    "description": "Beads task tracking integration with Superpowers methodology.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-beads-superpowers",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-beads-superpowers@main",
+    "rating": null,
+    "tags": [
+      "beads",
+      "tasks",
+      "superpowers"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "browser-debugger",
+    "name": "amplifier-browser-debugger",
+    "namespace": "ramparte",
+    "description": "Web UI debugging toolkit for Amplifier — automated browser-based debugging workflows.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-browser-debugger",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-browser-debugger@main",
+    "rating": null,
+    "tags": [
+      "debugging",
+      "browser",
+      "web",
+      "ui"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "ux-analyzer",
+    "name": "amplifier-ux-analyzer",
+    "namespace": "ramparte",
+    "description": "UX analysis bundle for Amplifier.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-ux-analyzer",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-ux-analyzer@main",
+    "rating": null,
+    "tags": [
+      "ux",
+      "analysis",
+      "ui"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-github-actions",
+    "name": "amplifier-module-tool-github-actions",
+    "namespace": "ramparte",
+    "description": "GitHub Actions management tool for Amplifier — trigger, monitor, and manage CI/CD workflows.",
+    "type": "tool",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-module-tool-github-actions",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-module-tool-github-actions@main",
+    "rating": null,
+    "tags": [
+      "github-actions",
+      "ci",
+      "cd",
+      "automation"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-database",
+    "name": "amplifier-module-tool-database",
+    "namespace": "ramparte",
+    "description": "Database operations tool for Amplifier with safety controls — SQL queries, schema inspection, and migrations.",
+    "type": "tool",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-module-tool-database",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-module-tool-database@main",
+    "rating": null,
+    "tags": [
+      "database",
+      "sql",
+      "migrations",
+      "safety"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "m365-collab",
+    "name": "amplifier-bundle-m365-collab",
+    "namespace": "ramparte",
+    "description": "Microsoft 365 agent collaboration bundle for Amplifier.",
+    "type": "bundle",
+    "category": "integration",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-m365-collab",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-m365-collab@main",
+    "rating": null,
+    "tags": [
+      "m365",
+      "teams",
+      "collaboration",
+      "microsoft"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "metacog-code-quality",
+    "name": "amplifier-bundle-metacog-code-quality",
+    "namespace": "ramparte",
+    "description": "Metacognitive code quality analysis bundle for Amplifier.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-metacog-code-quality",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-metacog-code-quality@main",
+    "rating": null,
+    "tags": [
+      "code-quality",
+      "metacognition",
+      "analysis"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "html-tools",
+    "name": "amplifier-bundle-html-tools",
+    "namespace": "ramparte",
+    "description": "HTML tool patterns inspired by Simon Willison — utility bundle for HTML generation and manipulation.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-bundle-html-tools",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-html-tools@main",
+    "rating": null,
+    "tags": [
+      "html",
+      "tools",
+      "web"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "collection-dev-memory",
+    "name": "amplifier-collection-dev-memory",
+    "namespace": "ramparte",
+    "description": "Persistent memory system collection for Amplifier development workflows.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-collection-dev-memory",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-collection-dev-memory@main",
+    "rating": null,
+    "tags": [
+      "memory",
+      "persistence",
+      "collection"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-mcp-server",
+    "name": "amplifier-mcp-server",
+    "namespace": "ramparte",
+    "description": "GitHub Copilot integration via MCP for Amplifier.",
+    "type": "module",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-mcp-server",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-mcp-server@main",
+    "rating": null,
+    "tags": [
+      "mcp",
+      "copilot",
+      "integration"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-tui",
+    "name": "amplifier-tui",
+    "namespace": "ramparte",
+    "description": "Textual TUI (terminal user interface) for Amplifier sessions.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-tui",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-tui@main",
+    "rating": null,
+    "tags": [
+      "tui",
+      "terminal",
+      "textual",
+      "ui"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "themed-bundles",
+    "name": "amplifier-themed-bundles",
+    "namespace": "ramparte",
+    "description": "15 themed bundles for different workflow contexts — curated Amplifier configurations.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-themed-bundles",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-themed-bundles@main",
+    "rating": null,
+    "tags": [
+      "themes",
+      "bundles",
+      "configurations"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "voice-bridge",
+    "name": "amplifier-voice-bridge",
+    "namespace": "ramparte",
+    "description": "FastAPI voice control bridge for Amplifier — iOS and CarPlay integration.",
+    "type": "bundle",
+    "category": "integration",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-voice-bridge",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-voice-bridge@main",
+    "rating": null,
+    "tags": [
+      "voice",
+      "ios",
+      "carplay",
+      "bridge"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-workflow",
+    "name": "amplifier-module-tool-workflow",
+    "namespace": "ramparte",
+    "description": "Workflow automation tool module for Amplifier.",
+    "type": "tool",
+    "category": "infra",
+    "author": "ramparte",
+    "repo": "https://github.com/ramparte/amplifier-module-tool-workflow",
+    "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-module-tool-workflow@main",
+    "rating": null,
+    "tags": [
+      "workflow",
+      "automation"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "dot-docs",
+    "name": "amplifier-bundle-dot-docs",
+    "namespace": "bkrabach",
+    "description": "DOT graph documentation generation for Amplifier repositories — auto-generates architecture diagrams from code.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-bundle-dot-docs",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-bundle-dot-docs@main",
+    "rating": null,
+    "tags": [
+      "documentation",
+      "dot-graph",
+      "diagrams",
+      "architecture"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "paperclip-adapter",
+    "name": "amplifier-paperclip-adapter",
+    "namespace": "bkrabach",
+    "description": "Amplifier adapter for Paperclip — open-source zero-human orchestration framework.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-paperclip-adapter",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-paperclip-adapter@main",
+    "rating": null,
+    "tags": [
+      "paperclip",
+      "orchestration",
+      "autonomous"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-server",
+    "name": "amplifier-app-server",
+    "namespace": "bkrabach",
+    "description": "Persistent AI server runtime for Amplifier — keeps sessions alive across connections.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-app-server",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-app-server@main",
+    "rating": null,
+    "tags": [
+      "server",
+      "runtime",
+      "persistent"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "loop-interactive",
+    "name": "amplifier-module-loop-interactive",
+    "namespace": "bkrabach",
+    "description": "Interactive orchestrator loop module for Amplifier — human-in-the-loop execution patterns.",
+    "type": "module",
+    "category": "infra",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-module-loop-interactive",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-module-loop-interactive@main",
+    "rating": null,
+    "tags": [
+      "orchestrator",
+      "interactive",
+      "loop",
+      "human-in-loop"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "document-builder-go",
+    "name": "amplifier-module-tool-document-builder-go",
+    "namespace": "bkrabach",
+    "description": "Go-based document builder gRPC module for Amplifier.",
+    "type": "tool",
+    "category": "dev",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-module-tool-document-builder-go",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-module-tool-document-builder-go@main",
+    "rating": null,
+    "tags": [
+      "go",
+      "grpc",
+      "documents"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "comic-strips-bkrabach",
+    "name": "amplifier-bundle-comic-strips",
+    "namespace": "bkrabach",
+    "description": "AI-generated comic strips bundle for Amplifier.",
+    "type": "bundle",
+    "category": "creative",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-bundle-comic-strips",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-bundle-comic-strips@main",
+    "rating": null,
+    "tags": [
+      "comics",
+      "creative",
+      "image-gen"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-webamp",
+    "name": "amplifier-app-webamp",
+    "namespace": "bkrabach",
+    "description": "Amplifier running in-browser via WebGPU and Pyodide — fully client-side AI agent execution.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/amplifier-app-webamp",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-app-webamp@main",
+    "rating": null,
+    "tags": [
+      "webgpu",
+      "browser",
+      "pyodide",
+      "wasm"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "coding-agent-loop",
+    "name": "coding-agent-loop",
+    "namespace": "bkrabach",
+    "description": "Autonomous coding agent loop written in Rust — self-contained execution loop for code generation tasks.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/coding-agent-loop",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/coding-agent-loop@main",
+    "rating": null,
+    "tags": [
+      "rust",
+      "autonomous",
+      "coding",
+      "loop"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "cortex",
+    "name": "cortex",
+    "namespace": "bkrabach",
+    "description": "Personal AI assistant platform built on Amplifier — persistent, self-managing AI assistant.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/cortex",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/cortex@main",
+    "rating": null,
+    "tags": [
+      "assistant",
+      "personal",
+      "persistent",
+      "platform"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "muxplex",
+    "name": "muxplex",
+    "namespace": "bkrabach",
+    "description": "Web-based tmux dashboard for Amplifier — monitor and control multiple terminal sessions from a browser.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "bkrabach",
+    "repo": "https://github.com/bkrabach/muxplex",
+    "install": "amplifier bundle add git+https://github.com/bkrabach/muxplex@main",
+    "rating": null,
+    "tags": [
+      "tmux",
+      "dashboard",
+      "terminal",
+      "monitoring"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "pr-review",
+    "name": "amplifier-bundle-pr-review",
+    "namespace": "robotdad",
+    "description": "PR review workflow bundle for Amplifier — automated pull request analysis and feedback.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-bundle-pr-review",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-bundle-pr-review@main",
+    "rating": null,
+    "tags": [
+      "pr",
+      "review",
+      "github",
+      "feedback"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "hooks-otel",
+    "name": "amplifier-module-hooks-otel",
+    "namespace": "robotdad",
+    "description": "OpenTelemetry hooks module for Amplifier — distributed tracing and observability for agent sessions.",
+    "type": "module",
+    "category": "infra",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-module-hooks-otel",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-module-hooks-otel@main",
+    "rating": null,
+    "tags": [
+      "opentelemetry",
+      "tracing",
+      "observability",
+      "hooks"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-comfyui",
+    "name": "amplifier-module-tool-comfyui",
+    "namespace": "robotdad",
+    "description": "ComfyUI image generation tool for Amplifier — integrates the ComfyUI workflow engine for AI image generation.",
+    "type": "tool",
+    "category": "ui",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-module-tool-comfyui",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-module-tool-comfyui@main",
+    "rating": null,
+    "tags": [
+      "comfyui",
+      "image-gen",
+      "stable-diffusion",
+      "visual"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "deepresearch",
+    "name": "amplifier-bundle-deepresearch",
+    "namespace": "robotdad",
+    "description": "Deep research bundle for Amplifier — multi-source research with synthesis and citation tracking.",
+    "type": "bundle",
+    "category": "research",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-bundle-deepresearch",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-bundle-deepresearch@main",
+    "rating": null,
+    "tags": [
+      "research",
+      "deep",
+      "synthesis",
+      "citations"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-deepresearch",
+    "name": "amplifier-module-tool-deepresearch",
+    "namespace": "robotdad",
+    "description": "Deep research tool module for Amplifier.",
+    "type": "tool",
+    "category": "research",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-module-tool-deepresearch",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-module-tool-deepresearch@main",
+    "rating": null,
+    "tags": [
+      "research",
+      "tool",
+      "web"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "bundle-beads",
+    "name": "amplifier-bundle-beads",
+    "namespace": "robotdad",
+    "description": "Beads task tracking integration bundle for Amplifier.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-bundle-beads",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-bundle-beads@main",
+    "rating": null,
+    "tags": [
+      "beads",
+      "tasks",
+      "tracking"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "plugin-compat",
+    "name": "amplifier-bundle-plugin-compat",
+    "namespace": "robotdad",
+    "description": "Claude Code compatibility bundle for Amplifier — enables Claude Code plugins to work with Amplifier.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-bundle-plugin-compat",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-bundle-plugin-compat@main",
+    "rating": null,
+    "tags": [
+      "claude-code",
+      "compat",
+      "plugins"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "comic-strips-robotdad",
+    "name": "amplifier-bundle-comic-strips",
+    "namespace": "robotdad",
+    "description": "AI-generated comic strips bundle by robotdad.",
+    "type": "bundle",
+    "category": "creative",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/amplifier-bundle-comic-strips",
+    "install": "amplifier bundle add git+https://github.com/robotdad/amplifier-bundle-comic-strips@main",
+    "rating": null,
+    "tags": [
+      "comics",
+      "creative",
+      "image-gen"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "lattice",
+    "name": "lattice",
+    "namespace": "robotdad",
+    "description": "Multi-agent Microsoft 365 collaboration framework — coordinates multiple Amplifier agents through M365 services.",
+    "type": "bundle",
+    "category": "integration",
+    "author": "robotdad",
+    "repo": "https://github.com/robotdad/lattice",
+    "install": "amplifier bundle add git+https://github.com/robotdad/lattice@main",
+    "rating": null,
+    "tags": [
+      "m365",
+      "multi-agent",
+      "collaboration",
+      "teams"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "change-advisor",
+    "name": "amplifier-change-advisor",
+    "namespace": "cpark4x",
+    "description": "Structured PR review bundle for Amplifier — analyzes changes, identifies risks, and suggests improvements.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-change-advisor",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-change-advisor@main",
+    "rating": null,
+    "tags": [
+      "pr",
+      "review",
+      "changes",
+      "analysis"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "bundle-ui-vision",
+    "name": "amplifier-bundle-ui-vision",
+    "namespace": "cpark4x",
+    "description": "Visual UI testing bundle for Amplifier — screenshot-based UI validation and regression detection.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-bundle-ui-vision",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-bundle-ui-vision@main",
+    "rating": null,
+    "tags": [
+      "ui",
+      "visual",
+      "testing",
+      "screenshots"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "team-pulse-cpark4x",
+    "name": "amplifier-team-pulse",
+    "namespace": "cpark4x",
+    "description": "Weekly team pulse and showcase bundle for Amplifier.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-team-pulse",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-team-pulse@main",
+    "rating": null,
+    "tags": [
+      "team",
+      "pulse",
+      "showcase"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-msgraph",
+    "name": "amplifier-module-tool-msgraph",
+    "namespace": "cpark4x",
+    "description": "Microsoft Graph API tool for Amplifier — access M365 data including users, groups, mail, calendar, and Teams.",
+    "type": "tool",
+    "category": "integration",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-module-tool-msgraph",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-module-tool-msgraph@main",
+    "rating": null,
+    "tags": [
+      "msgraph",
+      "m365",
+      "microsoft",
+      "api"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-canvas",
+    "name": "amplifier-canvas",
+    "namespace": "cpark4x",
+    "description": "Canvas workspace bundle for Amplifier — visual workspace management.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-canvas",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-canvas@main",
+    "rating": null,
+    "tags": [
+      "canvas",
+      "workspace",
+      "visual"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "ridecast",
+    "name": "ridecast",
+    "namespace": "cpark4x",
+    "description": "Personal podcast factory built with Amplifier — generate custom podcast episodes from any content.",
+    "type": "bundle",
+    "category": "integration",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/ridecast",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/ridecast@main",
+    "rating": null,
+    "tags": [
+      "podcast",
+      "audio",
+      "content",
+      "generation"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "doc-driven-dev",
+    "name": "amplifier-doc-driven-dev",
+    "namespace": "cpark4x",
+    "description": "Doc-driven development bundle for Amplifier — keeps AI and humans aligned via living documentation (VISION.md, OUTCOMES.md, BACKLOG.md, AGENTS.md).",
+    "type": "bundle",
+    "category": "dev",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-doc-driven-dev",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-doc-driven-dev@main",
+    "rating": null,
+    "tags": [
+      "documentation",
+      "alignment",
+      "methodology",
+      "living-docs"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "session-capture",
+    "name": "amplifier-session-capture",
+    "namespace": "cpark4x",
+    "description": "Session capture system for Amplifier — records and replays agent sessions.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-session-capture",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-session-capture@main",
+    "rating": null,
+    "tags": [
+      "sessions",
+      "capture",
+      "replay"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "usage-insights",
+    "name": "amplifier-usage-insights",
+    "namespace": "cpark4x",
+    "description": "Analytics and usage insights system for Amplifier deployments.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/amplifier-usage-insights",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/amplifier-usage-insights@main",
+    "rating": null,
+    "tags": [
+      "analytics",
+      "usage",
+      "insights",
+      "monitoring"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "finisher",
+    "name": "finisher",
+    "namespace": "cpark4x",
+    "description": "Autonomous coding agent that finishes incomplete implementations — spec-driven task completion.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/finisher",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/finisher@main",
+    "rating": null,
+    "tags": [
+      "autonomous",
+      "coding",
+      "completion"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "deckgen",
+    "name": "deckgen",
+    "namespace": "cpark4x",
+    "description": "HTML presentation generator — creates polished slide decks from content.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "cpark4x",
+    "repo": "https://github.com/cpark4x/deckgen",
+    "install": "amplifier bundle add git+https://github.com/cpark4x/deckgen@main",
+    "rating": null,
+    "tags": [
+      "presentations",
+      "html",
+      "slides",
+      "decks"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "recipe-dashboard",
+    "name": "amplifier-recipe-dashboard",
+    "namespace": "samueljklee",
+    "description": "Flask-based recipe execution dashboard for Amplifier — visual interface for managing and running recipes.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "samueljklee",
+    "repo": "https://github.com/samueljklee/amplifier-recipe-dashboard",
+    "install": "amplifier bundle add git+https://github.com/samueljklee/amplifier-recipe-dashboard@main",
+    "rating": null,
+    "tags": [
+      "dashboard",
+      "recipes",
+      "ui",
+      "flask"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "provider-foundry-local",
+    "name": "amplifier-module-provider-foundry-local",
+    "namespace": "samueljklee",
+    "description": "Foundry Local provider for Amplifier — run AI models locally via Microsoft Foundry.",
+    "type": "module",
+    "category": "infra",
+    "author": "samueljklee",
+    "repo": "https://github.com/samueljklee/amplifier-module-provider-foundry-local",
+    "install": "amplifier bundle add git+https://github.com/samueljklee/amplifier-module-provider-foundry-local@main",
+    "rating": null,
+    "tags": [
+      "foundry",
+      "local",
+      "provider",
+      "microsoft"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-tool-generator",
+    "name": "amplifier-app-tool-generator",
+    "namespace": "samueljklee",
+    "description": "Tool generator app for Amplifier — scaffolds new tool modules from specifications.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "samueljklee",
+    "repo": "https://github.com/samueljklee/amplifier-app-tool-generator",
+    "install": "amplifier bundle add git+https://github.com/samueljklee/amplifier-app-tool-generator@main",
+    "rating": null,
+    "tags": [
+      "scaffolding",
+      "tools",
+      "generator"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-vscode",
+    "name": "amplifier-app-vscode",
+    "namespace": "samueljklee",
+    "description": "VS Code extension for Amplifier — integrate Amplifier agent capabilities directly into VS Code.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "samueljklee",
+    "repo": "https://github.com/samueljklee/amplifier-app-vscode",
+    "install": "amplifier bundle add git+https://github.com/samueljklee/amplifier-app-vscode@main",
+    "rating": null,
+    "tags": [
+      "vscode",
+      "extension",
+      "ide"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "canvas-ai",
+    "name": "canvas-ai",
+    "namespace": "samueljklee",
+    "description": "Desktop app for workspace canvases — visual AI workspace management.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "samueljklee",
+    "repo": "https://github.com/samueljklee/canvas-ai",
+    "install": "amplifier bundle add git+https://github.com/samueljklee/canvas-ai@main",
+    "rating": null,
+    "tags": [
+      "canvas",
+      "workspace",
+      "desktop",
+      "visual"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "interop-router",
+    "name": "interop-router",
+    "namespace": "DavidKoleczek",
+    "description": "AI provider interoperability router via the Responses API — route requests across multiple providers.",
+    "type": "module",
+    "category": "infra",
+    "author": "DavidKoleczek",
+    "repo": "https://github.com/DavidKoleczek/interop-router",
+    "install": "amplifier bundle add git+https://github.com/DavidKoleczek/interop-router@main",
+    "rating": null,
+    "tags": [
+      "routing",
+      "providers",
+      "interop",
+      "responses-api"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "agent-tui",
+    "name": "agent-tui",
+    "namespace": "DavidKoleczek",
+    "description": "Terminal UI for AI agents — TUI interface for managing and interacting with Amplifier agents.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "DavidKoleczek",
+    "repo": "https://github.com/DavidKoleczek/agent-tui",
+    "install": "amplifier bundle add git+https://github.com/DavidKoleczek/agent-tui@main",
+    "rating": null,
+    "tags": [
+      "tui",
+      "terminal",
+      "ui",
+      "agents"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "provider-openai-v2",
+    "name": "amplifier-module-provider-openai-v2",
+    "namespace": "DavidKoleczek",
+    "description": "OpenAI provider v2 for Amplifier — updated provider using the latest OpenAI Responses API.",
+    "type": "module",
+    "category": "infra",
+    "author": "DavidKoleczek",
+    "repo": "https://github.com/DavidKoleczek/amplifier-module-provider-openai-v2",
+    "install": "amplifier bundle add git+https://github.com/DavidKoleczek/amplifier-module-provider-openai-v2@main",
+    "rating": null,
+    "tags": [
+      "openai",
+      "provider",
+      "responses-api",
+      "v2"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-session-analyzer",
+    "name": "amplifier-app-session-analyzer",
+    "namespace": "DavidKoleczek",
+    "description": "Session analysis app for Amplifier — inspect, debug, and analyze agent session transcripts.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "DavidKoleczek",
+    "repo": "https://github.com/DavidKoleczek/amplifier-app-session-analyzer",
+    "install": "amplifier bundle add git+https://github.com/DavidKoleczek/amplifier-app-session-analyzer@main",
+    "rating": null,
+    "tags": [
+      "sessions",
+      "analysis",
+      "debugging"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-grove",
+    "name": "amplifier-grove",
+    "namespace": "manojp99",
+    "description": "Grove IDE integration for Amplifier — connect Amplifier agents to the Grove development environment.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "manojp99",
+    "repo": "https://github.com/manojp99/amplifier-grove",
+    "install": "amplifier bundle add git+https://github.com/manojp99/amplifier-grove@main",
+    "rating": null,
+    "tags": [
+      "grove",
+      "ide",
+      "integration"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "module-grove",
+    "name": "amplifier-module-grove",
+    "namespace": "manojp99",
+    "description": "Grove IDE integration modules for Amplifier.",
+    "type": "module",
+    "category": "dev",
+    "author": "manojp99",
+    "repo": "https://github.com/manojp99/amplifier-module-grove",
+    "install": "amplifier bundle add git+https://github.com/manojp99/amplifier-module-grove@main",
+    "rating": null,
+    "tags": [
+      "grove",
+      "ide",
+      "module"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "hooks-notify-webhook",
+    "name": "amplifier-module-hooks-notify-webhook",
+    "namespace": "manojp99",
+    "description": "Webhook transport hook for the notify bundle — push Amplifier notifications to any webhook endpoint.",
+    "type": "module",
+    "category": "integration",
+    "author": "manojp99",
+    "repo": "https://github.com/manojp99/amplifier-module-hooks-notify-webhook",
+    "install": "amplifier bundle add git+https://github.com/manojp99/amplifier-module-hooks-notify-webhook@main",
+    "rating": null,
+    "tags": [
+      "notifications",
+      "webhook",
+      "hooks"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "tool-remote-task",
+    "name": "amplifier-module-tool-remote-task",
+    "namespace": "manojp99",
+    "description": "Remote task execution tool for Amplifier — dispatch and monitor tasks on remote systems.",
+    "type": "tool",
+    "category": "infra",
+    "author": "manojp99",
+    "repo": "https://github.com/manojp99/amplifier-module-tool-remote-task",
+    "install": "amplifier bundle add git+https://github.com/manojp99/amplifier-module-tool-remote-task@main",
+    "rating": null,
+    "tags": [
+      "remote",
+      "task",
+      "execution"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerified": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "bundle-qna",
+    "name": "amplifier-bundle-qna",
+    "namespace": "manojp99",
+    "description": "Question and answer bundle for Amplifier — structured Q&A workflows over documents and data.",
+    "type": "bundle",
+    "category": "knowledge",
+    "author": "manojp99",
+    "repo": "https://github.com/manojp99/amplifier-bundle-qna",
+    "install": "amplifier bundle add git+https://github.com/manojp99/amplifier-bundle-qna@main",
+    "rating": null,
+    "tags": [
+      "qna",
+      "qa",
+      "knowledge",
+      "documents"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "app-runtime",
+    "name": "amplifier-app-runtime",
+    "namespace": "manojp99",
+    "description": "Backend server with HTTP API for Amplifier — persistent runtime for serving agent sessions.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "manojp99",
+    "repo": "https://github.com/manojp99/amplifier-app-runtime",
+    "install": "amplifier bundle add git+https://github.com/manojp99/amplifier-app-runtime@main",
+    "rating": null,
+    "tags": [
+      "runtime",
+      "server",
+      "api",
+      "backend"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "bundle-contacts",
+    "name": "amplifier-bundle-contacts",
+    "namespace": "anderlpz",
+    "description": "Contact management bundle for Amplifier — manage and query contacts across services.",
+    "type": "bundle",
+    "category": "integration",
+    "author": "anderlpz",
+    "repo": "https://github.com/anderlpz/amplifier-bundle-contacts",
+    "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-bundle-contacts@main",
+    "rating": null,
+    "tags": [
+      "contacts",
+      "crm",
+      "integration"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "hooks-dynamic-context",
+    "name": "amplifier-module-hooks-dynamic-context",
+    "namespace": "anderlpz",
+    "description": "Dynamic context loading hook for Amplifier — inject context into sessions based on runtime conditions.",
+    "type": "module",
+    "category": "infra",
+    "author": "anderlpz",
+    "repo": "https://github.com/anderlpz/amplifier-module-hooks-dynamic-context",
+    "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-module-hooks-dynamic-context@main",
+    "rating": null,
+    "tags": [
+      "context",
+      "dynamic",
+      "hooks"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "design-verification",
+    "name": "amplifier-bundle-design-verification",
+    "namespace": "anderlpz",
+    "description": "Design verification bundle for Amplifier — automated design system compliance checking.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "anderlpz",
+    "repo": "https://github.com/anderlpz/amplifier-bundle-design-verification",
+    "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-bundle-design-verification@main",
+    "rating": null,
+    "tags": [
+      "design",
+      "verification",
+      "compliance",
+      "ui"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-studio",
+    "name": "amplifier-studio",
+    "namespace": "anderlpz",
+    "description": "Creative asset generation workflow for Amplifier — end-to-end creative production pipeline.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "anderlpz",
+    "repo": "https://github.com/anderlpz/amplifier-studio",
+    "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-studio@main",
+    "rating": null,
+    "tags": [
+      "creative",
+      "assets",
+      "studio",
+      "production"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "amplifier-embody",
+    "name": "amplifier-embody",
+    "namespace": "anderlpz",
+    "description": "Design system exploration tool for Amplifier — interactive design system documentation and playground.",
+    "type": "bundle",
+    "category": "ui",
+    "author": "anderlpz",
+    "repo": "https://github.com/anderlpz/amplifier-embody",
+    "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-embody@main",
+    "rating": null,
+    "tags": [
+      "design-system",
+      "exploration",
+      "playground"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "doc-evergreen",
+    "name": "doc-evergreen",
+    "namespace": "momuno",
+    "description": "AI-powered documentation that stays in sync with code — automatically updates docs when code changes.",
+    "type": "bundle",
+    "category": "dev",
+    "author": "momuno",
+    "repo": "https://github.com/momuno/doc-evergreen",
+    "install": "amplifier bundle add git+https://github.com/momuno/doc-evergreen@main",
+    "rating": null,
+    "tags": [
+      "documentation",
+      "sync",
+      "evergreen",
+      "ai-docs"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
+  },
+  {
+    "id": "recipe-tool",
+    "name": "recipe-tool",
+    "namespace": "momuno",
+    "description": "Experimental recipe tool — alternative recipe execution and authoring interface.",
+    "type": "bundle",
+    "category": "infra",
+    "author": "momuno",
+    "repo": "https://github.com/momuno/recipe-tool",
+    "install": "amplifier bundle add git+https://github.com/momuno/recipe-tool@main",
+    "rating": null,
+    "tags": [
+      "recipes",
+      "tool",
+      "experimental"
+    ],
+    "featured": false,
+    "community": true,
+    "lastUpdated": null,
+    "llmVerdict": null,
+    "stars": null,
+    "forks": null,
+    "quality": null
   }
 ]
