@@ -81,7 +81,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Exceptional precision on bundle YAML structure and composition patterns. Significantly reduces authoring errors. Highly recommended as a required checkpoint before any bundle work.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -317,7 +317,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Strong architectural judgment with clear philosophy application. The three-mode design (analyze/architect/review) maps well to real development workflows. Ruthless simplicity principle is consistently enforced.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 3,
       "design": 1,
@@ -487,7 +487,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Excellent implementation discipline. The hard requirement for complete specs before starting prevents scope creep. Pairs exceptionally well with zen-architect as a design-then-build workflow.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 3,
       "design": 2,
@@ -656,7 +656,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Exceptional methodological rigor. Consistently identifies root causes rather than patching symptoms. The hypothesis-driven approach prevents the common AI mistake of trying multiple fixes simultaneously.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 1,
       "design": 1,
@@ -827,7 +827,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Reliable and safe. The safety protocol guardrails prevent destructive git operations. Commit message quality is notably better than ad-hoc generation. Good GitHub CLI integration for PR workflows.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 1,
       "design": 1,
@@ -997,7 +997,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Solid context-sink pattern. Effectively absorbs token costs of large codebase exploration. The requirement to provide full objective and scope in the instruction is appropriate given the clean-slate design.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 3,
       "design": 1,
@@ -1418,7 +1418,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Invaluable for session recovery. The REPAIR-over-REWIND default is the right choice — preserving history is almost always preferable. Safe 100k+ token line handling is a genuine necessity for events.jsonl files.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 1,
       "design": 0,
@@ -1588,7 +1588,7 @@
     "lastUpdated": "2026-04-16",
     "llmVerdict": "Thorough and systematic security analysis. OWASP Top 10 coverage is comprehensive. The required-before-production gate enforces good practices. Dependency scanning integration catches a class of vulnerabilities often missed.",
     "stars": 15,
-    "forks": 14,
+    "forks": 15,
     "quality": {
       "docs": 1,
       "design": 1,
