@@ -2367,7 +2367,7 @@
     "lastUpdated": "2026-03-13",
     "llmVerdict": "Outstanding methodology for deep codebase understanding. The multi-angle approach catches blind spots that single-agent exploration consistently misses. Synthesis quality is high. Particularly valuable for onboarding to unfamiliar large codebases.",
     "stars": 0,
-    "forks": 0,
+    "forks": 1,
     "quality": {
       "docs": 4,
       "design": 4,
