@@ -1756,7 +1756,7 @@
       "daemon"
     ],
     "featured": false,
-    "lastUpdated": "2026-04-20",
+    "lastUpdated": "2026-04-22",
     "llmVerdict": "Practical local automation solution. The three executor types (shell/claude-code/amplifier) cover the main use cases. macOS tray app is a nice touch. File-watch triggers enable event-driven workflows.",
     "stars": 0,
     "forks": 0,
@@ -3487,7 +3487,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-04-20",
+    "lastUpdated": "2026-04-22",
     "llmVerdict": null,
     "stars": 0,
     "forks": 0,
