@@ -58,7 +58,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "foundation-expert",
@@ -228,7 +228,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "superpowers",
@@ -294,7 +294,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "zen-architect",
@@ -464,7 +464,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "modular-builder",
@@ -634,7 +634,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bug-hunter",
@@ -803,7 +803,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "git-ops",
@@ -974,7 +974,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "explorer",
@@ -1144,7 +1144,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "browser-tester",
@@ -1201,7 +1201,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "python-dev",
@@ -1281,7 +1281,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "lsp-code-navigator",
@@ -1337,7 +1337,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "recipes",
@@ -1395,7 +1395,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "session-analyst",
@@ -1565,7 +1565,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "security-guardian",
@@ -1735,7 +1735,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "agent-daemon",
@@ -1778,7 +1778,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-29"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "core-expert",
@@ -1833,7 +1833,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "agent-memory",
@@ -1876,7 +1876,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-04"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "self-driving",
@@ -1941,7 +1941,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "workgraph",
@@ -1996,7 +1996,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "metacognition",
@@ -2039,7 +2039,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-06"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "tool-diagrams",
@@ -2083,7 +2083,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "agent-governance",
@@ -2127,7 +2127,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-27"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundlewizard",
@@ -2198,7 +2198,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "loop-safety",
@@ -2256,7 +2256,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-sage",
@@ -2299,7 +2299,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "cicd-bundle",
@@ -2343,7 +2343,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-26"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "parallax-discovery",
@@ -2409,7 +2409,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "unified-llm",
@@ -2453,7 +2453,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-23"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "hive-slack",
@@ -2497,7 +2497,7 @@
       "forks": 1,
       "lastUpdated": "2026-02-26"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "dotnet-ops",
@@ -2554,7 +2554,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-perplexity",
@@ -2613,7 +2613,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "nano-banana",
@@ -2671,7 +2671,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-voice",
@@ -2715,7 +2715,7 @@
       "forks": 2,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "attention-firewall",
@@ -2759,7 +2759,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-01"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-notify",
@@ -2828,7 +2828,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "foreman",
@@ -2871,7 +2871,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-17"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "session-guardian",
@@ -2930,7 +2930,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "discovery-bundle",
@@ -2986,7 +2986,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "engram",
@@ -3045,7 +3045,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "stt-whispercpp",
@@ -3090,7 +3090,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-08"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "provider-github-copilot",
@@ -3134,7 +3134,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "lsp-typescript",
@@ -3192,7 +3192,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "infographic-builder",
@@ -3235,7 +3235,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "presentation-builder",
@@ -3304,7 +3304,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "infographic-builder-cc",
@@ -3330,7 +3330,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "atelier",
@@ -3439,7 +3439,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "connector-m365",
@@ -3492,7 +3492,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-registry",
@@ -3517,7 +3517,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "module-auto-title",
@@ -3554,7 +3554,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-omnisvg",
@@ -3580,7 +3580,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "sdk-node",
@@ -3605,7 +3605,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "module-connectors",
@@ -3642,7 +3642,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "team-pulse-kenotron",
@@ -3707,7 +3707,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "spicy-specs",
@@ -3732,7 +3732,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "ampbox",
@@ -3808,7 +3808,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "project-orchestrator",
@@ -3853,7 +3853,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "deliberate-development",
@@ -3914,7 +3914,7 @@
         "description": "Research mode behavior - optimized for comprehensive investigation with token-liberal exploration"
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "longbuilder",
@@ -3940,7 +3940,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "soar",
@@ -3979,7 +3979,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "daily-flow",
@@ -4020,7 +4020,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "beads-superpowers",
@@ -4045,7 +4045,7 @@
     "stars": 1,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "browser-debugger",
@@ -4071,7 +4071,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "ux-analyzer",
@@ -4096,7 +4096,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "tool-github-actions",
@@ -4122,7 +4122,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "tool-database",
@@ -4148,7 +4148,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "m365-collab",
@@ -4174,7 +4174,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "metacog-code-quality",
@@ -4199,7 +4199,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "html-tools",
@@ -4224,7 +4224,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "collection-dev-memory",
@@ -4261,7 +4261,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-mcp-server",
@@ -4286,7 +4286,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-tui",
@@ -4312,7 +4312,7 @@
     "stars": 1,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "themed-bundles",
@@ -4337,7 +4337,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "voice-bridge",
@@ -4363,7 +4363,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "tool-workflow",
@@ -4387,7 +4387,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "dot-docs",
@@ -4422,7 +4422,7 @@
         "description": "Adds DOT graph documentation recipes for discovering, prescanning, and synthesizing DOT graphs"
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "paperclip-adapter",
@@ -4447,7 +4447,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "app-server",
@@ -4472,7 +4472,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "loop-interactive",
@@ -4498,7 +4498,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "document-builder-go",
@@ -4523,7 +4523,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "comic-strips-bkrabach",
@@ -4596,7 +4596,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "coding-agent-loop",
@@ -4622,7 +4622,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "cortex",
@@ -4648,7 +4648,7 @@
     "stars": 1,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "muxplex",
@@ -4674,7 +4674,7 @@
     "stars": 0,
     "forks": 2,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "pr-review",
@@ -4700,7 +4700,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "hooks-otel",
@@ -4726,7 +4726,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "tool-comfyui",
@@ -4752,7 +4752,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "deepresearch",
@@ -4802,7 +4802,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-beads",
@@ -4827,7 +4827,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "plugin-compat",
@@ -4852,7 +4852,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "comic-strips-robotdad",
@@ -4900,7 +4900,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "lattice",
@@ -4926,7 +4926,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "change-advisor",
@@ -4961,7 +4961,7 @@
         "description": "Multi-lens decision advisor capability for evaluating changes"
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-ui-vision",
@@ -5004,7 +5004,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "team-pulse-cpark4x",
@@ -5054,7 +5054,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-canvas",
@@ -5079,7 +5079,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "ridecast",
@@ -5105,7 +5105,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "doc-driven-dev",
@@ -5143,7 +5143,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "session-capture",
@@ -5168,7 +5168,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "usage-insights",
@@ -5194,7 +5194,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "finisher",
@@ -5219,7 +5219,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "deckgen",
@@ -5245,7 +5245,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "recipe-dashboard",
@@ -5271,7 +5271,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "provider-foundry-local",
@@ -5297,7 +5297,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "app-tool-generator",
@@ -5322,7 +5322,7 @@
     "stars": 2,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "app-vscode",
@@ -5347,7 +5347,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "canvas-ai",
@@ -5373,7 +5373,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "interop-router",
@@ -5399,7 +5399,7 @@
     "stars": 7,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "agent-tui",
@@ -5425,7 +5425,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "provider-openai-v2",
@@ -5451,7 +5451,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "app-session-analyzer",
@@ -5476,7 +5476,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-grove",
@@ -5525,7 +5525,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "hooks-notify-webhook",
@@ -5550,7 +5550,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "tool-remote-task",
@@ -5575,7 +5575,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-qna",
@@ -5615,7 +5615,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "app-runtime",
@@ -5641,7 +5641,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "bundle-contacts",
@@ -5678,7 +5678,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "hooks-dynamic-context",
@@ -5703,7 +5703,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "design-verification",
@@ -5741,7 +5741,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-studio",
@@ -5767,7 +5767,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "amplifier-embody",
@@ -5792,7 +5792,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "doc-evergreen",
@@ -5818,7 +5818,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   },
   {
     "id": "recipe-tool",
@@ -5843,6 +5843,6 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-04-22"
+    "behaviorsScannedAt": "2026-04-23"
   }
 ]
