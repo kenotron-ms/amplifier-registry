@@ -3030,21 +3030,6 @@
       "forks": 0,
       "lastUpdated": "2026-03-07"
     },
-    "behaviors": [
-      {
-        "file": "behaviors/engram.yaml",
-        "name": "engram-behavior",
-        "install": "amplifier bundle add git+https://github.com/kenotron-ms/engram@main#subdirectory=behaviors/engram.yaml --app",
-        "version": "0.3.0",
-        "description": "Persistent vector memory — hooks + tools for Amplifier agents",
-        "tools": [
-          "tool-memory"
-        ],
-        "hooks": [
-          "hook-memory-context"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-04-26"
   },
   {
@@ -3512,7 +3497,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-26",
     "llmVerdict": null,
     "stars": 0,
     "forks": 0,
