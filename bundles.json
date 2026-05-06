@@ -17,10 +17,10 @@
       "guidance"
     ],
     "featured": true,
-    "lastUpdated": "2026-05-05",
+    "lastUpdated": "2026-05-06",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
     "stars": 3081,
-    "forks": 255,
+    "forks": 256,
     "quality": {
       "docs": 3,
       "design": 3,
@@ -40,13 +40,6 @@
       "lastUpdated": "2026-03-28"
     },
     "behaviors": [
-      {
-        "file": "behaviors/amplifier-dev.yaml",
-        "name": "amplifier-dev-behavior",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
-        "description": "Development hygiene and best practices for Amplifier CLI users"
-      },
       {
         "file": "behaviors/amplifier-expert.yaml",
         "name": "amplifier-expert-behavior",
@@ -172,16 +165,6 @@
         ],
         "agents": [
           "foundation:session-analyst"
-        ]
-      },
-      {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
         ]
       },
       {
@@ -411,16 +394,6 @@
         ]
       },
       {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
-        ]
-      },
-      {
         "file": "behaviors/status-context.yaml",
         "name": "behavior-status-context",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
@@ -581,16 +554,6 @@
         ]
       },
       {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
-        ]
-      },
-      {
         "file": "behaviors/status-context.yaml",
         "name": "behavior-status-context",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
@@ -747,16 +710,6 @@
         ],
         "agents": [
           "foundation:session-analyst"
-        ]
-      },
-      {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
         ]
       },
       {
@@ -921,16 +874,6 @@
         ]
       },
       {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
-        ]
-      },
-      {
         "file": "behaviors/status-context.yaml",
         "name": "behavior-status-context",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
@@ -1088,16 +1031,6 @@
         ],
         "agents": [
           "foundation:session-analyst"
-        ]
-      },
-      {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
         ]
       },
       {
@@ -1512,16 +1445,6 @@
         ]
       },
       {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
-        ]
-      },
-      {
         "file": "behaviors/status-context.yaml",
         "name": "behavior-status-context",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/status-context.yaml --app",
@@ -1679,16 +1602,6 @@
         ],
         "agents": [
           "foundation:session-analyst"
-        ]
-      },
-      {
-        "file": "behaviors/shadow-amplifier.yaml",
-        "name": "behavior-shadow-amplifier",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/shadow-amplifier.yaml --app",
-        "version": "1.0.0",
-        "description": "Amplifier ecosystem-specific shadow environment support. Includes the generic shadow bundle plus Amplifier-specific: - shadow-smoke-test agent for Amplifier validation - Amplifier testing patterns and examples - Pre-configured workflows for testing amplifier-core, amplifier-found",
-        "agents": [
-          "foundation:amplifier-smoke-test"
         ]
       },
       {
