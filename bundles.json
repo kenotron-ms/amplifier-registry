@@ -19,7 +19,7 @@
     "featured": true,
     "lastUpdated": "2026-05-08",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
-    "stars": 3084,
+    "stars": 3083,
     "forks": 256,
     "quality": {
       "docs": 3,
@@ -3490,7 +3490,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-05-10",
+    "lastUpdated": "2026-05-11",
     "llmVerdict": null,
     "stars": 0,
     "forks": 0,
