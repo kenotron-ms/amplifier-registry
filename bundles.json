@@ -51,7 +51,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "foundation-expert",
@@ -71,7 +71,7 @@
       "authoring"
     ],
     "featured": true,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Exceptional precision on bundle YAML structure and composition patterns. Significantly reduces authoring errors. Highly recommended as a required checkpoint before any bundle work.",
     "stars": 15,
     "forks": 15,
@@ -108,7 +108,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -221,7 +221,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "superpowers",
@@ -241,7 +241,7 @@
       "quality"
     ],
     "featured": true,
-    "lastUpdated": "2026-04-23",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Excellent discipline enforcement. The TDD-first approach and verification gates prevent a large class of agent mistakes. The brainstorm-to-execute flow is well-designed and transfers well across project types.",
     "stars": 3,
     "forks": 6,
@@ -287,7 +287,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "zen-architect",
@@ -307,7 +307,7 @@
       "review"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Strong architectural judgment with clear philosophy application. The three-mode design (analyze/architect/review) maps well to real development workflows. Ruthless simplicity principle is consistently enforced.",
     "stars": 15,
     "forks": 15,
@@ -344,7 +344,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -457,7 +457,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "modular-builder",
@@ -477,7 +477,7 @@
       "specs"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Excellent implementation discipline. The hard requirement for complete specs before starting prevents scope creep. Pairs exceptionally well with zen-architect as a design-then-build workflow.",
     "stars": 15,
     "forks": 15,
@@ -514,7 +514,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -627,7 +627,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bug-hunter",
@@ -646,7 +646,7 @@
       "root-cause"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Exceptional methodological rigor. Consistently identifies root causes rather than patching symptoms. The hypothesis-driven approach prevents the common AI mistake of trying multiple fixes simultaneously.",
     "stars": 15,
     "forks": 15,
@@ -683,7 +683,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -796,7 +796,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "git-ops",
@@ -817,7 +817,7 @@
       "safety"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Reliable and safe. The safety protocol guardrails prevent destructive git operations. Commit message quality is notably better than ad-hoc generation. Good GitHub CLI integration for PR workflows.",
     "stars": 15,
     "forks": 15,
@@ -854,7 +854,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -967,7 +967,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "explorer",
@@ -987,7 +987,7 @@
       "context"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Solid context-sink pattern. Effectively absorbs token costs of large codebase exploration. The requirement to provide full objective and scope in the instruction is appropriate given the clean-slate design.",
     "stars": 15,
     "forks": 15,
@@ -1024,7 +1024,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -1137,7 +1137,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "browser-tester",
@@ -1194,7 +1194,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "python-dev",
@@ -1215,7 +1215,7 @@
       "ruff"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-01",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Excellent Python tooling integration. The ruff+pyright combination catches a wide class of issues. The LSP code-intel sub-agent provides genuine semantic understanding beyond text search. Well-documented configuration.",
     "stars": 3,
     "forks": 4,
@@ -1249,7 +1249,7 @@
         "file": "behaviors/python-lsp.yaml",
         "name": "behavior-python-lsp",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-lsp.yaml --app",
-        "version": "0.1.0",
+        "version": "0.2.0",
         "tools": [
           "tool-lsp"
         ],
@@ -1261,7 +1261,7 @@
         "file": "behaviors/python-quality.yaml",
         "name": "python-quality-behavior",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-quality.yaml --app",
-        "version": "0.1.0",
+        "version": "0.2.0",
         "description": "Python code quality tools - ruff, pyright, stub detection, and expert agent",
         "tools": [
           "tool-python-check"
@@ -1274,7 +1274,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "lsp-code-navigator",
@@ -1295,7 +1295,7 @@
       "semantic"
     ],
     "featured": false,
-    "lastUpdated": "2026-03-02",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Strong semantic code intelligence. The LSP approach provides genuine type-aware navigation that grep cannot match. The distinction between semantic and text results is clearly maintained in outputs.",
     "stars": 0,
     "forks": 1,
@@ -1322,6 +1322,7 @@
         "file": "behaviors/lsp-core.yaml",
         "name": "behavior-lsp-core",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-lsp@main#subdirectory=behaviors/lsp-core.yaml --app",
+        "version": "0.2.0",
         "tools": [
           "tool-lsp"
         ],
@@ -1330,7 +1331,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "recipes",
@@ -1388,7 +1389,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "session-analyst",
@@ -1408,7 +1409,7 @@
       "transcripts"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Invaluable for session recovery. The REPAIR-over-REWIND default is the right choice — preserving history is almost always preferable. Safe 100k+ token line handling is a genuine necessity for events.jsonl files.",
     "stars": 15,
     "forks": 15,
@@ -1445,7 +1446,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -1558,7 +1559,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "security-guardian",
@@ -1578,7 +1579,7 @@
       "vulnerabilities"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Thorough and systematic security analysis. OWASP Top 10 coverage is comprehensive. The required-before-production gate enforces good practices. Dependency scanning integration catches a class of vulnerabilities often missed.",
     "stars": 15,
     "forks": 15,
@@ -1615,7 +1616,7 @@
         "file": "behaviors/amplifier-dev.yaml",
         "name": "behavior-amplifier-dev",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
         "agents": [
           "foundation:ecosystem-expert"
@@ -1728,7 +1729,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "agent-daemon",
@@ -1771,7 +1772,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-29"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "core-expert",
@@ -1792,7 +1793,7 @@
       "modules"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-12",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
     "stars": 21,
     "forks": 21,
@@ -1819,14 +1820,14 @@
         "file": "behaviors/core-expert.yaml",
         "name": "core-expert-behavior",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-core@main#subdirectory=behaviors/core-expert.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Expert consultant for Amplifier kernel internals",
         "agents": [
           "core:core-expert"
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "agent-memory",
@@ -1869,7 +1870,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-04"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "self-driving",
@@ -1934,7 +1935,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "workgraph",
@@ -1989,7 +1990,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "metacognition",
@@ -2032,7 +2033,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-06"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "tool-diagrams",
@@ -2076,7 +2077,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "agent-governance",
@@ -2120,7 +2121,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-27"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundlewizard",
@@ -2191,7 +2192,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "loop-safety",
@@ -2249,7 +2250,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-sage",
@@ -2292,7 +2293,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "cicd-bundle",
@@ -2336,7 +2337,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-26"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "parallax-discovery",
@@ -2357,7 +2358,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-04-23",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": "Outstanding methodology for deep codebase understanding. The multi-angle approach catches blind spots that single-agent exploration consistently misses. Synthesis quality is high. Particularly valuable for onboarding to unfamiliar large codebases.",
     "stars": 0,
     "forks": 1,
@@ -2402,7 +2403,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "unified-llm",
@@ -2446,7 +2447,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-23"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "hive-slack",
@@ -2490,7 +2491,7 @@
       "forks": 1,
       "lastUpdated": "2026-02-26"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "dotnet-ops",
@@ -2547,7 +2548,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-perplexity",
@@ -2606,7 +2607,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "nano-banana",
@@ -2664,7 +2665,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-voice",
@@ -2708,7 +2709,7 @@
       "forks": 2,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "attention-firewall",
@@ -2752,7 +2753,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-01"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-notify",
@@ -2821,7 +2822,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "foreman",
@@ -2864,7 +2865,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-17"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "session-guardian",
@@ -2923,7 +2924,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "discovery-bundle",
@@ -2979,7 +2980,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "engram",
@@ -3023,7 +3024,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-07"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "stt-whispercpp",
@@ -3068,7 +3069,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-08"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "provider-github-copilot",
@@ -3112,7 +3113,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "lsp-typescript",
@@ -3170,7 +3171,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "infographic-builder",
@@ -3213,7 +3214,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "presentation-builder",
@@ -3282,7 +3283,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "infographic-builder-cc",
@@ -3308,7 +3309,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "atelier",
@@ -3417,7 +3418,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "connector-m365",
@@ -3470,7 +3471,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-registry",
@@ -3495,7 +3496,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "module-auto-title",
@@ -3532,7 +3533,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-omnisvg",
@@ -3558,7 +3559,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "sdk-node",
@@ -3583,7 +3584,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "module-connectors",
@@ -3620,7 +3621,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "team-pulse-kenotron",
@@ -3685,7 +3686,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "spicy-specs",
@@ -3710,7 +3711,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "ampbox",
@@ -3786,7 +3787,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "project-orchestrator",
@@ -3831,7 +3832,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "deliberate-development",
@@ -3892,7 +3893,7 @@
         "description": "Research mode behavior - optimized for comprehensive investigation with token-liberal exploration"
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "longbuilder",
@@ -3918,7 +3919,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "soar",
@@ -3957,7 +3958,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "daily-flow",
@@ -3998,7 +3999,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "beads-superpowers",
@@ -4023,7 +4024,7 @@
     "stars": 1,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "browser-debugger",
@@ -4049,7 +4050,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "ux-analyzer",
@@ -4074,7 +4075,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "tool-github-actions",
@@ -4100,7 +4101,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "tool-database",
@@ -4126,7 +4127,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "m365-collab",
@@ -4152,7 +4153,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "metacog-code-quality",
@@ -4177,7 +4178,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "html-tools",
@@ -4202,7 +4203,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "collection-dev-memory",
@@ -4239,7 +4240,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-mcp-server",
@@ -4264,7 +4265,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-tui",
@@ -4290,7 +4291,7 @@
     "stars": 1,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "themed-bundles",
@@ -4315,7 +4316,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "voice-bridge",
@@ -4341,7 +4342,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "tool-workflow",
@@ -4365,7 +4366,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "dot-docs",
@@ -4400,7 +4401,7 @@
         "description": "Adds DOT graph documentation recipes for discovering, prescanning, and synthesizing DOT graphs"
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "paperclip-adapter",
@@ -4425,7 +4426,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "app-server",
@@ -4450,7 +4451,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "loop-interactive",
@@ -4476,7 +4477,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "document-builder-go",
@@ -4501,7 +4502,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "comic-strips-bkrabach",
@@ -4574,7 +4575,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "coding-agent-loop",
@@ -4600,7 +4601,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "cortex",
@@ -4626,7 +4627,7 @@
     "stars": 1,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "muxplex",
@@ -4647,12 +4648,12 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-05-18",
     "llmVerdict": null,
     "stars": 1,
     "forks": 3,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "pr-review",
@@ -4678,7 +4679,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "hooks-otel",
@@ -4704,7 +4705,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "tool-comfyui",
@@ -4730,7 +4731,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "deepresearch",
@@ -4780,7 +4781,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-beads",
@@ -4805,7 +4806,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "plugin-compat",
@@ -4830,7 +4831,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "comic-strips-robotdad",
@@ -4878,7 +4879,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "lattice",
@@ -4904,7 +4905,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "change-advisor",
@@ -4939,7 +4940,7 @@
         "description": "Multi-lens decision advisor capability for evaluating changes"
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-ui-vision",
@@ -4982,7 +4983,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "team-pulse-cpark4x",
@@ -5032,7 +5033,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-canvas",
@@ -5057,7 +5058,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "ridecast",
@@ -5083,7 +5084,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "doc-driven-dev",
@@ -5121,7 +5122,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "session-capture",
@@ -5146,7 +5147,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "usage-insights",
@@ -5172,7 +5173,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "finisher",
@@ -5197,7 +5198,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "deckgen",
@@ -5223,7 +5224,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "recipe-dashboard",
@@ -5249,7 +5250,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "provider-foundry-local",
@@ -5275,7 +5276,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "app-tool-generator",
@@ -5300,7 +5301,7 @@
     "stars": 2,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "app-vscode",
@@ -5325,7 +5326,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "canvas-ai",
@@ -5351,7 +5352,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "interop-router",
@@ -5377,7 +5378,7 @@
     "stars": 7,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "agent-tui",
@@ -5403,7 +5404,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "provider-openai-v2",
@@ -5429,7 +5430,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "app-session-analyzer",
@@ -5454,7 +5455,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-grove",
@@ -5503,7 +5504,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "hooks-notify-webhook",
@@ -5528,7 +5529,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "tool-remote-task",
@@ -5553,7 +5554,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-qna",
@@ -5593,7 +5594,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "app-runtime",
@@ -5619,7 +5620,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "bundle-contacts",
@@ -5656,7 +5657,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "hooks-dynamic-context",
@@ -5681,7 +5682,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "design-verification",
@@ -5719,7 +5720,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-studio",
@@ -5745,7 +5746,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "amplifier-embody",
@@ -5770,7 +5771,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "doc-evergreen",
@@ -5796,7 +5797,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   },
   {
     "id": "recipe-tool",
@@ -5821,6 +5822,6 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-05-17"
+    "behaviorsScannedAt": "2026-05-18"
   }
 ]
