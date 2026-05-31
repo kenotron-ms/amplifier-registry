@@ -191,7 +191,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -427,7 +427,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -597,7 +597,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -766,7 +766,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -937,7 +937,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -1107,7 +1107,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -1529,7 +1529,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -1699,7 +1699,7 @@
         "file": "behaviors/streaming-ui.yaml",
         "name": "behavior-streaming-ui",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/streaming-ui.yaml --app",
-        "version": "1.1.0",
+        "version": "1.2.0",
         "description": "Streaming UI display for thinking blocks, tool calls, and token usage",
         "hooks": [
           "hooks-streaming-ui"
@@ -2601,6 +2601,9 @@
         "description": "Perplexity deep research capability - agent, tool, and guidance",
         "tools": [
           "tool-perplexity-search"
+        ],
+        "hooks": [
+          "hooks-perplexity-nudge"
         ],
         "agents": [
           "perplexity:research-expert"
