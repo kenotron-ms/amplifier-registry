@@ -2778,7 +2778,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-03-20",
+    "lastUpdated": "2026-06-08",
     "llmVerdict": "Simple and high-value. Solves the \"is it done yet?\" workflow problem elegantly. Cross-platform support is correct. One of the more universally useful QoL bundles.",
     "stars": 0,
     "forks": 0,
@@ -2805,7 +2805,7 @@
         "file": "behaviors/desktop-notifications.yaml",
         "name": "behavior-desktop-notifications",
         "install": "amplifier bundle add git+https://github.com/colombod/amplifier-bundle-notify@main#subdirectory=behaviors/desktop-notifications.yaml --app",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "Desktop and terminal notifications when assistant turns complete. Supports macOS, Linux, Windows/WSL, and SSH sessions.",
         "hooks": [
           "hooks-notify"
@@ -5820,7 +5820,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-06-04",
+    "lastUpdated": "2026-06-08",
     "llmVerdict": null,
     "stars": 0,
     "forks": 0,
