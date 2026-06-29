@@ -3379,11 +3379,31 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": null,
+    "lastUpdated": "2026-04-10",
     "llmVerdict": null,
-    "stars": null,
-    "forks": null,
-    "quality": null
+    "stars": 0,
+    "forks": 0,
+    "quality": null,
+    "behaviors": [
+      {
+        "file": "behaviors/ui-studio.yaml",
+        "name": "ui-studio-behavior",
+        "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-bundle-ui-studio@main#subdirectory=behaviors/ui-studio.yaml --app",
+        "version": "1.1.0",
+        "description": "Composable design-to-code pipeline with five progressive modes",
+        "tools": [
+          "tool-nano-banana"
+        ],
+        "agents": [
+          "ui-studio:moodboard-agent",
+          "ui-studio:storyboard-agent",
+          "ui-studio:frame-agent",
+          "ui-studio:blueprint-agent",
+          "ui-studio:forge-agent"
+        ]
+      }
+    ],
+    "behaviorsScannedAt": "2026-06-29"
   },
   {
     "id": "tool-gpt-image",
