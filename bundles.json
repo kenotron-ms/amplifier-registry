@@ -2634,7 +2634,7 @@
     "lastUpdated": "2026-03-27",
     "llmVerdict": "Strong VLM integration with practical three-operation design (analyze/compare/generate). Reference image support prevents fidelity loss through the text bottleneck. Used heavily in the UI Studio pipeline.",
     "stars": 0,
-    "forks": 0,
+    "forks": 1,
     "quality": {
       "docs": 4,
       "design": 4,
