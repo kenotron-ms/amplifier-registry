@@ -4415,15 +4415,6 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviors": [
-      {
-        "file": "behaviors/dot-docs.yaml",
-        "name": "dot-docs-behavior",
-        "install": "amplifier bundle add git+https://github.com/bkrabach/amplifier-bundle-dot-docs@main#subdirectory=behaviors/dot-docs.yaml --app",
-        "version": "1.0.0",
-        "description": "Adds DOT graph documentation recipes for discovering, prescanning, and synthesizing DOT graphs"
-      }
-    ],
     "behaviorsScannedAt": "2026-07-07"
   },
   {
