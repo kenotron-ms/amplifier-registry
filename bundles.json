@@ -1795,7 +1795,7 @@
     "featured": false,
     "lastUpdated": "2026-07-01",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
-    "stars": 23,
+    "stars": 24,
     "forks": 23,
     "quality": {
       "docs": 4,
@@ -2164,34 +2164,6 @@
       "forks": 0,
       "lastUpdated": "2026-03-27"
     },
-    "behaviors": [
-      {
-        "file": "behaviors/bundlewizard.yaml",
-        "name": "bundlewizard-behavior",
-        "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-bundlewizard@main#subdirectory=behaviors/bundlewizard.yaml --app",
-        "version": "0.1.0",
-        "description": "Core behavior for bundlewizard. Mounts the modes system, registers all agents, loads skills, and includes root-level context.",
-        "tools": [
-          "tool-mode",
-          "tool-skills"
-        ],
-        "hooks": [
-          "hooks-mode"
-        ],
-        "agents": [
-          "bundlewizard:agents/bundle-explorer",
-          "bundlewizard:agents/bundle-auditor",
-          "bundlewizard:agents/ecosystem-scout",
-          "bundlewizard:agents/bundle-spec-writer",
-          "bundlewizard:agents/bundle-plan-writer",
-          "bundlewizard:agents/bundle-generator",
-          "bundlewizard:agents/bundle-critic",
-          "bundlewizard:agents/bundle-refiner",
-          "bundlewizard:agents/bundle-evaluator",
-          "bundlewizard:agents/bundle-packager"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-07-08"
   },
   {
@@ -2235,21 +2207,6 @@
       "forks": 0,
       "lastUpdated": "2026-02-06"
     },
-    "behaviors": [
-      {
-        "file": "behaviors/loop-safety.yaml",
-        "name": "loop-safety-behavior",
-        "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-loop-safety@main#subdirectory=behaviors/loop-safety.yaml --app",
-        "version": "1.0.0",
-        "description": "Loop safety behavior providing iteration limits and pattern detection. Includes: - orchestrator-loop-safe: Hard iteration limits with warnings - hooks-loop-detector: Repetitive pattern detection - loop-diagnostician: Diagnostic agent for stuck sessions",
-        "hooks": [
-          "hooks-loop-detector"
-        ],
-        "agents": [
-          "loop-safety:loop-diagnostician"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-07-08"
   },
   {
@@ -3201,22 +3158,6 @@
     "stars": 6,
     "forks": 2,
     "quality": null,
-    "behaviors": [
-      {
-        "file": "behaviors/infographic.yaml",
-        "name": "infographic-behavior",
-        "install": "amplifier bundle add git+https://github.com/singh2/infographic-builder@main#subdirectory=behaviors/infographic.yaml --app",
-        "version": "0.1.0",
-        "description": "Infographic design capability -- image generation via nano-banana, designer agent, awareness context",
-        "tools": [
-          "tool-nano-banana",
-          "tool-stitch-panels"
-        ],
-        "agents": [
-          "infographic-builder:infographic-builder"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-07-08"
   },
   {
@@ -3429,18 +3370,6 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviors": [
-      {
-        "file": "behaviors/gpt-image.yaml",
-        "name": "gpt-image-behavior",
-        "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-module-tool-gpt-image@main#subdirectory=behaviors/gpt-image.yaml --app",
-        "version": "0.1.0",
-        "description": "Adds OpenAI GPT image generation and background removal to Amplifier sessions",
-        "tools": [
-          "tool-gpt-image"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-07-08"
   },
   {
@@ -3786,16 +3715,6 @@
     "quality": null,
     "behaviors": [
       {
-        "file": "behaviors/projector-policy.yaml",
-        "name": "projector-policy",
-        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-projector@main#subdirectory=behaviors/projector-policy.yaml --app",
-        "version": "0.1.0",
-        "description": "Strategy injection and session outcome capture hooks",
-        "hooks": [
-          "hooks-projector"
-        ]
-      },
-      {
         "file": "behaviors/projector.yaml",
         "name": "projector-capability",
         "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-projector@main#subdirectory=behaviors/projector.yaml --app",
@@ -3835,26 +3754,6 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviors": [
-      {
-        "file": "behaviors/project-orchestrator.yaml",
-        "name": "project-orchestrator-behavior",
-        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-project-orchestrator@main#subdirectory=behaviors/project-orchestrator.yaml --app",
-        "version": "1.0.0",
-        "description": "Core project orchestration capabilities",
-        "tools": [
-          "tool-project-state"
-        ],
-        "agents": [
-          "project-orchestrator:project-planner",
-          "project-orchestrator:session-orchestrator",
-          "project-orchestrator:phase-coordinator",
-          "project-orchestrator:validation-architect",
-          "project-orchestrator:integration-validator",
-          "project-orchestrator:quality-gate-enforcer"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-07-08"
   },
   {
@@ -3882,13 +3781,6 @@
     "quality": null,
     "behaviors": [
       {
-        "file": "behaviors/deliberate-awareness.yaml",
-        "name": "behavior-deliberate-awareness",
-        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/deliberate-awareness.yaml --app",
-        "version": "1.0.0",
-        "description": "Thin awareness pointer for deliberate development methodology (discovery layer)"
-      },
-      {
         "file": "behaviors/deliberate-development.yaml",
         "name": "behavior-deliberate-development",
         "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/deliberate-development.yaml --app",
@@ -3907,13 +3799,6 @@
         "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/planning-mode.yaml --app",
         "version": "1.0.0",
         "description": "Planning mode behavior - restricts tool usage and adds planning context when in planning mode"
-      },
-      {
-        "file": "behaviors/research-mode.yaml",
-        "name": "behavior-research-mode",
-        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/research-mode.yaml --app",
-        "version": "1.0.0",
-        "description": "Research mode behavior - optimized for comprehensive investigation with token-liberal exploration"
       }
     ],
     "behaviorsScannedAt": "2026-07-08"
@@ -5668,18 +5553,6 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviors": [
-      {
-        "file": "behaviors/contact-intelligence.yaml",
-        "name": "contact-intelligence-behavior",
-        "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-bundle-contacts@main#subdirectory=behaviors/contact-intelligence.yaml --app",
-        "version": "1.0.0",
-        "description": "Cross-app contact management with gather-assemble-confirm-write workflow",
-        "agents": [
-          "contacts:contact-manager"
-        ]
-      }
-    ],
     "behaviorsScannedAt": "2026-07-08"
   },
   {
