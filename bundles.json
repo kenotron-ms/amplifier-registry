@@ -19,7 +19,7 @@
     "featured": true,
     "lastUpdated": "2026-07-08",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
-    "stars": 3099,
+    "stars": 3100,
     "forks": 256,
     "quality": {
       "docs": 3,
@@ -51,7 +51,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "foundation-expert",
@@ -198,16 +198,6 @@
         ]
       },
       {
-        "file": "behaviors/tasks.yaml",
-        "name": "behavior-tasks",
-        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/tasks.yaml --app",
-        "version": "1.0.0",
-        "description": "Legacy task tool behavior for backwards compatibility. For new development, consider using the 'agents' behavior with the enhanced delegate tool (two-parameter context, short session IDs, etc.)",
-        "tools": [
-          "tool-task"
-        ]
-      },
-      {
         "file": "behaviors/todo-reminder.yaml",
         "name": "behavior-todo-reminder",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/todo-reminder.yaml --app",
@@ -221,7 +211,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "superpowers",
@@ -287,7 +277,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "zen-architect",
@@ -457,7 +447,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "modular-builder",
@@ -627,7 +617,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bug-hunter",
@@ -796,7 +786,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "git-ops",
@@ -967,7 +957,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "explorer",
@@ -1137,7 +1127,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "browser-tester",
@@ -1194,7 +1184,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "python-dev",
@@ -1274,7 +1264,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "lsp-code-navigator",
@@ -1331,7 +1321,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "recipes",
@@ -1389,7 +1379,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "session-analyst",
@@ -1559,7 +1549,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "security-guardian",
@@ -1729,7 +1719,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "agent-daemon",
@@ -1772,7 +1762,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-29"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "core-expert",
@@ -1827,7 +1817,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "agent-memory",
@@ -1870,7 +1860,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-04"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "self-driving",
@@ -1935,7 +1925,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "workgraph",
@@ -1990,7 +1980,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "metacognition",
@@ -2033,7 +2023,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-06"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-diagrams",
@@ -2077,7 +2067,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "agent-governance",
@@ -2121,7 +2111,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-27"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundlewizard",
@@ -2164,7 +2154,35 @@
       "forks": 0,
       "lastUpdated": "2026-03-27"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09",
+    "behaviors": [
+      {
+        "file": "behaviors/bundlewizard.yaml",
+        "name": "bundlewizard-behavior",
+        "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-bundlewizard@main#subdirectory=behaviors/bundlewizard.yaml --app",
+        "version": "0.1.0",
+        "description": "Core behavior for bundlewizard. Mounts the modes system, registers all agents, loads skills, and includes root-level context.",
+        "tools": [
+          "tool-mode",
+          "tool-skills"
+        ],
+        "hooks": [
+          "hooks-mode"
+        ],
+        "agents": [
+          "bundlewizard:agents/bundle-explorer",
+          "bundlewizard:agents/bundle-auditor",
+          "bundlewizard:agents/ecosystem-scout",
+          "bundlewizard:agents/bundle-spec-writer",
+          "bundlewizard:agents/bundle-plan-writer",
+          "bundlewizard:agents/bundle-generator",
+          "bundlewizard:agents/bundle-critic",
+          "bundlewizard:agents/bundle-refiner",
+          "bundlewizard:agents/bundle-evaluator",
+          "bundlewizard:agents/bundle-packager"
+        ]
+      }
+    ]
   },
   {
     "id": "loop-safety",
@@ -2207,7 +2225,22 @@
       "forks": 0,
       "lastUpdated": "2026-02-06"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09",
+    "behaviors": [
+      {
+        "file": "behaviors/loop-safety.yaml",
+        "name": "loop-safety-behavior",
+        "install": "amplifier bundle add git+https://github.com/michaeljabbour/amplifier-bundle-loop-safety@main#subdirectory=behaviors/loop-safety.yaml --app",
+        "version": "1.0.0",
+        "description": "Loop safety behavior providing iteration limits and pattern detection. Includes: - orchestrator-loop-safe: Hard iteration limits with warnings - hooks-loop-detector: Repetitive pattern detection - loop-diagnostician: Diagnostic agent for stuck sessions",
+        "hooks": [
+          "hooks-loop-detector"
+        ],
+        "agents": [
+          "loop-safety:loop-diagnostician"
+        ]
+      }
+    ]
   },
   {
     "id": "bundle-sage",
@@ -2250,7 +2283,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-21"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "cicd-bundle",
@@ -2294,7 +2327,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-26"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "parallax-discovery",
@@ -2360,7 +2393,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "unified-llm",
@@ -2404,7 +2437,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-23"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "hive-slack",
@@ -2448,7 +2481,7 @@
       "forks": 1,
       "lastUpdated": "2026-02-26"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "dotnet-ops",
@@ -2505,7 +2538,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-perplexity",
@@ -2567,7 +2600,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "nano-banana",
@@ -2625,7 +2658,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-voice",
@@ -2669,7 +2702,7 @@
       "forks": 2,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "attention-firewall",
@@ -2713,7 +2746,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-01"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-notify",
@@ -2782,7 +2815,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "foreman",
@@ -2825,7 +2858,7 @@
       "forks": 0,
       "lastUpdated": "2026-02-17"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "session-guardian",
@@ -2884,7 +2917,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "discovery-bundle",
@@ -2940,7 +2973,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "engram",
@@ -2984,7 +3017,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-07"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "stt-whispercpp",
@@ -3029,7 +3062,7 @@
       "forks": 0,
       "lastUpdated": "2026-01-08"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "provider-github-copilot",
@@ -3073,7 +3106,7 @@
       "forks": 0,
       "lastUpdated": "2026-03-10"
     },
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "lsp-typescript",
@@ -3131,7 +3164,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "infographic-builder",
@@ -3158,7 +3191,23 @@
     "stars": 6,
     "forks": 2,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09",
+    "behaviors": [
+      {
+        "file": "behaviors/infographic.yaml",
+        "name": "infographic-behavior",
+        "install": "amplifier bundle add git+https://github.com/singh2/infographic-builder@main#subdirectory=behaviors/infographic.yaml --app",
+        "version": "0.1.0",
+        "description": "Infographic design capability -- image generation via nano-banana, designer agent, awareness context",
+        "tools": [
+          "tool-nano-banana",
+          "tool-stitch-panels"
+        ],
+        "agents": [
+          "infographic-builder:infographic-builder"
+        ]
+      }
+    ]
   },
   {
     "id": "presentation-builder",
@@ -3227,7 +3276,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "infographic-builder-cc",
@@ -3253,7 +3302,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "atelier",
@@ -3344,7 +3393,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-gpt-image",
@@ -3370,7 +3419,19 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09",
+    "behaviors": [
+      {
+        "file": "behaviors/gpt-image.yaml",
+        "name": "gpt-image-behavior",
+        "install": "amplifier bundle add git+https://github.com/kenotron-ms/amplifier-module-tool-gpt-image@main#subdirectory=behaviors/gpt-image.yaml --app",
+        "version": "0.1.0",
+        "description": "Adds OpenAI GPT image generation and background removal to Amplifier sessions",
+        "tools": [
+          "tool-gpt-image"
+        ]
+      }
+    ]
   },
   {
     "id": "connector-m365",
@@ -3423,7 +3484,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-registry",
@@ -3448,7 +3509,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "module-auto-title",
@@ -3485,7 +3546,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-omnisvg",
@@ -3511,7 +3572,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "sdk-node",
@@ -3536,7 +3597,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "module-connectors",
@@ -3573,7 +3634,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "team-pulse-kenotron",
@@ -3638,7 +3699,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "spicy-specs",
@@ -3663,7 +3724,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "ampbox",
@@ -3715,6 +3776,16 @@
     "quality": null,
     "behaviors": [
       {
+        "file": "behaviors/projector-policy.yaml",
+        "name": "projector-policy",
+        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-projector@main#subdirectory=behaviors/projector-policy.yaml --app",
+        "version": "0.1.0",
+        "description": "Strategy injection and session outcome capture hooks",
+        "hooks": [
+          "hooks-projector"
+        ]
+      },
+      {
         "file": "behaviors/projector.yaml",
         "name": "projector-capability",
         "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-projector@main#subdirectory=behaviors/projector.yaml --app",
@@ -3729,7 +3800,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "project-orchestrator",
@@ -3754,7 +3825,27 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09",
+    "behaviors": [
+      {
+        "file": "behaviors/project-orchestrator.yaml",
+        "name": "project-orchestrator-behavior",
+        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-project-orchestrator@main#subdirectory=behaviors/project-orchestrator.yaml --app",
+        "version": "1.0.0",
+        "description": "Core project orchestration capabilities",
+        "tools": [
+          "tool-project-state"
+        ],
+        "agents": [
+          "project-orchestrator:project-planner",
+          "project-orchestrator:session-orchestrator",
+          "project-orchestrator:phase-coordinator",
+          "project-orchestrator:validation-architect",
+          "project-orchestrator:integration-validator",
+          "project-orchestrator:quality-gate-enforcer"
+        ]
+      }
+    ]
   },
   {
     "id": "deliberate-development",
@@ -3781,6 +3872,13 @@
     "quality": null,
     "behaviors": [
       {
+        "file": "behaviors/deliberate-awareness.yaml",
+        "name": "behavior-deliberate-awareness",
+        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/deliberate-awareness.yaml --app",
+        "version": "1.0.0",
+        "description": "Thin awareness pointer for deliberate development methodology (discovery layer)"
+      },
+      {
         "file": "behaviors/deliberate-development.yaml",
         "name": "behavior-deliberate-development",
         "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/deliberate-development.yaml --app",
@@ -3799,9 +3897,16 @@
         "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/planning-mode.yaml --app",
         "version": "1.0.0",
         "description": "Planning mode behavior - restricts tool usage and adds planning context when in planning mode"
+      },
+      {
+        "file": "behaviors/research-mode.yaml",
+        "name": "behavior-research-mode",
+        "install": "amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main#subdirectory=behaviors/research-mode.yaml --app",
+        "version": "1.0.0",
+        "description": "Research mode behavior - optimized for comprehensive investigation with token-liberal exploration"
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "longbuilder",
@@ -3827,7 +3932,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "soar",
@@ -3866,7 +3971,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "daily-flow",
@@ -3907,7 +4012,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "beads-superpowers",
@@ -3932,7 +4037,7 @@
     "stars": 1,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "browser-debugger",
@@ -3958,7 +4063,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "ux-analyzer",
@@ -3983,7 +4088,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-github-actions",
@@ -4009,7 +4114,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-database",
@@ -4035,7 +4140,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "m365-collab",
@@ -4061,7 +4166,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "metacog-code-quality",
@@ -4086,7 +4191,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "html-tools",
@@ -4111,7 +4216,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "collection-dev-memory",
@@ -4148,7 +4253,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-mcp-server",
@@ -4173,7 +4278,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-tui",
@@ -4199,7 +4304,7 @@
     "stars": 1,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "themed-bundles",
@@ -4224,7 +4329,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "voice-bridge",
@@ -4250,7 +4355,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-workflow",
@@ -4274,7 +4379,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "dot-docs",
@@ -4300,7 +4405,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08",
+    "behaviorsScannedAt": "2026-07-09",
     "behaviors": [
       {
         "file": "behaviors/dot-docs.yaml",
@@ -4334,7 +4439,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "app-server",
@@ -4359,7 +4464,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "loop-interactive",
@@ -4385,7 +4490,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "document-builder-go",
@@ -4410,7 +4515,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "comic-strips-bkrabach",
@@ -4483,7 +4588,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "coding-agent-loop",
@@ -4509,7 +4614,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "cortex",
@@ -4535,7 +4640,7 @@
     "stars": 1,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "muxplex",
@@ -4561,7 +4666,7 @@
     "stars": 5,
     "forks": 6,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "pr-review",
@@ -4587,7 +4692,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "hooks-otel",
@@ -4613,7 +4718,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-comfyui",
@@ -4639,7 +4744,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "deepresearch",
@@ -4689,7 +4794,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-beads",
@@ -4714,7 +4819,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "plugin-compat",
@@ -4739,7 +4844,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "comic-strips-robotdad",
@@ -4787,7 +4892,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "lattice",
@@ -4813,7 +4918,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "change-advisor",
@@ -4848,7 +4953,7 @@
         "description": "Multi-lens decision advisor capability for evaluating changes"
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-ui-vision",
@@ -4891,7 +4996,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "team-pulse-cpark4x",
@@ -4941,7 +5046,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-canvas",
@@ -4966,7 +5071,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "ridecast",
@@ -4992,7 +5097,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "doc-driven-dev",
@@ -5030,7 +5135,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "session-capture",
@@ -5055,7 +5160,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "usage-insights",
@@ -5081,7 +5186,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "finisher",
@@ -5106,7 +5211,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "deckgen",
@@ -5132,7 +5237,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "recipe-dashboard",
@@ -5158,7 +5263,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "provider-foundry-local",
@@ -5184,7 +5289,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "app-tool-generator",
@@ -5209,7 +5314,7 @@
     "stars": 2,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "app-vscode",
@@ -5234,7 +5339,7 @@
     "stars": 0,
     "forks": 1,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "canvas-ai",
@@ -5260,7 +5365,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "interop-router",
@@ -5286,7 +5391,7 @@
     "stars": 8,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "agent-tui",
@@ -5312,7 +5417,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "provider-openai-v2",
@@ -5338,7 +5443,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "app-session-analyzer",
@@ -5363,7 +5468,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-grove",
@@ -5412,7 +5517,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "hooks-notify-webhook",
@@ -5437,7 +5542,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "tool-remote-task",
@@ -5462,7 +5567,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-qna",
@@ -5502,7 +5607,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "app-runtime",
@@ -5528,7 +5633,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "bundle-contacts",
@@ -5553,7 +5658,19 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09",
+    "behaviors": [
+      {
+        "file": "behaviors/contact-intelligence.yaml",
+        "name": "contact-intelligence-behavior",
+        "install": "amplifier bundle add git+https://github.com/anderlpz/amplifier-bundle-contacts@main#subdirectory=behaviors/contact-intelligence.yaml --app",
+        "version": "1.0.0",
+        "description": "Cross-app contact management with gather-assemble-confirm-write workflow",
+        "agents": [
+          "contacts:contact-manager"
+        ]
+      }
+    ]
   },
   {
     "id": "hooks-dynamic-context",
@@ -5578,7 +5695,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "design-verification",
@@ -5616,7 +5733,7 @@
         ]
       }
     ],
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-studio",
@@ -5642,7 +5759,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "amplifier-embody",
@@ -5667,7 +5784,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "doc-evergreen",
@@ -5693,7 +5810,7 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   },
   {
     "id": "recipe-tool",
@@ -5718,6 +5835,6 @@
     "stars": 0,
     "forks": 0,
     "quality": null,
-    "behaviorsScannedAt": "2026-07-08"
+    "behaviorsScannedAt": "2026-07-09"
   }
 ]
