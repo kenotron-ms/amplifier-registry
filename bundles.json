@@ -241,10 +241,10 @@
       "quality"
     ],
     "featured": true,
-    "lastUpdated": "2026-07-08",
+    "lastUpdated": "2026-07-10",
     "llmVerdict": "Excellent discipline enforcement. The TDD-first approach and verification gates prevent a large class of agent mistakes. The brainstorm-to-execute flow is well-designed and transfers well across project types.",
     "stars": 3,
-    "forks": 7,
+    "forks": 8,
     "quality": {
       "docs": 4,
       "design": 4,
@@ -3514,7 +3514,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-07-09",
+    "lastUpdated": "2026-07-10",
     "llmVerdict": null,
     "stars": 0,
     "forks": 0,
