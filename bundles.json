@@ -1161,7 +1161,7 @@
     "lastUpdated": "2026-05-01",
     "llmVerdict": "Effective browser automation layer. The three-agent split (operator/researcher/visual) maps well to different automation use cases. Accessibility-tree approach via agent-browser is more robust than DOM selectors.",
     "stars": 1,
-    "forks": 2,
+    "forks": 3,
     "quality": {
       "docs": 3,
       "design": 3,
