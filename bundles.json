@@ -20,7 +20,7 @@
     "lastUpdated": "2026-07-14",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
     "stars": 3104,
-    "forks": 257,
+    "forks": 258,
     "quality": {
       "docs": 3,
       "design": 3,
@@ -1795,8 +1795,8 @@
     "featured": false,
     "lastUpdated": "2026-07-14",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
-    "stars": 24,
-    "forks": 23,
+    "stars": 25,
+    "forks": 24,
     "quality": {
       "docs": 4,
       "design": 4,
