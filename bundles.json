@@ -1793,7 +1793,7 @@
       "modules"
     ],
     "featured": false,
-    "lastUpdated": "2026-07-25",
+    "lastUpdated": "2026-07-31",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
     "stars": 25,
     "forks": 24,
@@ -4674,7 +4674,7 @@
     "lastUpdated": "2026-07-31",
     "llmVerdict": null,
     "stars": 6,
-    "forks": 7,
+    "forks": 8,
     "quality": null,
     "behaviorsScannedAt": "2026-07-31"
   },
