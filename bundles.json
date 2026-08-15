@@ -2513,7 +2513,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-15",
     "llmVerdict": "Comprehensive .NET coverage. Build, test, package, and scaffold operations all present. Cross-platform behavior is correct. NuGet integration is clean. Fills a real gap — .NET is underserved in the Amplifier ecosystem relative to Python.",
     "stars": 0,
     "forks": 0,
@@ -2543,7 +2543,7 @@
         "version": "1.1.0",
         "description": "Adds dotnet-ops agent with cross-platform shell support. Compose onto any bundle for .NET CLI capabilities on Windows, Linux, or macOS.",
         "agents": [
-          "dotnet-ops:agents/dotnet-ops"
+          "dotnet-ops:dotnet-ops"
         ]
       }
     ],
