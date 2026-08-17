@@ -105,6 +105,16 @@
         ]
       },
       {
+        "file": "behaviors/amplifier-dev.yaml",
+        "name": "behavior-amplifier-dev",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/amplifier-dev.yaml --app",
+        "version": "1.1.0",
+        "description": "Amplifier ecosystem development behavior - multi-repo workflows, testing patterns, and ecosystem expertise",
+        "agents": [
+          "foundation:ecosystem-expert"
+        ]
+      },
+      {
         "file": "behaviors/bundle-design.yaml",
         "name": "behavior-bundle-design",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/bundle-design.yaml --app",
@@ -122,6 +132,16 @@
         "description": "Navigator for the Amplifier Foundation ecosystem -- knows what exists and helps users find the right resources, examples, and documentation",
         "agents": [
           "foundation:foundation-expert"
+        ]
+      },
+      {
+        "file": "behaviors/logging.yaml",
+        "name": "behavior-logging",
+        "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=behaviors/logging.yaml --app",
+        "version": "1.0.0",
+        "description": "Session logging to JSONL files",
+        "hooks": [
+          "hooks-logging"
         ]
       },
       {
