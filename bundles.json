@@ -1796,7 +1796,7 @@
     "lastUpdated": "2026-08-10",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
     "stars": 25,
-    "forks": 26,
+    "forks": 27,
     "quality": {
       "docs": 4,
       "design": 4,
