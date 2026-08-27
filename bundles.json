@@ -19,8 +19,8 @@
     "featured": true,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Exceptional breadth and accuracy. Consistently grounded in actual documentation with deep understanding of ecosystem design philosophy. The first agent to consult for any Amplifier work.",
-    "stars": 3116,
-    "forks": 261,
+    "stars": 3117,
+    "forks": 262,
     "quality": {
       "docs": 3,
       "design": 3,
@@ -73,7 +73,7 @@
     "featured": true,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Exceptional precision on bundle YAML structure and composition patterns. Significantly reduces authoring errors. Highly recommended as a required checkpoint before any bundle work.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 4,
@@ -102,6 +102,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -243,7 +246,7 @@
     "featured": true,
     "lastUpdated": "2026-07-10",
     "llmVerdict": "Excellent discipline enforcement. The TDD-first approach and verification gates prevent a large class of agent mistakes. The brainstorm-to-execute flow is well-designed and transfers well across project types.",
-    "stars": 3,
+    "stars": 4,
     "forks": 8,
     "quality": {
       "docs": 4,
@@ -309,7 +312,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Strong architectural judgment with clear philosophy application. The three-mode design (analyze/architect/review) maps well to real development workflows. Ruthless simplicity principle is consistently enforced.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 3,
@@ -338,6 +341,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -479,7 +485,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Excellent implementation discipline. The hard requirement for complete specs before starting prevents scope creep. Pairs exceptionally well with zen-architect as a design-then-build workflow.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 3,
@@ -508,6 +514,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -648,7 +657,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Exceptional methodological rigor. Consistently identifies root causes rather than patching symptoms. The hypothesis-driven approach prevents the common AI mistake of trying multiple fixes simultaneously.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 1,
@@ -677,6 +686,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -819,7 +831,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Reliable and safe. The safety protocol guardrails prevent destructive git operations. Commit message quality is notably better than ad-hoc generation. Good GitHub CLI integration for PR workflows.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 1,
@@ -848,6 +860,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -989,7 +1004,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Solid context-sink pattern. Effectively absorbs token costs of large codebase exploration. The requirement to provide full objective and scope in the instruction is appropriate given the clean-slate design.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 3,
@@ -1018,6 +1033,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -1160,7 +1178,7 @@
     "featured": false,
     "lastUpdated": "2026-08-09",
     "llmVerdict": "Effective browser automation layer. The three-agent split (operator/researcher/visual) maps well to different automation use cases. Accessibility-tree approach via agent-browser is more robust than DOM selectors.",
-    "stars": 2,
+    "stars": 3,
     "forks": 2,
     "quality": {
       "docs": 3,
@@ -1217,7 +1235,7 @@
     "featured": false,
     "lastUpdated": "2026-08-18",
     "llmVerdict": "Excellent Python tooling integration. The ruff+pyright combination catches a wide class of issues. The LSP code-intel sub-agent provides genuine semantic understanding beyond text search. Well-documented configuration.",
-    "stars": 3,
+    "stars": 4,
     "forks": 5,
     "quality": {
       "docs": 4,
@@ -1297,7 +1315,7 @@
     "featured": false,
     "lastUpdated": "2026-05-18",
     "llmVerdict": "Strong semantic code intelligence. The LSP approach provides genuine type-aware navigation that grep cannot match. The distinction between semantic and text results is clearly maintained in outputs.",
-    "stars": 0,
+    "stars": 1,
     "forks": 2,
     "quality": {
       "docs": 3,
@@ -1353,7 +1371,7 @@
     "featured": true,
     "lastUpdated": "2026-08-19",
     "llmVerdict": "Well-designed orchestration layer. The approval gate pattern is particularly valuable for human-in-loop workflows. Resumability after interruption is a genuine differentiator. Schema is clean and learnable.",
-    "stars": 6,
+    "stars": 7,
     "forks": 11,
     "quality": {
       "docs": 4,
@@ -1411,7 +1429,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Invaluable for session recovery. The REPAIR-over-REWIND default is the right choice — preserving history is almost always preferable. Safe 100k+ token line handling is a genuine necessity for events.jsonl files.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 1,
@@ -1440,6 +1458,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -1581,7 +1602,7 @@
     "featured": false,
     "lastUpdated": "2026-08-27",
     "llmVerdict": "Thorough and systematic security analysis. OWASP Top 10 coverage is comprehensive. The required-before-production gate enforces good practices. Dependency scanning integration catches a class of vulnerabilities often missed.",
-    "stars": 16,
+    "stars": 17,
     "forks": 22,
     "quality": {
       "docs": 1,
@@ -1610,6 +1631,9 @@
         "description": "Agent orchestration capability with enhanced delegate tool. Features: - Two-parameter context inheritance (depth + scope) - Session resume (use full session_id from delegate calls) - Fixed tool inheritance (agent declarations honored) - Multi-agent collaboration patterns Note: Th",
         "tools": [
           "tool-delegate"
+        ],
+        "hooks": [
+          "hooks-tool-dedupe"
         ]
       },
       {
@@ -1795,7 +1819,7 @@
     "featured": false,
     "lastUpdated": "2026-08-26",
     "llmVerdict": "Authoritative on kernel internals. The litmus test for kernel vs module decisions is consistently applied. Excellent on hooks API and event system. Essential for module authors.",
-    "stars": 25,
+    "stars": 26,
     "forks": 26,
     "quality": {
       "docs": 4,
@@ -3513,7 +3537,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-08-26",
+    "lastUpdated": "2026-08-27",
     "llmVerdict": null,
     "stars": 0,
     "forks": 0,
