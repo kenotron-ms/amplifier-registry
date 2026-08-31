@@ -1295,7 +1295,7 @@
       "semantic"
     ],
     "featured": false,
-    "lastUpdated": "2026-05-18",
+    "lastUpdated": "2026-08-31",
     "llmVerdict": "Strong semantic code intelligence. The LSP approach provides genuine type-aware navigation that grep cannot match. The distinction between semantic and text results is clearly maintained in outputs.",
     "stars": 1,
     "forks": 2,
@@ -1351,7 +1351,7 @@
       "yaml"
     ],
     "featured": true,
-    "lastUpdated": "2026-08-29",
+    "lastUpdated": "2026-08-31",
     "llmVerdict": "Well-designed orchestration layer. The approval gate pattern is particularly valuable for human-in-loop workflows. Resumability after interruption is a genuine differentiator. Schema is clean and learnable.",
     "stars": 7,
     "forks": 11,
