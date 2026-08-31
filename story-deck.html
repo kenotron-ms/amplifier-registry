@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Amplifier Bundle Registry</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #f8fafb;
+  --surface:      #ffffff;
+  --cyan:         #06B6D4;
+  --cyan-deep:    #0891B2;
+  --cyan-light:   #ecfeff;
+  --cyan-muted:   rgba(6, 182, 212, 0.07);
+  --navy:         #0c1222;
+  --navy-mid:     #1e293b;
+  --text:         #1e293b;
+  --text-muted:   #64748b;
+  --text-light:   #94a3b8;
+  --border:       #e2e8f0;
+  --border-light: #f1f5f9;
+  --code-bg:      #0f172a;
+  --code-surface: #1e293b;
+  --code-text:    #e2e8f0;
+  --green:        #10b981;
+  --green-light:  #ecfdf5;
+  --red:          #ef4444;
+  --red-muted:    #fca5a5;
+  --red-light:    #fef2f2;
+  --amber:        #f59e0b;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Deck chrome ─────────────────────────────────── */
+#deck-progress {
+  position: fixed; top: 0; left: 0;
+  height: 3px; background: var(--cyan);
+  width: 0%; z-index: 200;
+  transition: width 0.3s ease;
+}
+
+#slide-counter {
+  position: fixed;
+  bottom: clamp(12px, 2vh, 20px);
+  right: clamp(16px, 2.5vw, 28px);
+  font-size: clamp(0.72rem, 1vw, 0.88rem);
+  font-weight: 600; color: var(--text-light);
+  letter-spacing: 0.05em; z-index: 200;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Slide shell ─────────────────────────────────── */
+.slide {
+  position: absolute; inset: 0;
+  display: none; flex-direction: column;
+  background: var(--bg);
+}
+.slide.active { display: flex; }
+
+/* ── Standard slide header ───────────────────────── */
+.slide-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: clamp(16px, 2.8vh, 28px) clamp(32px, 5vw, 72px) clamp(12px, 2vh, 22px);
+  flex-shrink: 0;
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.eyebrow {
+  font-size: clamp(10px, 0.9vw, 13px);
+  font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--cyan);
+  opacity: 0;
+}
+.slide.active .eyebrow { animation: fadeIn 0.4s ease-out 0.05s both; }
+
+.slide-title {
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700; line-height: 1.3;
+  color: var(--navy); opacity: 0;
+}
+.slide.active .slide-title { animation: fadeUp 0.4s ease-out 0.12s both; }
+
+/* ── Slide body ──────────────────────────────────── */
+.slide-body {
+  flex: 1; min-height: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(16px, 3vh, 48px) clamp(32px, 5vw, 72px);
+}
+
+/* ── Monospace ───────────────────────────────────── */
+.mono {
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+}
+
+/* ══════════════════════════════════════════════════
+   SLIDE 1 — Title (LIGHT)
+   ══════════════════════════════════════════════════ */
+.slide--title {
+  align-items: center; justify-content: center;
+  background: var(--surface);
+}
+
+.title-center {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  gap: clamp(8px, 1.8vh, 16px);
+  max-width: 700px;
+}
+
+.title-overline {
+  font-size: clamp(0.72rem, 1vw, 0.88rem);
+  font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--cyan);
+  opacity: 0;
+}
+.slide.active .title-overline { animation: fadeIn 0.4s ease-out 0.1s both; }
+
+.title-wordmark {
+  font-size: clamp(2.8rem, 6.5vw, 5rem);
+  font-weight: 800; letter-spacing: -0.03em;
+  color: var(--navy); line-height: 1.05;
+  opacity: 0;
+}
+.slide.active .title-wordmark { animation: fadeIn 0.45s ease-out 0.22s both; }
+
+.title-accent {
+  color: var(--cyan);
+}
+
+.title-rule {
+  width: 48px; height: 3px;
+  background: var(--cyan); border-radius: 2px;
+  opacity: 0;
+}
+.slide.active .title-rule { animation: fadeIn 0.35s ease-out 0.5s both; }
+
+.title-sub {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 500; color: var(--text);
+  line-height: 1.5; opacity: 0;
+}
+.slide.active .title-sub { animation: fadeIn 0.4s ease-out 0.65s both; }
+
+.title-audience {
+  font-size: clamp(0.75rem, 1vw, 0.88rem);
+  color: var(--text-light); letter-spacing: 0.02em;
+  opacity: 0;
+}
+.slide.active .title-audience { animation: fadeIn 0.4s ease-out 0.9s both; }
+
+/* ══════════════════════════════════════════════════
+   SLIDE 2 — Problem (MEDIUM)
+   ══════════════════════════════════════════════════ */
+.problem-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; gap: clamp(24px, 3.5vh, 40px);
+  max-width: 800px; width: 100%;
+}
+
+.problem-stats {
+  display: flex; justify-content: center;
+  gap: clamp(32px, 5vw, 64px);
+  width: 100%;
+}
+
+.problem-stat {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+  opacity: 0;
+}
+.slide.active .problem-stat:nth-child(1) { animation: fadeUp 0.4s ease-out 0.25s both; }
+.slide.active .problem-stat:nth-child(2) { animation: fadeUp 0.4s ease-out 0.4s both; }
+.slide.active .problem-stat:nth-child(3) { animation: fadeUp 0.4s ease-out 0.55s both; }
+
+.stat-num {
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-weight: 800; line-height: 1;
+  letter-spacing: -0.03em; color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-num--danger { color: var(--red); }
+
+.stat-label {
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  font-weight: 600; color: var(--text-muted);
+  text-align: center;
+}
+
+.problem-list {
+  display: flex; flex-direction: column;
+  gap: clamp(8px, 1.2vh, 12px);
+  list-style: none;
+  width: 100%; max-width: 580px;
+  opacity: 0;
+}
+.slide.active .problem-list { animation: fadeUp 0.4s ease-out 0.7s both; }
+
+.problem-item {
+  font-size: clamp(0.88rem, 1.2vw, 1.05rem);
+  color: var(--text); line-height: 1.5;
+  display: flex; gap: 8px;
+  padding-left: 4px;
+}
+
+.problem-item::before {
+  content: "\2192"; color: var(--text-light);
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════
+   SLIDE 3 — Solution (MEDIUM)
+   ══════════════════════════════════════════════════ */
+.solution-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(32px, 4vw, 64px);
+  max-width: 880px; width: 100%;
+  align-items: start;
+}
+
+.solution-main {
+  display: flex; flex-direction: column;
+  gap: clamp(16px, 2.4vh, 24px);
+  opacity: 0;
+}
+.slide.active .solution-main { animation: fadeUp 0.45s ease-out 0.2s both; }
+
+.solution-desc {
+  font-size: clamp(0.88rem, 1.2vw, 1.05rem);
+  color: var(--text); line-height: 1.65;
+}
+
+.solution-code {
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: clamp(12px, 1.8vh, 16px) clamp(16px, 2vw, 24px);
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: clamp(0.72rem, 0.95vw, 0.85rem);
+  color: var(--code-text); line-height: 1.7;
+  white-space: pre; overflow-x: auto;
+}
+
+.code-dim { color: #64748b; }
+.code-cyan { color: #22d3ee; }
+.code-green { color: #34d399; }
+.code-amber { color: #fbbf24; }
+
+.solution-aside {
+  display: flex; flex-direction: column;
+  gap: clamp(12px, 1.8vh, 16px);
+  opacity: 0;
+}
+.slide.active .solution-aside { animation: fadeUp 0.45s ease-out 0.35s both; }
+
+.solution-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(12px, 1.8vh, 16px) clamp(16px, 2vw, 20px);
+  display: flex; flex-direction: column; gap: 4px;
+  border-left: 3px solid var(--cyan);
+}
+
+.solution-stat-num {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800; color: var(--navy);
+  line-height: 1; letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.solution-stat-label {
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  color: var(--text-muted); font-weight: 500;
+}
+
+.solution-footer {
+  grid-column: 1 / -1;
+  display: flex; gap: clamp(16px, 2.5vw, 32px);
+  justify-content: center;
+  padding-top: clamp(8px, 1.2vh, 12px);
+  border-top: 1px solid var(--border);
+  opacity: 0;
+}
+.slide.active .solution-footer { animation: fadeIn 0.4s ease-out 0.55s both; }
+
+.solution-pill {
+  font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+  font-weight: 600; color: var(--text-muted);
+  display: flex; align-items: center; gap: 8px;
+}
+
+.solution-pill-num {
+  font-weight: 800; color: var(--cyan-deep);
+}
+
+/* ══════════════════════════════════════════════════
+   SLIDE 4 — Semantic Search (HEAVY)
+   ══════════════════════════════════════════════════ */
+.search-wrap {
+  display: flex; flex-direction: column;
+  gap: clamp(16px, 2.5vh, 24px);
+  max-width: 900px; width: 100%;
+}
+
+.search-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.comp-col {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(16px, 2.4vh, 24px);
+  display: flex; flex-direction: column;
+  gap: clamp(12px, 1.8vh, 16px);
+  opacity: 0;
+}
+
+.comp-col--before { border-top: 3px solid var(--red-muted); }
+.comp-col--after { border-top: 3px solid var(--cyan); }
+
+.slide.active .comp-col--before { animation: fadeUp 0.45s ease-out 0.2s both; }
+.slide.active .comp-col--after { animation: fadeUp 0.45s ease-out 0.4s both; }
+
+.comp-badge {
+  font-size: clamp(9px, 0.8vw, 11px);
+  font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px; border-radius: 999px;
+  width: fit-content;
+}
+
+.comp-badge--before {
+  background: var(--red-light); color: var(--red);
+}
+
+.comp-badge--after {
+  background: var(--cyan-light); color: var(--cyan-deep);
+}
+
+.comp-metric {
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.comp-metric-value {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800; color: var(--navy);
+  line-height: 1; letter-spacing: -0.02em;
+}
+
+.comp-metric-label {
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  color: var(--text-muted); font-weight: 500;
+}
+
+.comp-bar-wrap {
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.comp-bar-header {
+  display: flex; justify-content: space-between;
+  align-items: baseline;
+}
+
+.comp-bar-name {
+  font-size: clamp(0.72rem, 0.95vw, 0.82rem);
+  color: var(--text-muted); font-weight: 500;
+}
+
+.comp-bar-val {
+  font-size: clamp(0.72rem, 0.95vw, 0.82rem);
+  font-weight: 700; color: var(--text);
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+}
+
+.comp-bar-track {
+  height: 8px; background: var(--border-light);
+  border-radius: 4px; overflow: hidden;
+}
+
+.comp-bar-fill {
+  height: 100%; border-radius: 4px;
+  transform: scaleX(0); transform-origin: left;
+}
+
+.comp-bar-fill--red { background: var(--red-muted); }
+.comp-bar-fill--cyan { background: var(--cyan); }
+
+.slide.active .comp-col--before .comp-bar-fill { animation: growRight 0.7s ease-out 0.55s both; }
+.slide.active .comp-col--after .comp-bar-fill { animation: growRight 0.7s ease-out 0.75s both; }
+
+.comp-desc {
+  font-size: clamp(0.78rem, 1.05vw, 0.88rem);
+  color: var(--text-muted); line-height: 1.5;
+}
+
+.search-insight {
+  text-align: center;
+  padding-top: clamp(8px, 1.2vh, 12px);
+  opacity: 0;
+}
+.slide.active .search-insight { animation: fadeUp 0.4s ease-out 0.9s both; }
+
+.insight-bar {
+  width: 48px; height: 3px;
+  background: var(--cyan);
+  border-radius: 2px;
+  margin: 0 auto clamp(8px, 1.2vh, 12px);
+}
+
+.insight-text {
+  font-size: clamp(0.92rem, 1.3vw, 1.1rem);
+  font-weight: 600; color: var(--navy);
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════════════════
+   SLIDE 5 — Behaviors (MEDIUM)
+   ══════════════════════════════════════════════════ */
+.behaviors-wrap {
+  display: flex; flex-direction: column;
+  gap: clamp(20px, 3vh, 32px);
+  max-width: 820px; width: 100%;
+}
+
+.behaviors-shift {
+  display: flex; align-items: center;
+  gap: clamp(12px, 2vw, 16px);
+  justify-content: center;
+  opacity: 0;
+}
+.slide.active .behaviors-shift { animation: fadeUp 0.4s ease-out 0.2s both; }
+
+.shift-from, .shift-to {
+  font-size: clamp(0.88rem, 1.2vw, 1.05rem);
+  font-weight: 600; padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.shift-from {
+  background: var(--border-light);
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--red-muted);
+}
+
+.shift-to {
+  background: var(--cyan-light);
+  color: var(--cyan-deep);
+}
+
+.shift-arrow {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  color: var(--text-light);
+}
+
+.behaviors-code {
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: clamp(16px, 2.2vh, 24px) clamp(16px, 2.5vw, 24px);
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: clamp(0.72rem, 0.95vw, 0.85rem);
+  color: var(--code-text); line-height: 1.8;
+  overflow-x: auto;
+  opacity: 0;
+}
+.slide.active .behaviors-code { animation: fadeUp 0.4s ease-out 0.35s both; }
+
+.behaviors-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 2vw, 16px);
+}
+
+.behavior-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(12px, 1.8vh, 16px) clamp(12px, 1.8vw, 16px);
+  display: flex; flex-direction: column; gap: 4px;
+  opacity: 0;
+}
+.slide.active .behavior-stat:nth-child(1) { animation: fadeUp 0.4s ease-out 0.5s both; }
+.slide.active .behavior-stat:nth-child(2) { animation: fadeUp 0.4s ease-out 0.6s both; }
+
+.behavior-stat-num {
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-weight: 800; color: var(--cyan-deep);
+  line-height: 1; letter-spacing: -0.02em;
+}
+
+.behavior-stat-label {
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  color: var(--text-muted); font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Bar for 66% coverage */
+.coverage-bar-track {
+  height: 6px; background: var(--border-light);
+  border-radius: 3px; margin-top: 8px;
+  overflow: hidden;
+}
+
+.coverage-bar-fill {
+  height: 100%; border-radius: 3px;
+  background: var(--cyan);
+  transform: scaleX(0); transform-origin: left;
+}
+.slide.active .coverage-bar-fill { animation: growRight 0.7s ease-out 0.7s both; }
+
+/* ══════════════════════════════════════════════════
+   SLIDE 6 — Badge (LIGHT)
+   ══════════════════════════════════════════════════ */
+.badge-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  gap: clamp(16px, 3vh, 32px);
+  max-width: 600px;
+}
+
+.badge-hero-pill {
+  display: inline-flex; align-items: center;
+  gap: clamp(8px, 1vw, 12px);
+  background: var(--cyan);
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  padding: clamp(12px, 1.8vh, 16px) clamp(24px, 3.5vw, 40px);
+  border-radius: 999px;
+  opacity: 0;
+}
+.slide.active .badge-hero-pill { animation: fadeUp 0.5s ease-out 0.2s both; }
+
+.badge-code-ref {
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  color: var(--text-muted);
+  opacity: 0;
+}
+.slide.active .badge-code-ref { animation: fadeIn 0.4s ease-out 0.55s both; }
+
+.badge-code-highlight {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.badge-punchline {
+  opacity: 0;
+}
+.slide.active .badge-punchline { animation: fadeUp 0.45s ease-out 0.75s both; }
+
+.badge-punchline-bar {
+  width: 48px; height: 3px;
+  background: var(--cyan);
+  border-radius: 2px;
+  margin: 0 auto clamp(8px, 1.2vh, 12px);
+}
+
+.badge-punchline-text {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 600; color: var(--navy);
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════════════════
+   SLIDE 7 — Architecture (HEAVY)
+   ══════════════════════════════════════════════════ */
+.arch-wrap {
+  width: 100%;
+  display: flex; justify-content: center;
+}
+
+.arch-svg {
+  width: 100%; max-width: 780px;
+}
+
+/* SVG element animation initial states */
+.arch-node { opacity: 0; }
+.arch-line {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+}
+.arch-label { opacity: 0; }
+
+/* Build sequence — gated on .slide.active */
+.slide.active .arch-bg         { animation: fadeIn   0.4s ease-out 0.1s both; }
+.slide.active .arch-sweep      { animation: fadeIn   0.35s ease-out 0.4s both; }
+.slide.active .arch-h-line-1   { animation: drawLine 0.3s ease-out 0.6s both; }
+.slide.active .arch-score      { animation: fadeIn   0.35s ease-out 0.8s both; }
+.slide.active .arch-h-line-2   { animation: drawLine 0.3s ease-out 1.0s both; }
+.slide.active .arch-embed      { animation: fadeIn   0.35s ease-out 1.2s both; }
+.slide.active .arch-sublabels  { animation: fadeIn   0.3s ease-out 1.4s both; }
+.slide.active .arch-v-line-1   { animation: drawLine 0.35s ease-out 1.6s both; }
+.slide.active .arch-commit-lbl { animation: fadeIn   0.3s ease-out 1.7s both; }
+.slide.active .arch-json       { animation: fadeIn   0.35s ease-out 1.9s both; }
+.slide.active .arch-v-line-2   { animation: drawLine 0.35s ease-out 2.1s both; }
+.slide.active .arch-pages-lbl  { animation: fadeIn   0.3s ease-out 2.2s both; }
+.slide.active .arch-browser    { animation: fadeIn   0.35s ease-out 2.4s both; }
+.slide.active .arch-bottom-lbl { animation: fadeIn   0.3s ease-out 2.7s both; }
+
+/* ══════════════════════════════════════════════════
+   SLIDE 8 — Close (LIGHT)
+   ══════════════════════════════════════════════════ */
+.close-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  gap: clamp(16px, 3vh, 32px);
+  max-width: 680px;
+}
+
+.close-coauthor {
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-weight: 700; color: var(--cyan);
+  background: var(--code-bg);
+  padding: clamp(12px, 2vh, 20px) clamp(24px, 3.5vw, 40px);
+  border-radius: 8px;
+  letter-spacing: -0.01em;
+  opacity: 0;
+}
+.slide.active .close-coauthor { animation: fadeUp 0.5s ease-out 0.2s both; }
+
+.close-statement {
+  font-size: clamp(0.92rem, 1.3vw, 1.1rem);
+  color: var(--text); line-height: 1.65;
+  max-width: 540px;
+  opacity: 0;
+}
+.slide.active .close-statement { animation: fadeIn 0.45s ease-out 0.55s both; }
+
+.close-log {
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: clamp(12px, 1.8vh, 16px) clamp(16px, 2.5vw, 24px);
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: clamp(0.68rem, 0.9vw, 0.8rem);
+  color: var(--text-light); line-height: 1.8;
+  text-align: left; width: 100%;
+  opacity: 0;
+}
+.slide.active .close-log { animation: fadeUp 0.45s ease-out 0.75s both; }
+
+.log-hash { color: #fbbf24; }
+.log-msg { color: var(--code-text); }
+
+/* ── Keyframes ───────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes growRight {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Reduced motion ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .arch-line { stroke-dashoffset: 0 !important; }
+  .comp-bar-fill { transform: scaleX(1) !important; }
+  .coverage-bar-fill { transform: scaleX(1) !important; }
+  #deck-progress { transition: none; }
+}
+
+/* ── Speaker notes ───────────────────────────────── */
+.speaker-notes {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(12, 18, 34, 0.96);
+  color: #e2e8f0; z-index: 500;
+  padding: clamp(12px, 2vh, 20px) clamp(24px, 4vw, 56px);
+  max-height: 38vh; overflow-y: auto;
+  font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+  line-height: 1.7;
+  border-top: 2px solid var(--cyan);
+}
+.speaker-notes p { margin-bottom: 4px; }
+.speaker-notes strong { color: #22d3ee; }
+</style>
+</head>
+<body>
+
+<!-- ── Deck chrome ────────────────────────────────── -->
+<div id="deck-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+<div id="slide-counter" aria-live="polite"></div>
+
+<!-- ═══ SLIDE 1 — Title (LIGHT) ═══ -->
+<section class="slide slide--title" aria-label="Title slide">
+  <div class="title-center">
+    <p class="title-overline">Amplifier Ecosystem</p>
+    <h1 class="title-wordmark">Bundle<br><span class="title-accent">Registry</span></h1>
+    <div class="title-rule" aria-hidden="true"></div>
+    <p class="title-sub">AI-powered discovery. Zero backend.<br>Behavior-level install.</p>
+    <p class="title-audience">MADE Team &middot; Dev Log</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 2 — Problem (MEDIUM) ═══ -->
+<section class="slide" aria-label="The problem">
+  <div class="slide-header">
+    <p class="eyebrow">The Ecosystem</p>
+    <h2 class="slide-title">42 bundles. 13 contributors. No central place to find them.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="problem-wrap">
+      <div class="problem-stats">
+        <div class="problem-stat">
+          <span class="stat-num">42</span>
+          <span class="stat-label">bundles across repos</span>
+        </div>
+        <div class="problem-stat">
+          <span class="stat-num">13+</span>
+          <span class="stat-label">contributors</span>
+        </div>
+        <div class="problem-stat">
+          <span class="stat-num stat-num--danger">0</span>
+          <span class="stat-label">central discovery</span>
+        </div>
+      </div>
+      <ul class="problem-list">
+        <li class="problem-item">No way to evaluate quality before installing</li>
+        <li class="problem-item">No way to install just one capability from a bundle</li>
+        <li class="problem-item">The ecosystem was invisible to users who needed it most</li>
+      </ul>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> The Amplifier bundle ecosystem had real momentum: 42 bundles from 13+ contributors with 3.2k combined stars. But none of that was discoverable. Every new user had to know someone who knew the right repo. Growth was word-of-mouth only, and quality was unknowable until after install.</p>
+    <p><strong>If challenged:</strong> "People find packages on GitHub all the time without a registry." True for established ecosystems with search terms. Amplifier bundles didn't have consistent naming or tagging. Searching GitHub for "amplifier bundle" returned noise. The discoverability problem was specific to our ecosystem's maturity stage.</p>
+    <p><strong>Transition:</strong> So the question was: can we build a registry that makes all 42 bundles visible, searchable, and quality-rated, without spinning up a server? The answer turned out to be surprisingly simple.</p>
+    <p><strong>Confidence:</strong> High. 42 bundles and 13 contributors counted directly from the sweep. Star count aggregated from GitHub API.</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 3 — Solution (MEDIUM) ═══ -->
+<section class="slide" aria-label="The solution">
+  <div class="slide-header">
+    <p class="eyebrow">The Solution</p>
+    <h2 class="slide-title">A community registry. Zero backend. CI is the backend.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="solution-wrap">
+      <div class="solution-main">
+        <p class="solution-desc">Single HTML file and two JSON files on GitHub Pages. No server, no database. A GitHub Actions pipeline sweeps, scores, and embeds every 2 hours.</p>
+        <div class="solution-code"><span class="code-dim"># GitHub Actions (every 2 hours)</span>
+<span class="code-cyan">sweep.mjs</span>  <span class="code-dim">&rarr;</span> GitHub API <span class="code-dim">&rarr;</span> stars, forks, behaviors/
+<span class="code-cyan">score.mjs</span>  <span class="code-dim">&rarr;</span> Claude     <span class="code-dim">&rarr;</span> 5-dimension quality rubric
+<span class="code-cyan">embed.mjs</span>  <span class="code-dim">&rarr;</span> MiniLM-L6  <span class="code-dim">&rarr;</span> 384-dim semantic vectors
+<span class="code-green">git commit</span> <span class="code-dim">&rarr;</span> bundles.json + embeddings.json</div>
+      </div>
+      <div class="solution-aside">
+        <div class="solution-stat-card">
+          <span class="solution-stat-num">1</span>
+          <span class="solution-stat-label">HTML file, zero build step</span>
+        </div>
+        <div class="solution-stat-card">
+          <span class="solution-stat-num">2</span>
+          <span class="solution-stat-label">JSON files (bundles + embeddings)</span>
+        </div>
+        <div class="solution-stat-card">
+          <span class="solution-stat-num">2h</span>
+          <span class="solution-stat-label">CI cycle, 12x more frequent than nightly</span>
+        </div>
+      </div>
+      <div class="solution-footer">
+        <span class="solution-pill"><span class="solution-pill-num">42</span> bundles</span>
+        <span class="solution-pill"><span class="solution-pill-num">13</span> contributors</span>
+        <span class="solution-pill"><span class="solution-pill-num">3.2k</span> total stars</span>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> The entire backend is a GitHub Actions cron job. Three scripts run every 2 hours: sweep discovers bundles and scans their behaviors, score sends each README to Claude for quality rating, and embed produces 384-dimensional vectors using the same model the browser uses for queries. The output is two JSON files committed to the repo, which GitHub Pages serves as a static site.</p>
+    <p><strong>If challenged:</strong> "Why not use a real backend with a database?" Because the data changes slowly (bundles don't update every minute) and the query model is simple (search + filter). A static site with pre-computed data is simpler to operate, costs nothing, has no uptime risk, and deploys automatically on every commit. The 2-hour refresh is more than sufficient for a registry of this size.</p>
+    <p><strong>Transition:</strong> That's the architecture. Now let me show you the first thing it enables: natural language search that works on the first keystroke.</p>
+    <p><strong>Confidence:</strong> High. All numbers verified from the codebase. The 1,663-line count is from the current index.html. The 5-dimension rubric is published in the repo.</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 4 — Semantic Search (HEAVY) ═══ -->
+<section class="slide" aria-label="Semantic search feature">
+  <div class="slide-header">
+    <p class="eyebrow">Feature &middot; Semantic Search</p>
+    <h2 class="slide-title">Natural language search. First keystroke instant.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="search-wrap">
+      <div class="search-columns">
+
+        <div class="comp-col comp-col--before">
+          <span class="comp-badge comp-badge--before">Before</span>
+          <div class="comp-metric">
+            <span class="comp-metric-value">6 MB</span>
+            <span class="comp-metric-label">ML model loaded on every visit</span>
+          </div>
+          <div class="comp-bar-wrap">
+            <div class="comp-bar-header">
+              <span class="comp-bar-name">Model + embeddings</span>
+              <span class="comp-bar-val">6,000 KB</span>
+            </div>
+            <div class="comp-bar-track">
+              <div class="comp-bar-fill comp-bar-fill--red" data-width="100"></div>
+            </div>
+          </div>
+          <p class="comp-desc">Browser downloaded the full ML model AND computed embeddings for all 42 bundles on every visit. "Indexing bundles..." delay before any search worked.</p>
+        </div>
+
+        <div class="comp-col comp-col--after">
+          <span class="comp-badge comp-badge--after">After</span>
+          <div class="comp-metric">
+            <span class="comp-metric-value">130 KB</span>
+            <span class="comp-metric-label">Pre-computed vectors, loaded once</span>
+          </div>
+          <div class="comp-bar-wrap">
+            <div class="comp-bar-header">
+              <span class="comp-bar-name">Pre-computed embeddings</span>
+              <span class="comp-bar-val">130 KB</span>
+            </div>
+            <div class="comp-bar-track">
+              <div class="comp-bar-fill comp-bar-fill--cyan" data-width="2.2"></div>
+            </div>
+          </div>
+          <p class="comp-desc">CI pre-computes 384-dim vectors for all 42 bundles (all-MiniLM-L6-v2). Same model runs in CI and browser. Vectors share the same embedding space. First keystroke is instant.</p>
+        </div>
+
+      </div>
+      <div class="search-insight">
+        <div class="insight-bar" aria-hidden="true"></div>
+        <p class="insight-text">CI produces the hard part. Browser just computes the query vector.</p>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> The old approach loaded a 6MB ML model and computed embeddings for all 42 bundles in the browser on every page visit. That meant a multi-second "Indexing bundles..." delay before search worked. The fix was to move the expensive computation to CI: pre-compute 384-dimensional semantic vectors using all-MiniLM-L6-v2 and store them as a 130KB JSON file. The browser downloads that JSON and only needs to embed the user's search query, which is a single vector operation.</p>
+    <p><strong>If challenged:</strong> "If the model runs in the browser via WASM, isn't it still slow?" The model load is lazy and cached by the browser. On first search, there's a brief model initialization. But the critical difference is that the browser doesn't need to embed 42 bundle descriptions anymore, just one query string. That takes milliseconds, not seconds. On repeat visits, the model is cached and search is truly instant.</p>
+    <p><strong>Transition:</strong> Semantic search makes bundles findable. But users don't always want the whole bundle. The next feature goes deeper: behavior-level discovery.</p>
+    <p><strong>Confidence:</strong> High. The 6MB model size is from the Transformers.js package. The 130KB embeddings.json is measured from the committed file. The "same embedding space" claim is verified: both CI and browser use the all-MiniLM-L6-v2 model via Transformers.js.</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 5 — Behaviors (MEDIUM) ═══ -->
+<section class="slide" aria-label="Behavior-level discovery">
+  <div class="slide-header">
+    <p class="eyebrow">Feature &middot; Behavior-Level Discovery</p>
+    <h2 class="slide-title">Don't install the whole bundle. Install just the capability you need.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="behaviors-wrap">
+      <div class="behaviors-shift">
+        <span class="shift-from">Install a bundle</span>
+        <span class="shift-arrow">&rarr;</span>
+        <span class="shift-to">Install exactly the capability I want</span>
+      </div>
+
+      <div class="behaviors-code"><span class="code-dim">$</span> <span class="code-green">amplifier bundle add</span> \
+  <span class="code-cyan">git+https://github.com/AmpDaily/foundation-expert@main</span> \
+  <span class="code-amber">#subdirectory=behaviors/logging.yaml</span> \
+  --app</div>
+
+      <div class="behaviors-stats">
+        <div class="behavior-stat">
+          <span class="behavior-stat-num">28 / 42</span>
+          <span class="behavior-stat-label">Bundles with scanned behaviors (66%)</span>
+          <div class="coverage-bar-track">
+            <div class="coverage-bar-fill" data-width="66"></div>
+          </div>
+        </div>
+        <div class="behavior-stat">
+          <span class="behavior-stat-num">12</span>
+          <span class="behavior-stat-label">Behaviors in foundation-expert, the most of any bundle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> Bundles are monolithic by default: install everything or nothing. But each repo has a behaviors/ directory with individual YAML files that define focused capabilities. The sweep now walks every repo's git tree, finds all behaviors/*.yaml, parses name, description, tools, hooks, and agents, and generates a ready-to-run install command for each one. Users can now install a single behavior instead of the entire bundle.</p>
+    <p><strong>If challenged:</strong> "Why not just document this in each bundle's README?" Because the install command requires a specific git URL format with a subdirectory fragment. Nobody is going to construct that by hand. Generating the command and providing a click-to-copy button removes all friction. The sweep also surfaces behaviors that README authors forgot to document.</p>
+    <p><strong>Transition:</strong> Behavior scanning was the hard part. The next step was making behaviors visible without clicking into each bundle. It took 13 lines of code.</p>
+    <p><strong>Confidence:</strong> High. 28 of 42 bundles confirmed from the latest sweep data. foundation-expert's 12 behaviors verified from the behaviors/ directory in that repo.</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 6 — Badge (LIGHT) ═══ -->
+<section class="slide" aria-label="Behavior badge feature">
+  <div class="slide-header">
+    <p class="eyebrow">Feature &middot; UI Discoverability</p>
+    <h2 class="slide-title">Hidden in a drawer no more. Behaviors visible at a glance.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="badge-wrap">
+      <div class="badge-hero-pill" aria-label="Example behavior badge">
+        <span>&#9889;</span>
+        <span>12 behaviors</span>
+      </div>
+      <p class="badge-code-ref">13 lines of code. <span class="badge-code-highlight">event.stopPropagation()</span></p>
+      <div class="badge-punchline">
+        <div class="badge-punchline-bar" aria-hidden="true"></div>
+        <p class="badge-punchline-text">Maximum discoverability. Minimum code.</p>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> The behaviors panel was already built, but it was invisible until you clicked into a bundle's detail drawer. A cyan pill badge on every card in the browse grid now shows behavior count at a glance. Clicking the badge opens the detail panel directly. The entire change was 13 lines of code, mostly event handling to prevent the click from bubbling up to the card's navigation handler.</p>
+    <p><strong>If challenged:</strong> "Is a badge really worth a slide?" Yes, because it changed the discovery model. Before the badge, users had to already be interested in a specific bundle to discover its behaviors. After the badge, behaviors are surfaced during browsing. It's the difference between search and serendipity. Small code change, large UX shift.</p>
+    <p><strong>Transition:</strong> We've seen the features. Let me show you the full architecture that makes all of this work with zero infrastructure.</p>
+    <p><strong>Confidence:</strong> High. 13 lines counted from the commit diff (d76826d). The event.stopPropagation() is the actual mechanism used.</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 7 — Architecture (HEAVY) ═══ -->
+<section class="slide" aria-label="Architecture diagram">
+  <div class="slide-header">
+    <p class="eyebrow">Architecture</p>
+    <h2 class="slide-title">No server. No database. Three JSON files and a cron job.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="arch-wrap">
+      <svg class="arch-svg" viewBox="0 0 780 370" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="arch-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#06B6D4"/>
+          </marker>
+        </defs>
+
+        <!-- GitHub Actions container -->
+        <g class="arch-node arch-bg">
+          <rect x="50" y="12" width="680" height="120" rx="8"
+                fill="#ecfeff" stroke="#06B6D4" stroke-width="1.5"/>
+          <text x="390" y="32" text-anchor="middle"
+                font-size="10" font-weight="700" letter-spacing="0.12em"
+                fill="#0891B2"
+                font-family="system-ui, -apple-system, sans-serif">GITHUB ACTIONS</text>
+          <text x="390" y="46" text-anchor="middle"
+                font-size="10" fill="#64748b"
+                font-family="system-ui, -apple-system, sans-serif">(every 2 hours)</text>
+        </g>
+
+        <!-- sweep.mjs -->
+        <g class="arch-node arch-sweep">
+          <rect x="90" y="62" width="160" height="44" rx="6" fill="#0f172a"/>
+          <text x="170" y="80" text-anchor="middle"
+                font-size="12" font-weight="600" fill="#22d3ee"
+                font-family="ui-monospace, 'SF Mono', Menlo, monospace">sweep.mjs</text>
+          <text x="170" y="96" text-anchor="middle"
+                font-size="10" fill="#94a3b8"
+                font-family="system-ui, -apple-system, sans-serif">GitHub API</text>
+        </g>
+
+        <!-- Arrow: sweep → score -->
+        <line class="arch-line arch-h-line-1"
+              x1="250" y1="84" x2="308" y2="84"
+              stroke="#06B6D4" stroke-width="1.5" marker-end="url(#arch-arrow)"/>
+
+        <!-- score.mjs -->
+        <g class="arch-node arch-score">
+          <rect x="310" y="62" width="160" height="44" rx="6" fill="#0f172a"/>
+          <text x="390" y="80" text-anchor="middle"
+                font-size="12" font-weight="600" fill="#22d3ee"
+                font-family="ui-monospace, 'SF Mono', Menlo, monospace">score.mjs</text>
+          <text x="390" y="96" text-anchor="middle"
+                font-size="10" fill="#94a3b8"
+                font-family="system-ui, -apple-system, sans-serif">Claude</text>
+        </g>
+
+        <!-- Arrow: score → embed -->
+        <line class="arch-line arch-h-line-2"
+              x1="470" y1="84" x2="528" y2="84"
+              stroke="#06B6D4" stroke-width="1.5" marker-end="url(#arch-arrow)"/>
+
+        <!-- embed.mjs -->
+        <g class="arch-node arch-embed">
+          <rect x="530" y="62" width="160" height="44" rx="6" fill="#0f172a"/>
+          <text x="610" y="80" text-anchor="middle"
+                font-size="12" font-weight="600" fill="#22d3ee"
+                font-family="ui-monospace, 'SF Mono', Menlo, monospace">embed.mjs</text>
+          <text x="610" y="96" text-anchor="middle"
+                font-size="10" fill="#94a3b8"
+                font-family="system-ui, -apple-system, sans-serif">all-MiniLM-L6-v2</text>
+        </g>
+
+        <!-- Vertical arrow: Actions → JSON -->
+        <line class="arch-line arch-v-line-1"
+              x1="390" y1="132" x2="390" y2="174"
+              stroke="#06B6D4" stroke-width="1.5" marker-end="url(#arch-arrow)"/>
+
+        <!-- "git commit" label -->
+        <text class="arch-label arch-commit-lbl"
+              x="416" y="158"
+              font-size="10" font-weight="600" fill="#10b981"
+              font-family="ui-monospace, 'SF Mono', Menlo, monospace">git commit</text>
+
+        <!-- JSON container -->
+        <g class="arch-node arch-json">
+          <rect x="210" y="178" width="360" height="46" rx="6"
+                fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <text x="390" y="198" text-anchor="middle"
+                font-size="12" font-weight="600" fill="#1e293b"
+                font-family="ui-monospace, 'SF Mono', Menlo, monospace">bundles.json + embeddings.json</text>
+          <text x="390" y="214" text-anchor="middle"
+                font-size="10" fill="#64748b"
+                font-family="system-ui, -apple-system, sans-serif">130 KB total</text>
+        </g>
+
+        <!-- Vertical arrow: JSON → Browser -->
+        <line class="arch-line arch-v-line-2"
+              x1="390" y1="224" x2="390" y2="270"
+              stroke="#06B6D4" stroke-width="1.5" marker-end="url(#arch-arrow)"/>
+
+        <!-- "GitHub Pages" label -->
+        <text class="arch-label arch-pages-lbl"
+              x="416" y="253"
+              font-size="10" font-weight="500" fill="#64748b"
+              font-family="system-ui, -apple-system, sans-serif">GitHub Pages auto-deploy</text>
+
+        <!-- Browser container -->
+        <g class="arch-node arch-browser">
+          <rect x="190" y="274" width="400" height="52" rx="6" fill="#0f172a"/>
+          <text x="390" y="296" text-anchor="middle"
+                font-size="13" font-weight="700" fill="#e2e8f0"
+                font-family="system-ui, -apple-system, sans-serif">index.html</text>
+          <text x="390" y="312" text-anchor="middle"
+                font-size="10" fill="#94a3b8"
+                font-family="system-ui, -apple-system, sans-serif">Transformers.js (WASM) &middot; Tailwind CSS &middot; Lucide</text>
+        </g>
+
+        <!-- Bottom annotation -->
+        <text class="arch-label arch-bottom-lbl"
+              x="390" y="348" text-anchor="middle"
+              font-size="11" font-weight="500" fill="#64748b"
+              font-family="system-ui, -apple-system, sans-serif">1,663 lines &middot; zero build step</text>
+      </svg>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> The entire system is three scripts, two JSON files, one HTML file, and a cron job. sweep.mjs hits the GitHub API to discover bundles, collect stars and forks, and scan each repo's behaviors/ directory. score.mjs sends each bundle's README to Claude and gets a quality rating on a 5-dimension rubric. embed.mjs runs all-MiniLM-L6-v2 to produce 384-dimensional semantic vectors for search. The output is committed as static JSON and auto-deployed to GitHub Pages. The browser (index.html, 1,663 lines) loads the JSON and uses Transformers.js for query embedding.</p>
+    <p><strong>If challenged:</strong> "What happens if the GitHub Actions cron fails?" The site keeps serving the last successful sweep. Stale data is better than no data, and the 2-hour cycle means the worst-case staleness is 2 hours. We also get email alerts on workflow failures. There's no single point of failure that takes the registry offline.</p>
+    <p><strong>Transition:</strong> This architecture was not designed in advance and implemented. It was built iteratively. And every commit that built it has the same co-author.</p>
+    <p><strong>Confidence:</strong> High. Every component described here is directly verifiable in the repository. Line count from wc -l. Script names and their dependencies are from the workflow YAML.</p>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 8 — Close (LIGHT) ═══ -->
+<section class="slide" aria-label="Closing">
+  <div class="slide-header">
+    <p class="eyebrow">The Meta Moment</p>
+    <h2 class="slide-title">The tool built its own registry.</h2>
+  </div>
+  <div class="slide-body">
+    <div class="close-wrap">
+      <div class="close-coauthor">Co-Authored-By: Amplifier</div>
+      <p class="close-statement">From first commit to 42-bundle, behavior-scanning, semantically searchable registry. Every feature. Every commit. Built with Amplifier.</p>
+      <div class="close-log"><span class="log-hash">d76826d</span> <span class="log-msg">feat: add behavior pill badge to bundle cards</span>
+<span class="log-hash">15f84a1</span> <span class="log-msg">feat: behavior scanning and browsing UI</span>
+<span class="log-hash">8d0d0ca</span> <span class="log-msg">feat: pre-computed semantic embeddings &amp; 2-hour sweep</span></div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <p><strong>Key point:</strong> Every commit in this registry carries the Co-Authored-By: Amplifier trailer. This is not a hypothetical showcase. The registry itself is evidence of what AI-paired development enables: a developer and their AI collaborator shipped a fully functional, semantically searchable, quality-rated, behavior-aware bundle registry with zero backend infrastructure.</p>
+    <p><strong>If challenged:</strong> "How much of this was actually AI-generated vs. human-directed?" Every feature was human-conceived and human-reviewed. Amplifier handled implementation, iteration, and the mechanical work of writing HTML, CSS, JavaScript, and the CI pipeline scripts. The human provided direction, architectural decisions, and quality judgment. That's what co-authorship means.</p>
+    <p><strong>Transition:</strong> That's the registry. It's live, it's open, and it's ready for the community to use and extend.</p>
+    <p><strong>Confidence:</strong> High. Commit hashes are real (d76826d, 15f84a1, 8d0d0ca) and verifiable in the git log.</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  'use strict';
+  var slides  = document.querySelectorAll('.slide');
+  var total   = slides.length;
+  var bar     = document.getElementById('deck-progress');
+  var counter = document.getElementById('slide-counter');
+  var current = 0;
+  var notesOn = false;
+
+  function updateChrome() {
+    var pct = total > 1 ? (current / (total - 1)) * 100 : 100;
+    bar.style.width = pct + '%';
+    bar.setAttribute('aria-valuenow', Math.round(pct));
+    counter.textContent = (current + 1) + ' / ' + total;
+  }
+
+  function goTo(i) {
+    if (i < 0 || i >= total) return;
+    slides[current].classList.remove('active');
+    slides[current].style.display = 'none';
+    current = i;
+    slides[current].style.display = 'flex';
+    void slides[current].offsetWidth;
+    slides[current].classList.add('active');
+    updateChrome();
+  }
+
+  /* Initialize: set bar widths from data attributes */
+  document.querySelectorAll('.comp-bar-fill').forEach(function (el) {
+    var w = el.getAttribute('data-width');
+    if (w) el.style.width = w + '%';
+  });
+  document.querySelectorAll('.coverage-bar-fill').forEach(function (el) {
+    var w = el.getAttribute('data-width');
+    if (w) el.style.width = w + '%';
+  });
+
+  /* Initialize: hide all but first */
+  slides.forEach(function (s, idx) {
+    if (idx !== 0) s.style.display = 'none';
+    else s.classList.add('active');
+  });
+  updateChrome();
+
+  /* Keyboard */
+  document.addEventListener('keydown', function (e) {
+    switch (e.key) {
+      case 'ArrowRight': case 'ArrowDown':
+        e.preventDefault(); goTo(current + 1); break;
+      case 'ArrowLeft': case 'ArrowUp':
+        e.preventDefault(); goTo(current - 1); break;
+      case 'Home':
+        e.preventDefault(); goTo(0); break;
+      case 'End':
+        e.preventDefault(); goTo(total - 1); break;
+      case 's': case 'S':
+        e.preventDefault();
+        notesOn = !notesOn;
+        document.querySelectorAll('.speaker-notes').forEach(function (n) {
+          n.style.display = notesOn ? 'block' : 'none';
+        });
+        break;
+    }
+  });
+
+  /* Touch */
+  var touchX = 0;
+  document.addEventListener('touchstart', function (e) {
+    touchX = e.changedTouches[0].clientX;
+  }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
+</script>
+
+<!-- PRESENTATION METADATA
+Specialist: presentation-builder
+Input type: structured brief with claims and data
+Audience: Amplifier community / MADE team — developers who build and use Amplifier bundles
+Purpose: Dev log / launch announcement for the Amplifier Bundle Registry
+Framework: problem-solution-impact
+Slide count: 8
+Visual rhythm: light → medium → medium → heavy → medium → light → heavy → light
+-->
+
+<!-- CONTENT MAP
+C1: "42 bundles, 13 contributors, no central discovery" | used in: slides 2, 3
+C2: "Zero backend — CI is the backend via GitHub Actions" | used in: slides 3, 7
+C3: "Pre-computed semantic embeddings enable instant search" | used in: slide 4
+C4: "Behavior-level discovery with per-behavior install commands" | used in: slides 5, 6
+C5: "13 lines of code made behaviors visible on cards" | used in: slide 6
+C6: "Full architecture: 3 scripts, 2 JSON files, 1 HTML file, 0 servers" | used in: slide 7
+C7: "Every commit co-authored with Amplifier" | used in: slide 8
+-->
+
+</body>
+</html>
