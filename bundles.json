@@ -1218,7 +1218,7 @@
       "screenshots"
     ],
     "featured": false,
-    "lastUpdated": "2026-09-07",
+    "lastUpdated": "2026-10-29",
     "llmVerdict": "Effective browser automation layer. The three-agent split (operator/researcher/visual) maps well to different automation use cases. Accessibility-tree approach via agent-browser is more robust than DOM selectors.",
     "stars": 3,
     "forks": 2,
@@ -2395,7 +2395,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-10-28",
+    "lastUpdated": "2026-10-29",
     "llmVerdict": "Strong CI/CD coverage. The audit capability is particularly valuable — identifying gaps in existing pipelines is harder than generating new ones. Multi-system support is practical for mixed environments.",
     "stars": 0,
     "forks": 0,
