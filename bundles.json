@@ -2395,7 +2395,7 @@
     ],
     "featured": false,
     "community": true,
-    "lastUpdated": "2026-10-29",
+    "lastUpdated": "2026-10-30",
     "llmVerdict": "Strong CI/CD coverage. The audit capability is particularly valuable — identifying gaps in existing pipelines is harder than generating new ones. Multi-system support is practical for mixed environments.",
     "stars": 0,
     "forks": 0,
