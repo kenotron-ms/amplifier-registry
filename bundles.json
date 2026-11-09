@@ -1275,7 +1275,7 @@
       "ruff"
     ],
     "featured": false,
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "llmVerdict": "Excellent Python tooling integration. The ruff+pyright combination catches a wide class of issues. The LSP code-intel sub-agent provides genuine semantic understanding beyond text search. Well-documented configuration.",
     "stars": 4,
     "forks": 5,
@@ -1302,14 +1302,14 @@
         "file": "behaviors/python-dev.yaml",
         "name": "python-dev-behavior",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-dev.yaml --app",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "description": "Comprehensive Python development - LSP intelligence + quality tools"
       },
       {
         "file": "behaviors/python-lsp.yaml",
         "name": "behavior-python-lsp",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-lsp.yaml --app",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "tools": [
           "tool-lsp"
         ],
@@ -1321,7 +1321,7 @@
         "file": "behaviors/python-quality.yaml",
         "name": "python-quality-behavior",
         "install": "amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-python-dev@main#subdirectory=behaviors/python-quality.yaml --app",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "description": "Python code quality tools - ruff, pyright, stub detection, and expert agent",
         "tools": [
           "tool-python-check"
